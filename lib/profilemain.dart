@@ -63,7 +63,7 @@ class ProfileMenu extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 15,),
+            SizedBox(height: 30,),
 
             RawMaterialButton(
               padding: EdgeInsets.symmetric(horizontal: 15),
