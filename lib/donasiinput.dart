@@ -44,10 +44,11 @@ class _DonasiInputState extends State<DonasiInput> {
                 ),
                 controller: nominalControllerd,
                 decoration: InputDecoration(
-                  border: InputBorder.none,
+                  border: OutlineInputBorder(),
                   fillColor: salurwidgetbg,
                   filled: true,
                   prefixText: "Rp",
+                  labelText: 'Nominal Donasi'
                 ),
                 keyboardType: TextInputType.number,
               ),
