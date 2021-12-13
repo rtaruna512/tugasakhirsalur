@@ -12,10 +12,11 @@ class loginPage extends StatefulWidget {
 }
 
 class _State extends State<loginPage> {
-  TextEditingController nameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   bool _isHidden = true;
   Color salur1 = const Color(0xff014753);
+  Color salurwidgetbg2 = const Color(0x66a7a7a7);
 
   @override
   Widget build(BuildContext context) {
@@ -59,29 +60,58 @@ class _State extends State<loginPage> {
                               fontWeight: FontWeight.w500,
                               fontSize: 30),
                         )),
-                    Container(
-                      padding: EdgeInsets.fromLTRB(30, 0, 30, 10),
-                      child: TextField(
-                        controller: nameController,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Masukkan Email',
-                          isDense: true,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                        decoration: BoxDecoration(
+                            color: salurwidgetbg2,
+                            borderRadius: BorderRadius.circular(5)
+                        ),
+                        child: TextField(
+                          style: TextStyle(
+                              fontSize: 20
+                          ),
+                          controller: emailController,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Masukkan Email',
+                            hintStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20
+                            ),
+                          ),
                         ),
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.fromLTRB(30,10,30,0),
-                      child: TextField(
-                        obscureText: _isHidden,
-                        controller: passwordController,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Password',
-                          isDense: true,
-                          suffix: InkWell(
-                            onTap: _togglePasswordView,
-                            child: Icon(Icons.visibility),
+
+                    SizedBox(height: 15,),
+
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: salurwidgetbg2
+                        ),
+                        padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                        child: TextField(
+                          obscureText: _isHidden,
+                          controller: passwordController,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Password',
+                            hintStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20
+                            ),
+                            suffix: InkWell(
+                              onTap: _togglePasswordView,
+                              child: Icon(
+                                Icons.visibility,
+                                size: 20,
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -120,7 +150,7 @@ class _State extends State<loginPage> {
                             primary: salur1
                           ),
                           onPressed: () {
-                            print(nameController.text);
+                            print(emailController.text);
                             print(passwordController.text);
                             Navigator.push(
                                 context,

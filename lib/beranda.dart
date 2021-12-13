@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/berandascreens/beranda_main.dart';
 import 'package:tugasakhirsalur/berandascreens/beranda_riwayat.dart';
-import 'package:tugasakhirsalur/donasimain.dart';
-import 'package:tugasakhirsalur/transfermain.dart';
-import 'package:tugasakhirsalur/widget/donasicarousel.dart';
 import 'package:flutter/services.dart';
 
 

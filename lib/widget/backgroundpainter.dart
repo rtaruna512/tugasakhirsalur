@@ -3,8 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'dart:ui' as ui;
 
 class BackgroundPainter extends StatelessWidget {
-  const BackgroundPainter({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Column(

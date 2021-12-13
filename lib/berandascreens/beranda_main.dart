@@ -21,7 +21,6 @@ class _State extends State<BerandaMenuMain>{
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: salur1));
     return Scaffold(
       body: Padding(
           padding: EdgeInsets.all(0),
