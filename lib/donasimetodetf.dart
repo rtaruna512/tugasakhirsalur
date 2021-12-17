@@ -14,7 +14,7 @@ class DonasiMetodeTF extends StatefulWidget {
 
 class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
   Color salur1 = const Color(0xff014753);
-  Color salurwidgetbg = const Color(0xb3D2DDAF);
+  Color salurwidgetbg = const Color(0x80D2DDAF);
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                       child: Text(
                         'Nominal yang akan di donasi:',
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                         ),
                         textAlign: TextAlign.left,
                       ),
@@ -111,10 +111,20 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => donasiBCA()));
                 },
-                child: Container(
+                elevation: 2,
+                child:
+                Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: salurwidgetbg
+                    color: salurwidgetbg,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, 3)
+                      )
+                    ]
                   ),
                   padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
                   child: Row(
@@ -123,6 +133,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                         'assets/images/bca.png',
                         height: 25,
                         width: 100,
+                        alignment: Alignment.centerLeft,
                       ),
                       SizedBox(width: 15,),
                       Text(
@@ -157,6 +168,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                         'assets/images/mandiri.png',
                         height: 25,
                         width: 100,
+                        alignment: Alignment.centerLeft,
                       ),
                       SizedBox(width: 15,),
                       Text(
@@ -191,6 +203,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                         'assets/images/bni.png',
                         height: 25,
                         width: 100,
+                        alignment: Alignment.centerLeft,
                       ),
                       SizedBox(width: 15,),
                       Text(
@@ -225,6 +238,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                         'assets/images/bri.png',
                         height: 25,
                         width: 100,
+                        alignment: Alignment.centerLeft,
                       ),
                       SizedBox(width: 15,),
                       Text(
@@ -259,6 +273,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                         'assets/images/bsi.png',
                         height: 25,
                         width: 100,
+                        alignment: Alignment.centerLeft,
                       ),
                       SizedBox(width: 15,),
                       Text(

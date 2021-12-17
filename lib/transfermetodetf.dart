@@ -55,7 +55,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                       child: Text(
                         'Nominal yang akan di Transfer:',
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                         ),
                         textAlign: TextAlign.left,
                       ),
@@ -123,6 +123,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                           'assets/images/bca.png',
                           height: 25,
                           width: 100,
+                          alignment: Alignment.centerLeft,
                         ),
                         SizedBox(width: 15,),
                         Text(
@@ -159,6 +160,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                           'assets/images/mandiri.png',
                           height: 25,
                           width: 100,
+                          alignment: Alignment.centerLeft,
                         ),
                         SizedBox(width: 15,),
                         Text(
@@ -195,6 +197,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                           'assets/images/bni.png',
                           height: 25,
                           width: 100,
+                          alignment: Alignment.centerLeft,
                         ),
                         SizedBox(width: 15,),
                         Text(
@@ -231,6 +234,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                           'assets/images/bri.png',
                           height: 25,
                           width: 100,
+                          alignment: Alignment.centerLeft,
                         ),
                         SizedBox(width: 15,),
                         Text(
@@ -267,6 +271,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                           'assets/images/bsi.png',
                           height: 25,
                           width: 100,
+                          alignment: Alignment.centerLeft,
                         ),
                         SizedBox(width: 15,),
                         Text(

@@ -132,8 +132,8 @@ class _State extends State<BerandaMenuMain>{
                                         children: <Widget>[
                                           Image.asset(
                                             'assets/images/mastercard.png',
-                                            height: 75,
-                                            width: 75,
+                                            height: 45,
+                                            width: 45,
                                             fit: BoxFit.fitWidth,
                                           )
                                         ],
@@ -189,8 +189,8 @@ class _State extends State<BerandaMenuMain>{
                                         children: <Widget>[
                                           Image.asset(
                                             'assets/images/mastercard.png',
-                                            height: 75,
-                                            width: 75,
+                                            height: 45,
+                                            width: 45,
                                             fit: BoxFit.fitWidth,
                                           )
                                         ],

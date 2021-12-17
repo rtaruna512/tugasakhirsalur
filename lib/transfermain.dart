@@ -4,6 +4,8 @@ import 'package:tugasakhirsalur/transfertujuan.dart';
 
 class TransferBeranda extends StatelessWidget {
   Color salur1 = const Color(0xff014753);
+  Color gradientGLight = const Color(0xffD7E14C);
+  Color gradientGdark = const Color(0xff041417);
 
   @override
   Widget build(BuildContext context) {
@@ -20,53 +22,86 @@ class TransferBeranda extends StatelessWidget {
           ),
         ),
       body:Padding(
-        padding: EdgeInsets.all(0),
+        padding: EdgeInsets.all(15),
         child: ListView(
           children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                color: salur1,
-                border: Border.all(
-                    color: salur1,
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: Container(
+                width: 320,
+                height: 200,
+                padding: EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment(0, 0),
+                        colors: <Color>[
+                          gradientGLight,
+                          gradientGdark
+                        ],
+                    ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black26,
+                      blurRadius: 15,
+                    )
+                  ]
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'Total Aset Pendanaan',
+                          style: TextStyle(
+                              color: Colors.white
+                          ),
+                        ),
+                        SizedBox(height: 15,),
+                        Text(
+                          'Rp250.000',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 27
+                          ),
+                        )
+                      ],
+                    ),
+                    Spacer(),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/mastercard.png',
+                          height: 45,
+                          width: 45,
+                          fit: BoxFit.fitWidth,
+                        )
+                      ],
+                    )
+                  ],
                 ),
               ),
-              padding: EdgeInsets.fromLTRB(30, 15, 30, 0),
-              child: Text(
-                'Wah anda telah\n'
-                    'menghemat sebesar:',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                )
-              ),
-
             ),
 
-            Container(
-              decoration: BoxDecoration(
-                color: salur1,
-                border: Border.all(
-                    color: salur1
-                ),
-              ),
-              padding: EdgeInsets.fromLTRB(30, 10, 30, 15),
-              child: Text(
-                'Rp123.456',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                ),
-              ),
-            ),
+            SizedBox(height: 15,),
 
             Container(
-              padding: EdgeInsets.fromLTRB(30, 250, 30, 0),
+              padding: EdgeInsets.symmetric(horizontal: 15),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(500, 45)
                 ),
                 child: Text(
-                  'Kirim Uang Sekarang'
+                  'Kirim Uang Sekarang',
+                  style: TextStyle(
+                    color: Colors.black
+                  ),
                 ),
                 onPressed: (){
                   Navigator.push(

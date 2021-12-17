@@ -11,7 +11,7 @@ class DonasiBeranda extends StatefulWidget {
 class _State extends State<DonasiBeranda> {
   Color salur1 = const Color(0xff014753);
   Color salur2 = const Color(0xcc014753);
-  Color salur3 = const Color(0xffd2ddaf);
+  Color salur3 = const Color(0x80d2ddaf);
   Color salur4 = const Color(0xff79834e);
   Color gradientGLight = const Color(0xffD7E14C);
   Color gradientGdark = const Color(0xff041417);
@@ -83,7 +83,13 @@ class _State extends State<DonasiBeranda> {
                           gradientGLight,
                           gradientGdark
                         ]
-                    )
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 15,
+                      )
+                    ]
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
