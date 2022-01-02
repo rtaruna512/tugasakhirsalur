@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/donasibni.dart';
-import 'package:tugasakhirsalur/donasibri.dart';
-import 'package:tugasakhirsalur/donasibsi.dart';
-import 'package:tugasakhirsalur/donasimandiri.dart';
+import 'package:tugasakhirsalur/donasi/donasibni.dart';
+import 'package:tugasakhirsalur/donasi/donasibri.dart';
+import 'package:tugasakhirsalur/donasi/donasibsi.dart';
+import 'package:tugasakhirsalur/donasi/donasimandiri.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
-import 'package:tugasakhirsalur/donasibca.dart';
+import 'package:tugasakhirsalur/donasi/donasibca.dart';
 
 class DonasiMetodeTF extends StatefulWidget {
   @override

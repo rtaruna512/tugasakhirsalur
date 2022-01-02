@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/donasimain.dart';
-import 'package:tugasakhirsalur/profilemain.dart';
-import 'package:tugasakhirsalur/transfermain.dart';
+import 'package:tugasakhirsalur/donasi/donasimain.dart';
+import 'package:tugasakhirsalur/pendanaan/pendanaanmain.dart';
+import 'package:tugasakhirsalur/profile/profilemain.dart';
+import 'package:tugasakhirsalur/transfer/transfermain.dart';
 import 'package:tugasakhirsalur/widget/donasicarousel.dart';
-import 'package:flutter/services.dart';
 
 
 
@@ -232,7 +232,7 @@ class _State extends State<BerandaMenuMain>{
                           children: <Widget>[
                             RawMaterialButton(
                               onPressed: () {
-
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => pendanaanBeranda()));
                               },
                               child: Container(
                                 child: Column(

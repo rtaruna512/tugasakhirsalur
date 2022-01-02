@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/transfermetodetf.dart';
+import 'package:tugasakhirsalur/transfer/transfermetodetf.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 
 

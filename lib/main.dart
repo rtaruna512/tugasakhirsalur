@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/bantuanmain.dart';
+import 'package:tugasakhirsalur/bantuan/bantuanmain.dart';
 import 'package:tugasakhirsalur/login.dart';
 import 'package:tugasakhirsalur/syaratketentuan.dart';
-import 'dart:ui' as ui;
 
 import 'package:tugasakhirsalur/widget/backgroundpainter.dart';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/donasidata.dart';
-import 'package:tugasakhirsalur/donasiinput.dart';
+import 'package:tugasakhirsalur/data/datadonasi.dart';
+import 'package:tugasakhirsalur/donasi/donasiinput.dart';
 
 
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/donasidata.dart';
-import 'package:tugasakhirsalur/donasimetodetf.dart';
+import 'package:tugasakhirsalur/data/datadonasi.dart';
+import 'package:tugasakhirsalur/donasi/donasimetodetf.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 
 class DonasiInput extends StatefulWidget {

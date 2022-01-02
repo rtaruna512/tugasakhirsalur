@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/bantuan1.dart';
-import 'package:tugasakhirsalur/bantuan2.dart';
-import 'package:tugasakhirsalur/bantuan3.dart';
-import 'package:tugasakhirsalur/bantuan4.dart';
+import 'package:tugasakhirsalur/bantuan/bantuan1.dart';
+import 'package:tugasakhirsalur/bantuan/bantuan2.dart';
+import 'package:tugasakhirsalur/bantuan/bantuan3.dart';
+import 'package:tugasakhirsalur/bantuan/bantuan4.dart';
 
 class BantuanMain extends StatelessWidget {
   @override

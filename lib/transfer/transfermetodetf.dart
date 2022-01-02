@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/transferbsi.dart';
-import 'package:tugasakhirsalur/transferbca.dart';
-import 'package:tugasakhirsalur/transferbni.dart';
-import 'package:tugasakhirsalur/transferbri.dart';
-import 'package:tugasakhirsalur/transfermandiri.dart';
+import 'package:tugasakhirsalur/transfer/transferbsi.dart';
+import 'package:tugasakhirsalur/transfer/transferbca.dart';
+import 'package:tugasakhirsalur/transfer/transferbni.dart';
+import 'package:tugasakhirsalur/transfer/transferbri.dart';
+import 'package:tugasakhirsalur/transfer/transfermandiri.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 
 class transferMetodeTF extends StatefulWidget {

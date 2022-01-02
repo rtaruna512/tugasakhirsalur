@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tugasakhirsalur/donasidata.dart';
-import 'package:tugasakhirsalur/donasiketerangan.dart';
+import 'package:tugasakhirsalur/data/datadonasi.dart';
+import 'package:tugasakhirsalur/donasi/donasiketerangan.dart';
 
 class donasiCarousel extends StatelessWidget {
   Color salur1 = const Color(0xff014753);

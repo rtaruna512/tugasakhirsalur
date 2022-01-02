@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/bantuanmain.dart';
+import 'package:tugasakhirsalur/bantuan/bantuanmain.dart';
 import 'package:tugasakhirsalur/beranda.dart';
 import 'package:tugasakhirsalur/main.dart';
 import 'package:tugasakhirsalur/widget/backgroundpainter.dart';

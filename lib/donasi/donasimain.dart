@@ -114,6 +114,19 @@ class _State extends State<DonasiBeranda> {
                         )
                       ],
                     ),
+                    Spacer(),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/mastercard.png',
+                          height: 45,
+                          width: 45,
+                          fit: BoxFit.fitWidth,
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),

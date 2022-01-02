@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/transfertujuan.dart';
+import 'package:tugasakhirsalur/transfer/transfertujuan.dart';
 
 class TransferBeranda extends StatelessWidget {
   Color salur1 = const Color(0xff014753);
