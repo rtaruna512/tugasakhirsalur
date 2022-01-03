@@ -250,7 +250,7 @@ class _State extends State<BerandaMenuMain>{
                                         borderRadius: BorderRadius.circular(20),
 
                                         child: Image.asset(
-                                          'assets/images/funding.png',
+                                          'assets/images/cvc.png',
                                           scale: 10,),
                                       ),
                                     ),
@@ -282,7 +282,7 @@ class _State extends State<BerandaMenuMain>{
                                         borderRadius: BorderRadius.circular(20),
 
                                         child: Image.asset(
-                                          'assets/images/solidarity.png',
+                                          'assets/images/pngwing.png',
                                           scale: 10,),
                                       ),
                                     ),
@@ -313,7 +313,7 @@ class _State extends State<BerandaMenuMain>{
                                       borderRadius: BorderRadius.circular(20),
 
                                       child: Image.asset(
-                                        'assets/images/money-transfer.png',
+                                        'assets/images/cbb.png',
                                         scale: 10,),
                                     ),
                                   ),

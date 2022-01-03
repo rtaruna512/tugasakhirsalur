@@ -142,7 +142,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                       Spacer(),
 
                       Icon(
-                        Icons.house_outlined,
+                        Icons.storefront,
                         color: Colors.black,
                       ),
 
