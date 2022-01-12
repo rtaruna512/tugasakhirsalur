@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanpasar.dart';
 
 
@@ -23,7 +25,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
         centerTitle: true,
         title: Text(
           'Pendanaan',
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             color: Colors.white,
           ),
         ),
@@ -75,22 +77,88 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        Spacer(),
                         Text(
                           'Total Aset Pendanaan',
-                          style: TextStyle(
-                              color: Colors.white
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: 5,),
+                        Text(
+                          'Rp250.000',
+                          style: GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 29
                           ),
                         ),
                         SizedBox(height: 15,),
-                        Text(
-                          'Rp250.000',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 27
-                          ),
+                        Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Sisa Pokok',
+                                  style: GoogleFonts.poppins(
+                                    color: Colors.white,
+                                    fontSize: 13
+                                  ),
+                                ),
+                                SizedBox(height: 5,),
+                                Text(
+                                  'Angsuran Terbayar',
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: 13
+                                  ),
+                                ),
+                                SizedBox(height: 5,),
+                                Text(
+                                  'Mitra Aktif',
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: 13
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(width: 30,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Rp 0',
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: 13
+                                  ),
+                                ),
+                                SizedBox(height: 5,),
+                                Text(
+                                  'Rp 0',
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: 13
+                                  ),
+                                ),
+                                SizedBox(height: 5,),
+                                Text(
+                                  '0 Mitra',
+                                  style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: 13
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -119,7 +187,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: Text(
                 'Portofolio Saya',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   color: Colors.black,
                   fontSize: 20,
                   fontWeight: FontWeight.bold
@@ -130,13 +198,253 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
 
             SizedBox(height: 10,),
 
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 15,
+                      )
+                    ]
+                ),
+                child: ExpansionTile(
+                  title: Text('Pendanaan Aktif'),
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 5,),
+
+                              Text(
+                                'Pokok Diterima',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
+
+                              SizedBox(height: 10,),
+
+                              Text(
+                                'Sisa Pokok',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
+
+                              SizedBox(height: 10,),
+
+                              Text(
+                                'Total Pendanaan Aktif',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
+
+                              SizedBox(height: 10,),
+
+                              Text(
+                                'Bagi hasil Diterima',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
+
+                              SizedBox(height: 10,),
+                            ],
+                          ),
+
+                          Spacer(),
+
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              SizedBox(height: 5,),
+
+                              Text(
+                                'Rp 0',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
+
+                              SizedBox(height: 10,),
+
+                              Text(
+                                'Rp 0',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
+
+                              SizedBox(height: 10,),
+
+                              Text(
+                                'Rp 0',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
+
+                              SizedBox(height: 10,),
+
+                              Text(
+                                'Rp 0',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
 
 
-            SizedBox(height: 10,),
+
+                              SizedBox(height: 10,),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 15,),
+
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 15,
+                      )
+                    ]
+                ),
+                child: ExpansionTile(
+                  title: Text('Kualitas Pendanaan'),
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Row(
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 5,),
+
+                              Text(
+                                'Jumlah Mitra',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
+
+                              SizedBox(height: 10,),
+
+                              Text(
+                                'Pembayaran Lancar',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
+
+                              SizedBox(height: 10,),
+                            ],
+                          ),
+
+                          Spacer(),
+
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              SizedBox(height: 5,),
+
+                              Text(
+                                'Rp 0',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
+
+                              SizedBox(height: 10,),
+
+                              Text(
+                                'Rp 0',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 15
+                                ),
+                              ),
+
+                              SizedBox(height: 10,),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 15,),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Container(
+                height: 56,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 15,
+                      )
+                    ]
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Proses Pencarian',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                        ),
+                      ),
+                      Spacer(),
+                      Text(
+                        'Rp 0',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  )
+                ),
+              ),
+            ),
+
+            SizedBox(height: 65,),
 
             Container(
               height: 50,
-              padding: EdgeInsets.symmetric(horizontal: 30),
+              padding: EdgeInsets.symmetric(horizontal: 15),
               child:
               ElevatedButton(
                   onPressed: () {
@@ -148,26 +456,11 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                     ),
                   ),
                   child:
-                  Row(
-                    children: [
-                      Spacer(),
-
-                      Icon(
-                        Icons.storefront,
-                        color: Colors.black,
-                      ),
-
-                      SizedBox(width: 10,),
-
-                      Text(
-                        "Lihat Pasar Pendanaan",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-
-                      Spacer(),
-                    ],
+                  Text(
+                    "Lihat Pasar Pendanaan",
+                    style: GoogleFonts.poppins(
+                      color: Colors.black,
+                    ),
                   ),
               ),
             ),
