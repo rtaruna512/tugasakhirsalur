@@ -17,7 +17,7 @@ class _BerandaRiwayatState extends State<BerandaRiwayat> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Catatan Penyalur'),
+        title: Text('Riwayat Penyalur'),
         centerTitle: true,
         backgroundColor: salur1,
         automaticallyImplyLeading: false,

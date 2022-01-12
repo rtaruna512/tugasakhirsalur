@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanpasar.dart';
 
+
+
 class pendanaanBeranda extends StatefulWidget {
   @override
   _pendanaanBerandaState createState() => _pendanaanBerandaState();
@@ -22,7 +24,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
         title: Text(
           'Pendanaan',
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
         leading: IconButton(
@@ -30,19 +32,24 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
           onPressed: () {
             Navigator.pop(context);
           },
-          color: Colors.black,
+          color: Colors.white,
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: salur1,
         elevation: 0,
       ),
       body: Padding(
         padding: EdgeInsets.all(0),
-        child: Column(
+        child: ListView(
           children: <Widget>[
-            SizedBox(height: 15,),
-            
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
+            Container(
+              padding: EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)
+                ),
+                color: salur1,
+              ),
               child: Container(
                 width: 320,
                 height: 200,
@@ -108,20 +115,24 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
             SizedBox(height: 30,),
             
             Container(
-              width: double.infinity,
-              padding: EdgeInsets.all(10),
-              color: salur1,
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.symmetric(horizontal: 30),
               child: Text(
-                'Portfolio saya',
+                'Portofolio Saya',
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 17
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold
                 ),
                 textAlign: TextAlign.center,
               ),
             ),
 
-            Spacer(),
+            SizedBox(height: 10,),
+
+
+
+            SizedBox(height: 10,),
 
             Container(
               height: 50,
