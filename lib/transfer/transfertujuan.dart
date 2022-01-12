@@ -121,21 +121,36 @@ class _State extends State<TransferTujuan>{
 
                         SizedBox(height: 20,),
 
-                        Container(
-                          padding: EdgeInsets.symmetric(horizontal: 15),
-                          child: TextField(
-                            controller: nominalControllertf,
-                            decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Nominal Transfer',
-                              isDense: true,
-                              prefixText: "Rp",
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.symmetric(horizontal: 15),
+                              child: TextField(
+                                controller: nominalControllertf,
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  labelText: 'Nominal Transfer',
+                                  isDense: true,
+                                  prefixText: "Rp",
+                                ),
+                                keyboardType: TextInputType.number,
+                              ),
                             ),
-                            keyboardType: TextInputType.number,
-                          ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 15),
+                              child: Text(
+                                'Minimal Transfer Rp10.000',
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 13
+                                ),
+                              ),
+                            )
+                          ],
                         ),
 
-                        SizedBox(height: 20,),
+                        SizedBox(height: 10,),
 
                         Container(
                           padding: EdgeInsets.symmetric(horizontal: 15),
@@ -162,15 +177,23 @@ class _State extends State<TransferTujuan>{
                 ),
 
                 
-                SizedBox(height: 15,),
+                Spacer(),
                 
                 Container(
                   padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(double.infinity,50),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)
+                      )
                     ),
-                    child: Text('Lanjut'),
+                    child: Text(
+                      'LANJUT',
+                      style: TextStyle(
+                        color: Colors.black
+                      ),
+                    ),
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => transferMetodeTF()));
                       nominalTransfer = int.parse(nominalControllertf.text);

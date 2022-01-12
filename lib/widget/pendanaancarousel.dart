@@ -55,14 +55,6 @@ class pendanaanCarousel extends StatelessWidget {
                                 radius: 55,
                                 backgroundImage: ExactAssetImage(pendanaan.avatarURL),
                               ),
-                              SizedBox(height: 50,),
-                              Text(
-                                '*Minimal Pendanaan Rp100.000',
-                                style: TextStyle(
-                                  fontSize: 8,
-                                  fontStyle: FontStyle.italic
-                                ),
-                              )
                             ],
                           ),
 
@@ -90,107 +82,76 @@ class pendanaanCarousel extends StatelessWidget {
 
                               SizedBox(height: 5,),
 
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.location_on,
-                                    size: 12,
-                                  ),
-                                  Text(
-                                    pendanaan.lokasi,
-                                    style: TextStyle(
-                                        fontSize: 12
-                                    ),
-                                  ),
-                                ],
-                              ),
-
-                              SizedBox(height: 5,),
-
                               Container(
                                 width: 175,
                                 padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(50),
+                                  borderRadius: BorderRadius.circular(10),
                                   border: Border.all()
                                 ),
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: <Widget>[
-                                    Text(
-                                      'Sisa Plafond',
-                                      style: TextStyle(
-                                          fontSize: 12
-                                      ),
-                                    ),
-                                    SizedBox(width: 10,),
-                                    Text(
-                                      pendanaan.sisaPlafond,
-                                      style: TextStyle(
-                                          fontSize: 12
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          'Sisa Plafond',
+                                          style: TextStyle(
+                                              fontSize: 12
+                                          ),
+                                        ),
 
-                              SizedBox(height: 5,),
+                                        SizedBox(height: 5,),
 
-                              Container(
-                                width: 175,
-                                padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(50),
-                                    border: Border.all()
-                                ),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: <Widget>[
-                                    Text(
-                                      'Tenor',
-                                      style: TextStyle(
-                                          fontSize: 12
-                                      ),
-                                    ),
-                                    SizedBox(width: 10,),
-                                    Text(
-                                      pendanaan.tenor,
-                                      style: TextStyle(
-                                          fontSize: 12
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                                        Text(
+                                          'Tenor',
+                                          style: TextStyle(
+                                              fontSize: 12
+                                          ),
+                                        ),
 
-                              SizedBox(height: 5,),
+                                        SizedBox(height: 5,),
 
-                              Container(
-                                width: 175,
-                                padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(50),
-                                    border: Border.all()
-                                ),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: <Widget>[
-                                    Text(
-                                      'Bagi Hasil',
-                                      style: TextStyle(
-                                          fontSize: 12
-                                      ),
+                                        Text(
+                                          'Bagi Hasil',
+                                          style: TextStyle(
+                                              fontSize: 12
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                    SizedBox(width: 10,),
-                                    Text(
-                                      pendanaan.bagihasil,
-                                      style: TextStyle(
-                                          fontSize: 12
-                                      ),
-                                    ),
+                                    Spacer(),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          pendanaan.sisaPlafond,
+                                          style: TextStyle(
+                                              fontSize: 12
+                                          ),
+                                        ),
+
+                                        SizedBox(height: 5,),
+
+                                        Text(
+                                          pendanaan.tenor,
+                                          style: TextStyle(
+                                              fontSize: 12
+                                          ),
+                                        ),
+
+                                        SizedBox(height: 5,),
+
+                                        Text(
+                                          pendanaan.bagihasil,
+                                          style: TextStyle(
+                                              fontSize: 12
+                                          ),
+                                        ),
+                                      ],
+                                    )
                                   ],
                                 ),
                               ),

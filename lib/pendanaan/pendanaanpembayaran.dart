@@ -449,7 +449,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => pendanaanBeranda()));
               },
               child: Text(
-                'Kembali ke dashboard',
+                'Kembali ke halaman pendanaan',
                 style: TextStyle(
                   fontSize: 18,
                   color: salur1,

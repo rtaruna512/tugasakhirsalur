@@ -74,7 +74,7 @@ class _State extends State<BerandaMenuMain>{
                                   },
                                   child: CircleAvatar(
                                     radius: 25,
-                                    backgroundImage: ExactAssetImage('assets/images/avatarplaceholder.jpg'),
+                                    backgroundImage: ExactAssetImage('assets/images/5894220152385821-Male_6.jpg'),
                                   ),
                                 )
                               ],

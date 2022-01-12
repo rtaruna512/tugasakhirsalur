@@ -36,14 +36,9 @@ class ProfileMenu extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Row(
                 children: <Widget>[
-                  InkWell(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileMenu()));
-                    },
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundImage: ExactAssetImage('assets/images/avatarplaceholder.jpg'),
-                    ),
+                  CircleAvatar(
+                    radius: 50,
+                    backgroundImage: ExactAssetImage('assets/images/5894220152385821-Male_6.jpg'),
                   ),
                   SizedBox(width: 15,),
                   Column(

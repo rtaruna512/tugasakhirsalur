@@ -20,7 +20,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
   Color gradientGLight = const Color(0xffD7E14C);
   Color gradientGdark = const Color(0xff041417);
   Color salurwidgetbg = const Color(0xb3D2DDAF);
-  Color salurwidgetbg2 = const Color(0xd4B3C824);
+  Color salurwidgetbg2 = const Color(0x14B3C824);
 
   @override
   Widget build(BuildContext context) {
@@ -47,309 +47,271 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
         padding: const EdgeInsets.all(15),
         child: ListView(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: ExactAssetImage(widget.pendanaanPilihan.avatarURL),
-                    ),
-                  ],
-                ),
-
-                SizedBox(width: 10,),
-
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      widget.pendanaanPilihan.namaDebitor,
-                      style: TextStyle(
-                          fontSize: 18
-                      ),
-                    ),
-
-                    SizedBox(height: 5,),
-
-                    Text(
-                      widget.pendanaanPilihan.namaUsaha,
-                      style: TextStyle(
-                          fontSize: 15
-                      ),
-                    ),
-
-                    SizedBox(height: 5,),
-
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.location_on,
-                          size: 13,
+            Container(
+              height: 100,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          boxShadow: [BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black26,
+                            offset: Offset(0,6),)
+                          ],
                         ),
-                        Text(
-                          widget.pendanaanPilihan.lokasi,
-                          style: TextStyle(
-                              fontSize: 12
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-              ],
-            ),
+                        child: CircleAvatar(
+                          radius: 50,
+                          backgroundImage: ExactAssetImage(widget.pendanaanPilihan.avatarURL),
 
-            SizedBox(height: 15,),
-
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 175,
-                      padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all()
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            'Sisa Plafond',
-                            style: TextStyle(
-                                fontSize: 12
-                            ),
-                          ),
-                          SizedBox(width: 10,),
-                          Text(
-                            widget.pendanaanPilihan.sisaPlafond,
-                            style: TextStyle(
-                                fontSize: 12
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    SizedBox(width: 10,),
-
-                    Container(
-                      width: 175,
-                      padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all()
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            'Tenor',
-                            style: TextStyle(
-                                fontSize: 12
-                            ),
-                          ),
-                          SizedBox(width: 10,),
-                          Text(
-                            widget.pendanaanPilihan.tenor,
-                            style: TextStyle(
-                                fontSize: 12
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-
-                SizedBox(height: 10,),
-
-                Container(
-                  width: 175,
-                  padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      border: Border.all()
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'Bagi Hasil',
-                        style: TextStyle(
-                            fontSize: 12
-                        ),
-                      ),
-                      SizedBox(width: 10,),
-                      Text(
-                        widget.pendanaanPilihan.bagihasil,
-                        style: TextStyle(
-                            fontSize: 12
                         ),
                       ),
                     ],
                   ),
-                ),
-              ],
+
+                  SizedBox(width: 10,),
+
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        widget.pendanaanPilihan.namaDebitor,
+                        style: TextStyle(
+                            fontSize: 20
+                        ),
+                      ),
+
+                      Spacer(),
+
+                      Text(
+                        widget.pendanaanPilihan.namaUsaha,
+                        style: TextStyle(
+                            fontSize: 17
+                        ),
+                      ),
+
+                      Spacer(),
+
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.location_on,
+                            size: 14,
+                          ),
+                          Text(
+                            widget.pendanaanPilihan.lokasi,
+                            style: TextStyle(
+                                fontSize: 14
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
 
             SizedBox(height: 30,),
 
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: salurwidgetbg2,
-                boxShadow: [
-                   BoxShadow(
-                     color: Colors.black26,
-                     blurRadius: 15,
-                     offset: Offset(0, 8),
-                   )
-                ],
-              ),
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                child: Row(
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 5,),
+            Card(
+              elevation: 10,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: salurwidgetbg2,
+                ),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  child: Row(
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(height: 5,),
 
-                        Text(
-                          'Bagi hasil',
-                          style: TextStyle(
-                            fontSize: 15
+                          Text(
+                            'Plafond',
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 10,),
+                          SizedBox(height: 10,),
 
-                        Text(
-                          'Pendanaan ke',
-                          style: TextStyle(
+                          Text(
+                            'Tenor',
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
+                          ),
+
+                          SizedBox(height: 10,),
+
+                          Text(
+                            'Bagi hasil',
+                            style: TextStyle(
                               fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 10,),
+                          SizedBox(height: 10,),
 
-                        Text(
-                          'Angsuran Mingguan',
-                          style: TextStyle(
-                              fontSize: 15
+                          Text(
+                            'Pendanaan ke',
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 10,),
+                          SizedBox(height: 10,),
 
-                        Text(
-                          'Penghasilan perbulan',
-                          style: TextStyle(
-                              fontSize: 15
+                          Text(
+                            'Angsuran Mingguan',
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 10,),
+                          SizedBox(height: 10,),
 
-                        Text(
-                          'Pekerjaan',
-                          style: TextStyle(
-                              fontSize: 15
+                          Text(
+                            'Penghasilan perbulan',
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 10,),
+                          SizedBox(height: 10,),
 
-                        Text(
-                          'Sektor',
-                          style: TextStyle(
-                              fontSize: 15
+                          Text(
+                            'Pekerjaan',
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 5,),
-                      ],
-                    ),
+                          SizedBox(height: 10,),
 
-                    Spacer(),
-
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        SizedBox(height: 5,),
-
-                        Text(
-                          widget.pendanaanPilihan.bagihasilTotal,
-                          style: TextStyle(
-                              fontSize: 15
+                          Text(
+                            'Sektor',
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 10,),
+                          SizedBox(height: 10,),
 
-                        Text(
-                          widget.pendanaanPilihan.pendanaanKe,
-                          style: TextStyle(
-                              fontSize: 15
+                          Text(
+                            'Akad',
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 10,),
+                          SizedBox(height: 5,),
+                        ],
+                      ),
 
-                        Text(
-                          widget.pendanaanPilihan.angsuranMingguan,
-                          style: TextStyle(
-                              fontSize: 15
+                      Spacer(),
+
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          SizedBox(height: 5,),
+
+                          Text(
+                            widget.pendanaanPilihan.sisaPlafond,
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 10,),
+                          SizedBox(height: 10,),
 
-                        Text(
-                          widget.pendanaanPilihan.penghasilanPerbulan,
-                          style: TextStyle(
-                              fontSize: 15
+                          Text(
+                            widget.pendanaanPilihan.tenor,
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 10,),
+                          SizedBox(height: 10,),
 
-                        Text(
-                          widget.pendanaanPilihan.pekerjaan,
-                          style: TextStyle(
-                              fontSize: 15
+                          Text(
+                            widget.pendanaanPilihan.bagihasilTotal,
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 10,),
+                          SizedBox(height: 10,),
 
-                        Text(
-                          widget.pendanaanPilihan.sektor,
-                          style: TextStyle(
-                              fontSize: 15
+                          Text(
+                            widget.pendanaanPilihan.pendanaanKe,
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
                           ),
-                        ),
 
-                        SizedBox(height: 5,),
-                      ],
-                    ),
-                  ],
+                          SizedBox(height: 10,),
+
+                          Text(
+                            widget.pendanaanPilihan.angsuranMingguan,
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
+                          ),
+
+                          SizedBox(height: 10,),
+
+                          Text(
+                            widget.pendanaanPilihan.penghasilanPerbulan,
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
+                          ),
+
+                          SizedBox(height: 10,),
+
+                          Text(
+                            widget.pendanaanPilihan.pekerjaan,
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
+                          ),
+
+                          SizedBox(height: 10,),
+
+                          Text(
+                            widget.pendanaanPilihan.sektor,
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
+                          ),
+
+                          SizedBox(height: 10,),
+
+                          Text(
+                            widget.pendanaanPilihan.akad,
+                            style: TextStyle(
+                                fontSize: 15
+                            ),
+                          ),
+
+                          SizedBox(height: 5,),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

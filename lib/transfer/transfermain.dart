@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/transfer/transfertujuan.dart';
+import 'package:tugasakhirsalur/widget/transferriwayatcarousel.dart';
 
 class TransferBeranda extends StatelessWidget {
   Color salur1 = const Color(0xff014753);
@@ -56,7 +57,7 @@ class TransferBeranda extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'Total Aset Pendanaan',
+                          'Anda sudah berhemat',
                           style: TextStyle(
                               color: Colors.white
                           ),
@@ -88,8 +89,23 @@ class TransferBeranda extends StatelessWidget {
                 ),
               ),
             ),
-
             SizedBox(height: 15,),
+
+            Container(
+              alignment: Alignment.center,
+              child:
+              Text(
+                'Riwayat Transaksi',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+            ),
+
+            transferRiwayatCarousel(),
+
+            SizedBox(height: 20,),
 
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
