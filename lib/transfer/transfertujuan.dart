@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/transfer/transfermetodetf.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 
 
 class TransferTujuan extends StatefulWidget {
@@ -25,6 +25,9 @@ class _State extends State<TransferTujuan>{
   var maxLength = 20;
   var textLength = 0;
   final nominalControllertf = TextEditingController();
+  final rekeningTujuantf = TextEditingController();
+  final namaTujuantf = TextEditingController();
+  final beritaTransfer = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +38,7 @@ class _State extends State<TransferTujuan>{
           backgroundColor: salur1,
           title: Text(
             "Kirim Uang",
-            style: TextStyle(color: Colors.white),
+            style: GoogleFonts.poppins(color: Colors.white),
           ),
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
@@ -65,7 +68,7 @@ class _State extends State<TransferTujuan>{
                           padding: EdgeInsets.symmetric(horizontal: 15),
                           child: Text(
                             'Tujuan Kirim Uang',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
@@ -110,12 +113,27 @@ class _State extends State<TransferTujuan>{
                         Container(
                           padding: EdgeInsets.symmetric(horizontal: 15),
                           child: TextField(
+                            controller: rekeningTujuantf,
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Masukkan nomor rekening',
                               isDense: true,
                             ),
                             keyboardType: TextInputType.number,
+                          ),
+                        ),
+
+                        SizedBox(height: 20,),
+
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          child: TextField(
+                            controller: namaTujuantf,
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: 'Masukkan nama penerima',
+                              isDense: true,
+                            ),
                           ),
                         ),
 
@@ -141,7 +159,7 @@ class _State extends State<TransferTujuan>{
                               padding: const EdgeInsets.symmetric(horizontal: 15),
                               child: Text(
                                 'Minimal Transfer Rp10.000',
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                   color: Colors.red,
                                   fontSize: 13
                                 ),
@@ -155,6 +173,7 @@ class _State extends State<TransferTujuan>{
                         Container(
                           padding: EdgeInsets.symmetric(horizontal: 15),
                           child: TextField(
+                            controller: beritaTransfer,
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
                               labelText: 'Berita Transfer',
@@ -190,13 +209,16 @@ class _State extends State<TransferTujuan>{
                     ),
                     child: Text(
                       'LANJUT',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         color: Colors.black
                       ),
                     ),
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => transferMetodeTF()));
                       nominalTransfer = int.parse(nominalControllertf.text);
+                      rekeningTransferStr = rekeningTujuantf.text;
+                      beritaTransferText = beritaTransfer.text;
+                      namaTujuanText = namaTujuantf.text;
                     },
                   ),
                 ),

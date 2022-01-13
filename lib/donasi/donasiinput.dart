@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/data/datadonasi.dart';
 import 'package:tugasakhirsalur/donasi/donasimetodetf.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DonasiInput extends StatefulWidget {
   late final Donasi donasiPilihan;
@@ -39,7 +40,7 @@ class _DonasiInputState extends State<DonasiInput> {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 25,
                 ),
                 controller: nominalControllerd,
@@ -57,7 +58,7 @@ class _DonasiInputState extends State<DonasiInput> {
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Text(
                   'Minimal menyalurkan Rp1000.',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontStyle: FontStyle.italic,
                   color: Colors.red,
                 ),
@@ -70,7 +71,7 @@ class _DonasiInputState extends State<DonasiInput> {
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Text(
                 'Berikan pesan kepada penerima',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 16
                 ),
               ),
@@ -90,7 +91,7 @@ class _DonasiInputState extends State<DonasiInput> {
                     border: InputBorder.none,
                     isDense: true,
                     hintText: 'Tulis dukungan dan doa kepada penerima',
-                    hintStyle: TextStyle(
+                    hintStyle: GoogleFonts.poppins(
                       fontSize: 14
                     ),
                   ),
@@ -110,7 +111,7 @@ class _DonasiInputState extends State<DonasiInput> {
                 ),
                 child: Text(
                   'Lanjutkan pembayaran',
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                       color: Colors.black
                   ),
                 ),

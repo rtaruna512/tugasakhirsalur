@@ -6,6 +6,7 @@ import 'package:tugasakhirsalur/donasi/donasibsi.dart';
 import 'package:tugasakhirsalur/donasi/donasimandiri.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'package:tugasakhirsalur/donasi/donasibca.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DonasiMetodeTF extends StatefulWidget {
   @override
@@ -55,7 +56,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       child: Text(
                         'Nominal yang akan di donasi:',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 20,
                         ),
                         textAlign: TextAlign.left,
@@ -68,7 +69,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       child: Text(
                         'Rp$nominalDonasi',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
                           color: Colors.green,
@@ -94,7 +95,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                   children: <Widget>[
                     Text(
                       'Transfer Bank',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           fontSize: 20,
                           fontWeight: FontWeight.bold
                       ),
@@ -138,7 +139,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                       SizedBox(width: 15,),
                       Text(
                         'BCA',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold
                         ),
@@ -173,7 +174,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                       SizedBox(width: 15,),
                       Text(
                         'Mandiri',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold
                         ),
@@ -208,7 +209,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                       SizedBox(width: 15,),
                       Text(
                         'BNI',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold
                         ),
@@ -243,7 +244,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                       SizedBox(width: 15,),
                       Text(
                         'BRI',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold
                         ),
@@ -278,7 +279,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                       SizedBox(width: 15,),
                       Text(
                         'BSI',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold
                         ),

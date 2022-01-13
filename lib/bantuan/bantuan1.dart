@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Bantuan1 extends StatelessWidget {
   @override
@@ -26,7 +27,7 @@ class Bantuan1 extends StatelessWidget {
                     alignment: Alignment.center,
                     child: Text(
                       'Bantuan 1',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           color: Colors.black,
                           fontSize: 30),
                     )),

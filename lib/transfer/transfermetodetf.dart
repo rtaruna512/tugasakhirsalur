@@ -5,7 +5,7 @@ import 'package:tugasakhirsalur/transfer/transferbca.dart';
 import 'package:tugasakhirsalur/transfer/transferbni.dart';
 import 'package:tugasakhirsalur/transfer/transferbri.dart';
 import 'package:tugasakhirsalur/transfer/transfermandiri.dart';
-import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class transferMetodeTF extends StatefulWidget {
   @override
@@ -36,54 +36,6 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(
-                    color: salur1,
-                    width: 1,
-                  ),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    SizedBox(height: 15,),
-
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
-                      child: Text(
-                        'Nominal yang akan di Transfer:',
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                    SizedBox(height: 15,),
-
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
-                      child: Text(
-                        'Rp$nominalTransfer',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.green,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                    SizedBox(height: 15,),
-                  ],
-                ),
-              ),
-
-              SizedBox(height: 15,),
-
-              Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.lightGreen,
@@ -93,7 +45,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                   children: <Widget>[
                     Text(
                       'Transfer Bank',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           fontSize: 20,
                           fontWeight: FontWeight.bold
                       ),
@@ -104,7 +56,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                 ),
               ),
 
-              SizedBox(height: 15),
+              SizedBox(height: 40),
 
               InkWell(
                 onTap: () {
@@ -128,7 +80,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                         SizedBox(width: 15,),
                         Text(
                           'BCA',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold
                           ),
@@ -165,7 +117,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                         SizedBox(width: 15,),
                         Text(
                           'Mandiri',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold
                           ),
@@ -202,7 +154,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                         SizedBox(width: 15,),
                         Text(
                           'BNI',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold
                           ),
@@ -239,7 +191,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                         SizedBox(width: 15,),
                         Text(
                           'BRI',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold
                           ),
@@ -276,7 +228,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
                         SizedBox(width: 15,),
                         Text(
                           'BSI',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold
                           ),

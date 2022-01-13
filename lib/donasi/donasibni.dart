@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'dart:math';
+import 'package:google_fonts/google_fonts.dart';
 
 class donasiBNI extends StatefulWidget {
   const donasiBNI({Key? key}) : super(key: key);
@@ -65,7 +66,7 @@ class _donasiBNIState extends State<donasiBNI> {
                         SizedBox(width: 15,),
                         Text(
                           'Bank BNI',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
@@ -88,7 +89,7 @@ class _donasiBNIState extends State<donasiBNI> {
                       children: <Widget>[
                         Text(
                           '$rekeningBNI',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 30
                           ),
                         ),
@@ -108,7 +109,7 @@ class _donasiBNIState extends State<donasiBNI> {
                             ),
                             child: Text(
                               'Salin',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   color: salur1
                               ),
@@ -150,7 +151,7 @@ class _donasiBNIState extends State<donasiBNI> {
                       children: <Widget>[
                         Text(
                           'Rp$totaldonasi',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 30
                           ),
                         ),
@@ -170,7 +171,7 @@ class _donasiBNIState extends State<donasiBNI> {
                             ),
                             child: Text(
                               'Salin',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   color: salur1
                               ),

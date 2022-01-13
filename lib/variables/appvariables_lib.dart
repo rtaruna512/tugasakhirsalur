@@ -3,6 +3,9 @@ export 'appvariables_lib.dart';
 
 int nominalTransfer = 0;
 int nominalDonasi = 0;
+String rekeningTransferStr = '00000000';
+String beritaTransferText = '';
+String namaTujuanText = '';
 String rekeningBCA = '00000001';
 String rekeningMandiri = '00000002';
 String rekeningBNI = '00000003';

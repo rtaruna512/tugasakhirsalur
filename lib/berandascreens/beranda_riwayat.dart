@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BerandaRiwayat extends StatefulWidget {
 
@@ -34,12 +35,12 @@ class _BerandaRiwayatState extends State<BerandaRiwayat> {
                 onChanged: (value){
 
                 },
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   color:Colors.lightGreen[800],
                 ),
                 decoration: InputDecoration(
                     hintText: 'Cari catatan',
-                    hintStyle: TextStyle(
+                    hintStyle: GoogleFonts.poppins(
                       color:Colors.lightGreen[800],
                       fontStyle: FontStyle.italic,
                     ),

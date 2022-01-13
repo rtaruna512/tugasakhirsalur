@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/bantuan/bantuan1.dart';
 import 'package:tugasakhirsalur/bantuan/bantuan2.dart';
 import 'package:tugasakhirsalur/bantuan/bantuan3.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BantuanMain extends StatelessWidget {
   @override
@@ -22,7 +23,7 @@ class BantuanMain extends StatelessWidget {
         ),
         title: Text(
           'Bantuan',
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             color: Colors.black
           ),
         ),
@@ -48,7 +49,7 @@ class BantuanMain extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Text(
                             'Pendanaan',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 color: Colors.black,
                                 fontSize: 18
                             ),
@@ -81,7 +82,7 @@ class BantuanMain extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Text(
                             'Donasi',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                               color: Colors.black,
                               fontSize: 18
                             ),
@@ -114,7 +115,7 @@ class BantuanMain extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Text(
                             'Kirim Uang',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 color: Colors.black,
                                 fontSize: 18
                             ),

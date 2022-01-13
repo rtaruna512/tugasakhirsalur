@@ -5,6 +5,7 @@ import 'package:tugasakhirsalur/pendanaan/pendanaanmain.dart';
 import 'package:tugasakhirsalur/profile/profilemain.dart';
 import 'package:tugasakhirsalur/transfer/transfermain.dart';
 import 'package:tugasakhirsalur/widget/donasicarousel.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 
@@ -50,7 +51,7 @@ class _State extends State<BerandaMenuMain>{
                                   children: [
                                     Text(
                                       'Halo, Penyalur',
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                           fontSize: 17,
                                           color: Colors.grey
                                       ),
@@ -58,7 +59,7 @@ class _State extends State<BerandaMenuMain>{
                                     ),
                                     Text(
                                       'Selamat datang!',
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                           fontSize: 27,
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold
@@ -111,14 +112,14 @@ class _State extends State<BerandaMenuMain>{
                                         children: <Widget>[
                                           Text(
                                             'Total Aset Pendanaan',
-                                            style: TextStyle(
+                                            style: GoogleFonts.poppins(
                                                 color: Colors.white
                                             ),
                                           ),
                                           SizedBox(height: 15,),
                                           Text(
                                             'Rp250.000',
-                                            style: TextStyle(
+                                            style: GoogleFonts.poppins(
                                                 color: Colors.white,
                                                 fontSize: 27
                                             ),
@@ -168,14 +169,14 @@ class _State extends State<BerandaMenuMain>{
                                         children: <Widget>[
                                           Text(
                                             'Anda sudah berbagi',
-                                            style: TextStyle(
+                                            style: GoogleFonts.poppins(
                                                 color: Colors.white
                                             ),
                                           ),
                                           SizedBox(height: 15,),
                                           Text(
                                             'Rp250.000',
-                                            style: TextStyle(
+                                            style: GoogleFonts.poppins(
                                                 color: Colors.white,
                                                 fontSize: 27
                                             ),
@@ -334,7 +335,7 @@ class _State extends State<BerandaMenuMain>{
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Text(
                     'Ayo Salurkan',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),

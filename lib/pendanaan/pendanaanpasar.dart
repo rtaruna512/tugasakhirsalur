@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:tugasakhirsalur/widget/pendanaancarousel.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class pendanaanPasar extends StatefulWidget {
   @override
@@ -15,7 +16,7 @@ class _pendanaanPasarState extends State<pendanaanPasar> {
         centerTitle: true,
         title: Text(
           'Pasar Mitra Pendanaan',
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             color: Colors.black,
           ),
         ),
@@ -38,12 +39,12 @@ class _pendanaanPasarState extends State<pendanaanPasar> {
                 onChanged: (value){
 
                 },
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   color:Colors.grey[800],
                 ),
                 decoration: InputDecoration(
                     hintText: 'Cari tujuan donasi',
-                    hintStyle: TextStyle(
+                    hintStyle: GoogleFonts.poppins(
                       color:Colors.grey[800],
                       fontStyle: FontStyle.italic,
                     ),

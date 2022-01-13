@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:tugasakhirsalur/data/datapendanaan.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanpembayaran.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class pendanaanKeterangan extends StatefulWidget {
   final Pendanaan pendanaanPilihan;
@@ -28,7 +29,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
       appBar: AppBar(
         title: Text(
           'Tentang Mitra',
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             color: Colors.black
           ),
         ),
@@ -82,7 +83,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                     children: <Widget>[
                       Text(
                         widget.pendanaanPilihan.namaDebitor,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             fontSize: 20
                         ),
                       ),
@@ -91,7 +92,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                       Text(
                         widget.pendanaanPilihan.namaUsaha,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             fontSize: 17
                         ),
                       ),
@@ -106,7 +107,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                           ),
                           Text(
                             widget.pendanaanPilihan.lokasi,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 14
                             ),
                           ),
@@ -139,7 +140,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             'Plafond',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -148,7 +149,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             'Tenor',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -157,7 +158,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             'Bagi hasil',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                               fontSize: 15
                             ),
                           ),
@@ -166,7 +167,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             'Pendanaan ke',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -175,7 +176,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             'Angsuran Mingguan',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -184,7 +185,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             'Penghasilan perbulan',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -193,7 +194,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             'Pekerjaan',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -202,7 +203,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             'Sektor',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -211,7 +212,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             'Akad',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -230,7 +231,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             widget.pendanaanPilihan.sisaPlafond,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -239,7 +240,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             widget.pendanaanPilihan.tenor,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -248,7 +249,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             widget.pendanaanPilihan.bagihasilTotal,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -257,7 +258,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             widget.pendanaanPilihan.pendanaanKe,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -266,7 +267,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             widget.pendanaanPilihan.angsuranMingguan,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -275,7 +276,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             widget.pendanaanPilihan.penghasilanPerbulan,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -284,7 +285,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             widget.pendanaanPilihan.pekerjaan,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -293,7 +294,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             widget.pendanaanPilihan.sektor,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -302,7 +303,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                           Text(
                             widget.pendanaanPilihan.akad,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
                           ),
@@ -343,7 +344,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                               children: <Widget>[
                                 Text(
                                   'Risiko yang dihadapi mitra usaha yang mungkin terjadi:',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     color: Colors.white,
                                     fontSize: 15
                                   ),
@@ -351,7 +352,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                                 SizedBox(height: 10,),
                                 Text(
                                   '1. Persaingan antar penjual mempengaruhi permintaan penjualan',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                       color: Colors.white,
                                       fontSize: 15
                                   ),
@@ -359,7 +360,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                                 SizedBox(height: 5,),
                                 Text(
                                   '2. karakteristik dan pengetahuan market mempengaruhi penjualan',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                       color: Colors.white,
                                       fontSize: 15
                                   ),
@@ -367,7 +368,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                                 SizedBox(height: 5,),
                                 Text(
                                   '3. keadaan ekonomi wilayah mitra tersebut',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                       color: Colors.white,
                                       fontSize: 15
                                   ),
@@ -389,7 +390,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                   child:
                   Text(
                     "Resiko",
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: Colors.white,
                     ),
                   ),
@@ -411,7 +412,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                   child:
                   Text(
                     "Riwayat",
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: Colors.white,
                     ),
                   ),
@@ -434,7 +435,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
               child:
               Text(
                 "Mulai Pendanaan",
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   color: Colors.black,
                 ),
               ),

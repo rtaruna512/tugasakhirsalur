@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tugasakhirsalur/data/datadonasi.dart';
 import 'package:tugasakhirsalur/donasi/donasiketerangan.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class donasiCarousel extends StatelessWidget {
   Color salur1 = const Color(0xff014753);
@@ -85,7 +86,7 @@ class donasiCarousel extends StatelessWidget {
                                 children: <Widget>[
                                   Text(
                                     donasi.judulDonasi,
-                                    style: TextStyle(
+                                    style: GoogleFonts.poppins(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold
                                     ),

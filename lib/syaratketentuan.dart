@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SyaratKetentuan extends StatelessWidget {
   @override
@@ -25,7 +26,7 @@ class SyaratKetentuan extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: Text(
                   'Syarat & Ketentuan Umum Salur',
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
                       fontSize: 30),

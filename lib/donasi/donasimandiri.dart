@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'dart:math';
+import 'package:google_fonts/google_fonts.dart';
 
 class donasiMandiri extends StatefulWidget {
   const donasiMandiri({Key? key}) : super(key: key);
@@ -65,7 +66,7 @@ class _donasiMandiriState extends State<donasiMandiri> {
                         SizedBox(width: 15,),
                         Text(
                           'Bank Mandiri',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
@@ -88,7 +89,7 @@ class _donasiMandiriState extends State<donasiMandiri> {
                       children: <Widget>[
                         Text(
                           '$rekeningMandiri',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 30
                           ),
                         ),
@@ -108,7 +109,7 @@ class _donasiMandiriState extends State<donasiMandiri> {
                             ),
                             child: Text(
                               'Salin',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   color: salur1
                               ),
@@ -150,7 +151,7 @@ class _donasiMandiriState extends State<donasiMandiri> {
                       children: <Widget>[
                         Text(
                           'Rp$totaldonasi',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 30
                           ),
                         ),
@@ -170,7 +171,7 @@ class _donasiMandiriState extends State<donasiMandiri> {
                             ),
                             child: Text(
                               'Salin',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 15,
                                   color: salur1
                               ),

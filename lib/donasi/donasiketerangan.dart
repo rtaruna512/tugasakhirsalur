@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/data/datadonasi.dart';
 import 'package:tugasakhirsalur/donasi/donasiinput.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 
@@ -67,7 +68,7 @@ class _State extends State<DonasiKeterangan>{
                      children: <Widget>[
                        Text(
                            'Salurkan Bantuan Anda ke',
-                         style: TextStyle(
+                         style: GoogleFonts.poppins(
                            fontSize: 22,
                          ),
                        ),
@@ -76,7 +77,7 @@ class _State extends State<DonasiKeterangan>{
 
                        Text(
                          widget.donasiPilihan.judulDonasi,
-                         style: TextStyle(
+                         style: GoogleFonts.poppins(
                              fontSize: 22,
                              fontWeight: FontWeight.bold
                          ),
@@ -89,13 +90,13 @@ class _State extends State<DonasiKeterangan>{
                          children: [
                            Text(
                                'Lokasi: ',
-                             style: TextStyle(
+                             style: GoogleFonts.poppins(
                                  fontSize: 18
                              ),
                            ),
                            Text(
                              widget.donasiPilihan.lokasi,
-                             style: TextStyle(
+                             style: GoogleFonts.poppins(
                                fontSize: 18,
                                fontWeight: FontWeight.bold
                              ),
@@ -114,7 +115,7 @@ class _State extends State<DonasiKeterangan>{
                        ),
                        child: Text(
                            'Salurkan sekarang',
-                         style: TextStyle(
+                         style: GoogleFonts.poppins(
                            color: Colors.black
                          ),
                        ),
@@ -140,14 +141,14 @@ class _State extends State<DonasiKeterangan>{
                        children: [
                          Text(
                            'Informasi penggalang dana:',
-                           style: TextStyle(
+                           style: GoogleFonts.poppins(
                              fontSize: 17
                            ),
                          ),
                          SizedBox(height: 5,),
                          Text(
                            widget.donasiPilihan.keterangan,
-                           style: TextStyle(
+                           style: GoogleFonts.poppins(
                              fontSize: 17
                            ),
                          )

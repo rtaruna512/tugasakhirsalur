@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/widget/donasicarousel.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DonasiBeranda extends StatefulWidget {
   @override
@@ -41,12 +42,12 @@ class _State extends State<DonasiBeranda> {
                 onChanged: (value){
 
                 },
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   color:Colors.lightGreen[800],
                 ),
                   decoration: InputDecoration(
                     hintText: 'Cari tujuan donasi',
-                    hintStyle: TextStyle(
+                    hintStyle: GoogleFonts.poppins(
                       color:Colors.lightGreen[800],
                       fontStyle: FontStyle.italic,
                     ),
@@ -100,14 +101,14 @@ class _State extends State<DonasiBeranda> {
                       children: <Widget>[
                         Text(
                           'Anda sudah berbagi:',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color: Colors.white
                           ),
                         ),
                         SizedBox(height: 15,),
                         Text(
                           'Rp250.000',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 27
                           ),
@@ -138,7 +139,7 @@ class _State extends State<DonasiBeranda> {
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Text(
                 'Ayo Bantu Sekarang',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),

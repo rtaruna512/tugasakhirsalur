@@ -4,6 +4,7 @@ import 'package:tugasakhirsalur/data/datapendanaan.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanmain.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class pendanaanPembayaran extends StatefulWidget {
   final Pendanaan pendanaanTerpilih;
@@ -29,7 +30,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
       appBar: AppBar(
         title: Text(
           'Pembayaran Pendanaan',
-          style: TextStyle(
+          style: GoogleFonts.poppins(
               color: Colors.black
           ),
         ),
@@ -70,7 +71,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                   children: <Widget>[
                     Text(
                       widget.pendanaanTerpilih.namaDebitor,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           fontSize: 18
                       ),
                     ),
@@ -79,7 +80,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
 
                     Text(
                       widget.pendanaanTerpilih.namaUsaha,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           fontSize: 15
                       ),
                     ),
@@ -94,7 +95,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                         ),
                         Text(
                           widget.pendanaanTerpilih.lokasi,
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 12
                           ),
                         ),
@@ -121,14 +122,14 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                     Spacer(),
                     Text(
                       'Lakukan pembayaran dalam',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           fontSize: 17
                       ),
                     ),
                     Spacer(),
                     Text(
                       '01:00:00',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         color: Colors.red,
                         fontSize: 17
                       ),
@@ -153,7 +154,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                 children: [
                   Text(
                     'Pembayaran',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 20,
                       fontWeight: FontWeight.bold
                     ),
@@ -163,14 +164,14 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                     children: [
                       Text(
                         'Total plafon',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 18,
                         ),
                       ),
                       Spacer(),
                       Text(
                         'Rp5.000.000',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 18,
                         ),
                       ),
@@ -198,7 +199,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                       children: [
                         Text(
                           'TOTAL',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 18,
                             fontWeight: FontWeight.bold
                           ),
@@ -206,7 +207,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                         Spacer(),
                         Text(
                           'Rp5.000.000',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 18,
                             fontWeight: FontWeight.bold
                           ),
@@ -232,7 +233,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                 children: [
                   Text(
                     'Lakukan Pembayaran',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                         fontSize: 20,
                         fontWeight: FontWeight.bold
                     ),
@@ -255,7 +256,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                         Spacer(),
                         Text(
                           '$rekeningBCA',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 18
                           ),
                         ),
@@ -272,7 +273,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                             ),
                             child: Text(
                               'Salin',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 12,
                                   color: Colors.black
                               ),
@@ -294,7 +295,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                         Spacer(),
                         Text(
                           '$rekeningMandiri',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 18
                           ),
                         ),
@@ -311,7 +312,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                             ),
                             child: Text(
                               'Salin',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 12,
                                   color: Colors.black
                               ),
@@ -333,7 +334,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                         Spacer(),
                         Text(
                           '$rekeningBNI',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 18
                           ),
                         ),
@@ -350,7 +351,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                             ),
                             child: Text(
                               'Salin',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 12,
                                   color: Colors.black
                               ),
@@ -372,7 +373,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                         Spacer(),
                         Text(
                           '$rekeningBRI',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 18
                           ),
                         ),
@@ -389,7 +390,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                             ),
                             child: Text(
                               'Salin',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 12,
                                   color: Colors.black
                               ),
@@ -411,7 +412,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                         Spacer(),
                         Text(
                           '$rekeningBSI',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontSize: 18
                           ),
                         ),
@@ -428,7 +429,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                             ),
                             child: Text(
                               'Salin',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                   fontSize: 12,
                                   color: Colors.black
                               ),
@@ -450,7 +451,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
               },
               child: Text(
                 'Kembali ke halaman pendanaan',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 18,
                   color: salur1,
                 ),

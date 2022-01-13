@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:tugasakhirsalur/data/datapendanaan.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanketerangan.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class pendanaanCarousel extends StatelessWidget {
   Color salur1 = const Color(0xff014753);
@@ -66,7 +67,7 @@ class pendanaanCarousel extends StatelessWidget {
                             children: <Widget>[
                               Text(
                                 pendanaan.namaDebitor,
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                   fontSize: 14
                                 ),
                               ),
@@ -75,7 +76,7 @@ class pendanaanCarousel extends StatelessWidget {
 
                               Text(
                                 pendanaan.namaUsaha,
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                     fontSize: 12
                                 ),
                               ),
@@ -97,7 +98,7 @@ class pendanaanCarousel extends StatelessWidget {
                                       children: [
                                         Text(
                                           'Sisa Plafond',
-                                          style: TextStyle(
+                                          style: GoogleFonts.poppins(
                                               fontSize: 12
                                           ),
                                         ),
@@ -106,7 +107,7 @@ class pendanaanCarousel extends StatelessWidget {
 
                                         Text(
                                           'Tenor',
-                                          style: TextStyle(
+                                          style: GoogleFonts.poppins(
                                               fontSize: 12
                                           ),
                                         ),
@@ -115,7 +116,7 @@ class pendanaanCarousel extends StatelessWidget {
 
                                         Text(
                                           'Bagi Hasil',
-                                          style: TextStyle(
+                                          style: GoogleFonts.poppins(
                                               fontSize: 12
                                           ),
                                         ),
@@ -128,7 +129,7 @@ class pendanaanCarousel extends StatelessWidget {
                                       children: [
                                         Text(
                                           pendanaan.sisaPlafond,
-                                          style: TextStyle(
+                                          style: GoogleFonts.poppins(
                                               fontSize: 12
                                           ),
                                         ),
@@ -137,7 +138,7 @@ class pendanaanCarousel extends StatelessWidget {
 
                                         Text(
                                           pendanaan.tenor,
-                                          style: TextStyle(
+                                          style: GoogleFonts.poppins(
                                               fontSize: 12
                                           ),
                                         ),
@@ -146,7 +147,7 @@ class pendanaanCarousel extends StatelessWidget {
 
                                         Text(
                                           pendanaan.bagihasil,
-                                          style: TextStyle(
+                                          style: GoogleFonts.poppins(
                                               fontSize: 12
                                           ),
                                         ),

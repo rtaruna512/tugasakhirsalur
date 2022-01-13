@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/transfer/transfertujuan.dart';
 import 'package:tugasakhirsalur/widget/transferriwayatcarousel.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TransferBeranda extends StatelessWidget {
   Color salur1 = const Color(0xff014753);
@@ -13,6 +14,13 @@ class TransferBeranda extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: salur1,
+          centerTitle: true,
+          title: Text(
+            'Pendanaan',
+            style: GoogleFonts.poppins(
+              color: Colors.white,
+            ),
+          ),
           elevation: 0,
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
@@ -58,14 +66,14 @@ class TransferBeranda extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'Anda sudah berhemat',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color: Colors.white
                           ),
                         ),
                         SizedBox(height: 15,),
                         Text(
                           'Rp250.000',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 27
                           ),
@@ -96,7 +104,7 @@ class TransferBeranda extends StatelessWidget {
               child:
               Text(
                 'Riwayat Transaksi',
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 20,
                   fontWeight: FontWeight.bold
                 ),
@@ -115,7 +123,7 @@ class TransferBeranda extends StatelessWidget {
                 ),
                 child: Text(
                   'Kirim Uang Sekarang',
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                     color: Colors.black
                   ),
                 ),
