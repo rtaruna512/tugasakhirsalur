@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class pendanaanCarousel extends StatelessWidget {
   Color salur1 = const Color(0xff014753);
+  Color salurwidgetbg2 = const Color(0x14B3C824);
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +69,8 @@ class pendanaanCarousel extends StatelessWidget {
                               Text(
                                 pendanaan.namaDebitor,
                                 style: GoogleFonts.poppins(
-                                  fontSize: 14
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold
                                 ),
                               ),
 
@@ -84,11 +86,11 @@ class pendanaanCarousel extends StatelessWidget {
                               SizedBox(height: 5,),
 
                               Container(
-                                width: 175,
+                                width: 220,
                                 padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  border: Border.all()
+                                  color: salurwidgetbg2,
                                 ),
                                 child: Row(
                                   children: [
@@ -128,7 +130,7 @@ class pendanaanCarousel extends StatelessWidget {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          pendanaan.sisaPlafond,
+                                          pendanaan.sisaPlafond.toString(),
                                           style: GoogleFonts.poppins(
                                               fontSize: 12
                                           ),
