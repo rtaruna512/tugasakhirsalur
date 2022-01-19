@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tugasakhirsalur/data/datapendanaan.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanketerangan.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class pendanaanCarousel extends StatelessWidget {
   Color salur1 = const Color(0xff014753);
@@ -51,11 +52,47 @@ class pendanaanCarousel extends StatelessWidget {
                         children: <Widget>[
                           Column(
                             mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               CircleAvatar(
                                 radius: 55,
                                 backgroundImage: ExactAssetImage(pendanaan.avatarURL),
+                              ),
+                              SizedBox(height: 5,),
+                              Column(
+                                children: [
+                                  Text(
+                                    'Crowdfunding',
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 12
+                                    ),
+                                  ),
+                                  LinearPercentIndicator(
+                                    width: 116,
+                                    lineHeight: 10,
+                                    percent: pendanaan.persentasePendanaan/100,
+                                    linearStrokeCap: LinearStrokeCap.roundAll,
+                                    backgroundColor: Colors.grey,
+                                    progressColor: salur1,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(width: 50,),
+                                      Text(
+                                        pendanaan.sisaHariPendanaan.toString(),
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 11,
+                                        ),
+                                      ),
+                                      Text(
+                                        ' hari lagi',
+                                        style: GoogleFonts.poppins(
+                                            fontSize: 11
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                ],
                               ),
                             ],
                           ),
@@ -85,77 +122,79 @@ class pendanaanCarousel extends StatelessWidget {
 
                               SizedBox(height: 5,),
 
-                              Container(
-                                width: 220,
-                                padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: salurwidgetbg2,
-                                ),
-                                child: Row(
-                                  children: [
-                                    Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          'Sisa Plafond',
-                                          style: GoogleFonts.poppins(
-                                              fontSize: 12
+                              Card(
+                                child: Container(
+                                  width: 210,
+                                  padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: salurwidgetbg2,
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            'Sisa Plafond',
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 12
+                                            ),
                                           ),
-                                        ),
 
-                                        SizedBox(height: 5,),
+                                          SizedBox(height: 5,),
 
-                                        Text(
-                                          'Tenor',
-                                          style: GoogleFonts.poppins(
-                                              fontSize: 12
+                                          Text(
+                                            'Tenor',
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 12
+                                            ),
                                           ),
-                                        ),
 
-                                        SizedBox(height: 5,),
+                                          SizedBox(height: 5,),
 
-                                        Text(
-                                          'Bagi Hasil',
-                                          style: GoogleFonts.poppins(
-                                              fontSize: 12
+                                          Text(
+                                            'Bagi Hasil',
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 12
+                                            ),
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    Spacer(),
-                                    Column(
-                                      crossAxisAlignment: CrossAxisAlignment.end,
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          pendanaan.sisaPlafond.toString(),
-                                          style: GoogleFonts.poppins(
-                                              fontSize: 12
+                                        ],
+                                      ),
+                                      Spacer(),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            pendanaan.sisaPlafond.toString(),
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 12
+                                            ),
                                           ),
-                                        ),
 
-                                        SizedBox(height: 5,),
+                                          SizedBox(height: 5,),
 
-                                        Text(
-                                          pendanaan.tenor,
-                                          style: GoogleFonts.poppins(
-                                              fontSize: 12
+                                          Text(
+                                            pendanaan.tenor,
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 12
+                                            ),
                                           ),
-                                        ),
 
-                                        SizedBox(height: 5,),
+                                          SizedBox(height: 5,),
 
-                                        Text(
-                                          pendanaan.bagihasil,
-                                          style: GoogleFonts.poppins(
-                                              fontSize: 12
+                                          Text(
+                                            pendanaan.bagihasil,
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 12
+                                            ),
                                           ),
-                                        ),
-                                      ],
-                                    )
-                                  ],
+                                        ],
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
 

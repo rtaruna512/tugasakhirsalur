@@ -49,69 +49,76 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
         padding: const EdgeInsets.all(15),
         child: ListView(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: ExactAssetImage(widget.pendanaanTerpilih.avatarURL),
-                    ),
-                  ],
-                ),
-
-                SizedBox(width: 10,),
-
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      widget.pendanaanTerpilih.namaDebitor,
-                      style: GoogleFonts.poppins(
-                          fontSize: 18
-                      ),
-                    ),
-
-                    SizedBox(height: 5,),
-
-                    Text(
-                      widget.pendanaanTerpilih.namaUsaha,
-                      style: GoogleFonts.poppins(
-                          fontSize: 15
-                      ),
-                    ),
-
-                    SizedBox(height: 5,),
-
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.location_on,
-                          size: 13,
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          boxShadow: [BoxShadow(
+                            blurRadius: 10,
+                            color: Colors.black26,
+                            offset: Offset(0,6),)
+                          ],
                         ),
-                        Text(
-                          widget.pendanaanTerpilih.lokasi,
-                          style: GoogleFonts.poppins(
-                              fontSize: 12
+                        child: CircleAvatar(
+                          radius: 40,
+                          backgroundImage: ExactAssetImage(widget.pendanaanTerpilih.avatarURL),
+
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(width: 10,),
+
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Text(
+                        widget.pendanaanTerpilih.namaDebitor,
+                        style: GoogleFonts.poppins(
+                            fontSize: 17
+                        ),
+                      ),
+                      Text(
+                        widget.pendanaanTerpilih.namaUsaha,
+                        style: GoogleFonts.poppins(
+                            fontSize: 13
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.location_on,
+                            size: 14,
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-              ],
+                          Text(
+                            widget.pendanaanTerpilih.lokasi,
+                            style: GoogleFonts.poppins(
+                                fontSize: 14
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
 
             SizedBox(height: 15,),
 
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: EdgeInsets.symmetric(horizontal: 30),
               child: Container(
-                height: 50,
+                height: 40,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all()
@@ -121,17 +128,17 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                   children: [
                     Spacer(),
                     Text(
-                      'Lakukan pembayaran dalam',
+                      'Lakukan pembayaran dalam ',
                       style: GoogleFonts.poppins(
-                          fontSize: 17
+                          fontSize: 13
                       ),
                     ),
-                    Spacer(),
                     Text(
                       '01:00:00',
                       style: GoogleFonts.poppins(
                         color: Colors.red,
-                        fontSize: 17
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold
                       ),
                     ),
                     Spacer(),
@@ -142,304 +149,323 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
 
             SizedBox(height: 15),
 
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all()
-              ),
-              padding: EdgeInsets.all(15),
-              child:
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Pembayaran',
-                    style: GoogleFonts.poppins(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                  SizedBox(height: 10,),
-                  Row(
-                    children: [
-                      Text(
-                        'Total plafon',
-                        style: GoogleFonts.poppins(
-                          fontSize: 18,
-                        ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all()
+                ),
+                padding: EdgeInsets.all(15),
+                child:
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Pembayaran',
+                      style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold
                       ),
-                      Spacer(),
-                      Text(
-                        'Rp5.000.000',
-                        style: GoogleFonts.poppins(
-                          fontSize: 18,
-                        ),
-                      ),
-                    ],
-                  ),
-
-                  SizedBox(height: 10,),
-
-                  Divider(
-                    color: Colors.black,
-                    thickness: 1.5,
-                  ),
-
-                  SizedBox(height: 10,),
-
-                  Container(
-                    height: 50,
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.lightGreen
                     ),
-                    child:
+                    SizedBox(height: 10,),
                     Row(
                       children: [
                         Text(
-                          'TOTAL',
+                          'Total plafon',
                           style: GoogleFonts.poppins(
                             fontSize: 18,
-                            fontWeight: FontWeight.bold
                           ),
                         ),
                         Spacer(),
                         Text(
-                          'Rp5.000.000',
+                          'Rp',
                           style: GoogleFonts.poppins(
                             fontSize: 18,
-                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        Text(
+                          nominalPendanaanAkhir.toString(),
+                          style: GoogleFonts.poppins(
+                            fontSize: 18,
                           ),
                         ),
                       ],
                     ),
-                  ),
-                ],
+
+                    SizedBox(height: 10,),
+
+                    Divider(
+                      color: Colors.black,
+                      thickness: 1.5,
+                    ),
+
+                    SizedBox(height: 10,),
+
+                    Container(
+                      height: 50,
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.lightGreen
+                      ),
+                      child:
+                      Row(
+                        children: [
+                          Text(
+                            'TOTAL',
+                            style: GoogleFonts.poppins(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Rp',
+                            style: GoogleFonts.poppins(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          Text(
+                            nominalPendanaanAkhir.toString(),
+                            style: GoogleFonts.poppins(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
 
             SizedBox(height: 15),
 
-            Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all()
-              ),
-              padding: EdgeInsets.all(15),
-              child:
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Lakukan Pembayaran',
-                    style: GoogleFonts.poppins(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all()
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+                child:
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Lakukan Pembayaran',
+                      style: GoogleFonts.poppins(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 10,),
+                    SizedBox(height: 10,),
 
-                  Container(
-                    child: Row(
-                      children: <Widget>[
-                        Column(
-                          children: [
-                            Image.asset(
-                              'assets/images/bca.png',
-                              height: 25,
-                              width: 100,
-                              alignment: Alignment.centerLeft,
-                            ),
-                          ],
-                        ),
-                        Spacer(),
-                        Text(
-                          '$rekeningBCA',
-                          style: GoogleFonts.poppins(
-                              fontSize: 18
-                          ),
-                        ),
-                        Spacer(),
-                        RawMaterialButton(
-                          onPressed: () {
-                            Clipboard.setData(ClipboardData(text: rekeningBCA));
-                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tersalin ke clipboard!')));
-                          },
-                          child: Container(
-                            padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
-                            decoration: BoxDecoration(
-                              color: Colors.grey
-                            ),
-                            child: Text(
-                              'Salin',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 12,
-                                  color: Colors.black
+                    Container(
+                      child: Row(
+                        children: <Widget>[
+                          Column(
+                            children: [
+                              Image.asset(
+                                'assets/images/bca.png',
+                                height: 25,
+                                width: 100,
+                                alignment: Alignment.centerLeft,
                               ),
+                            ],
+                          ),
+                          Spacer(),
+                          Text(
+                            '$rekeningBCA',
+                            style: GoogleFonts.poppins(
+                                fontSize: 18
                             ),
                           ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    child: Row(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/images/mandiri.png',
-                          height: 25,
-                          width: 100,
-                          alignment: Alignment.centerLeft,
-                        ),
-                        Spacer(),
-                        Text(
-                          '$rekeningMandiri',
-                          style: GoogleFonts.poppins(
-                              fontSize: 18
-                          ),
-                        ),
-                        Spacer(),
-                        RawMaterialButton(
-                          onPressed: () {
-                            Clipboard.setData(ClipboardData(text: rekeningMandiri));
-                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tersalin ke clipboard!')));
-                          },
-                          child: Container(
-                            padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
-                            decoration: BoxDecoration(
+                          Spacer(),
+                          RawMaterialButton(
+                            onPressed: () {
+                              Clipboard.setData(ClipboardData(text: rekeningBCA));
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tersalin ke clipboard!')));
+                            },
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
+                              decoration: BoxDecoration(
                                 color: Colors.grey
-                            ),
-                            child: Text(
-                              'Salin',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 12,
-                                  color: Colors.black
+                              ),
+                              child: Text(
+                                'Salin',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 12,
+                                    color: Colors.black
+                                ),
                               ),
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                  Container(
-                    child: Row(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/images/bni.png',
-                          height: 25,
-                          width: 100,
-                          alignment: Alignment.centerLeft,
-                        ),
-                        Spacer(),
-                        Text(
-                          '$rekeningBNI',
-                          style: GoogleFonts.poppins(
-                              fontSize: 18
+                    Container(
+                      child: Row(
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/images/mandiri.png',
+                            height: 25,
+                            width: 100,
+                            alignment: Alignment.centerLeft,
                           ),
-                        ),
-                        Spacer(),
-                        RawMaterialButton(
-                          onPressed: () {
-                            Clipboard.setData(ClipboardData(text: rekeningBNI));
-                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tersalin ke clipboard!')));
-                          },
-                          child: Container(
-                            padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
-                            decoration: BoxDecoration(
-                                color: Colors.grey
+                          Spacer(),
+                          Text(
+                            '$rekeningMandiri',
+                            style: GoogleFonts.poppins(
+                                fontSize: 18
                             ),
-                            child: Text(
-                              'Salin',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 12,
-                                  color: Colors.black
+                          ),
+                          Spacer(),
+                          RawMaterialButton(
+                            onPressed: () {
+                              Clipboard.setData(ClipboardData(text: rekeningMandiri));
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tersalin ke clipboard!')));
+                            },
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
+                              decoration: BoxDecoration(
+                                  color: Colors.grey
+                              ),
+                              child: Text(
+                                'Salin',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 12,
+                                    color: Colors.black
+                                ),
                               ),
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                  Container(
-                    child: Row(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/images/bri.png',
-                          height: 25,
-                          width: 100,
-                          alignment: Alignment.centerLeft,
-                        ),
-                        Spacer(),
-                        Text(
-                          '$rekeningBRI',
-                          style: GoogleFonts.poppins(
-                              fontSize: 18
+                    Container(
+                      child: Row(
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/images/bni.png',
+                            height: 25,
+                            width: 100,
+                            alignment: Alignment.centerLeft,
                           ),
-                        ),
-                        Spacer(),
-                        RawMaterialButton(
-                          onPressed: () {
-                            Clipboard.setData(ClipboardData(text: rekeningBRI));
-                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tersalin ke clipboard!')));
-                          },
-                          child: Container(
-                            padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
-                            decoration: BoxDecoration(
-                                color: Colors.grey
+                          Spacer(),
+                          Text(
+                            '$rekeningBNI',
+                            style: GoogleFonts.poppins(
+                                fontSize: 18
                             ),
-                            child: Text(
-                              'Salin',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 12,
-                                  color: Colors.black
+                          ),
+                          Spacer(),
+                          RawMaterialButton(
+                            onPressed: () {
+                              Clipboard.setData(ClipboardData(text: rekeningBNI));
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tersalin ke clipboard!')));
+                            },
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
+                              decoration: BoxDecoration(
+                                  color: Colors.grey
+                              ),
+                              child: Text(
+                                'Salin',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 12,
+                                    color: Colors.black
+                                ),
                               ),
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                  Container(
-                    child: Row(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/images/bsi.png',
-                          height: 25,
-                          width: 100,
-                          alignment: Alignment.centerLeft,
-                        ),
-                        Spacer(),
-                        Text(
-                          '$rekeningBSI',
-                          style: GoogleFonts.poppins(
-                              fontSize: 18
+                    Container(
+                      child: Row(
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/images/bri.png',
+                            height: 25,
+                            width: 100,
+                            alignment: Alignment.centerLeft,
                           ),
-                        ),
-                        Spacer(),
-                        RawMaterialButton(
-                          onPressed: () {
-                            Clipboard.setData(ClipboardData(text: rekeningBSI));
-                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tersalin ke clipboard!')));
-                          },
-                          child: Container(
-                            padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
-                            decoration: BoxDecoration(
-                                color: Colors.grey
+                          Spacer(),
+                          Text(
+                            '$rekeningBRI',
+                            style: GoogleFonts.poppins(
+                                fontSize: 18
                             ),
-                            child: Text(
-                              'Salin',
-                              style: GoogleFonts.poppins(
-                                  fontSize: 12,
-                                  color: Colors.black
+                          ),
+                          Spacer(),
+                          RawMaterialButton(
+                            onPressed: () {
+                              Clipboard.setData(ClipboardData(text: rekeningBRI));
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tersalin ke clipboard!')));
+                            },
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
+                              decoration: BoxDecoration(
+                                  color: Colors.grey
+                              ),
+                              child: Text(
+                                'Salin',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 12,
+                                    color: Colors.black
+                                ),
                               ),
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                    Container(
+                      child: Row(
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/images/bsi.png',
+                            height: 25,
+                            width: 100,
+                            alignment: Alignment.centerLeft,
+                          ),
+                          Spacer(),
+                          Text(
+                            '$rekeningBSI',
+                            style: GoogleFonts.poppins(
+                                fontSize: 18
+                            ),
+                          ),
+                          Spacer(),
+                          RawMaterialButton(
+                            onPressed: () {
+                              Clipboard.setData(ClipboardData(text: rekeningBSI));
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tersalin ke clipboard!')));
+                            },
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
+                              decoration: BoxDecoration(
+                                  color: Colors.grey
+                              ),
+                              child: Text(
+                                'Salin',
+                                style: GoogleFonts.poppins(
+                                    fontSize: 12,
+                                    color: Colors.black
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
 

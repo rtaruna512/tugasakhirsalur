@@ -342,10 +342,7 @@ class _State extends State<BerandaMenuMain>{
                   ),
                 ),
 
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                  child: donasiCarousel(),
-                ),
+                donasiCarousel(),
               ]
           )
       ),

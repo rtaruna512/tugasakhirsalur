@@ -72,7 +72,7 @@ class donasiCarousel extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            height: 100,
+                            height: 150,
                             width: 300,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),

@@ -3,8 +3,6 @@ class Pendanaan {
   String namaDebitor;
   String namaUsaha;
   String lokasi;
-  int plafond;
-  int sisaPlafond;
   String tenor;
   String bagihasil;
   String bagihasilTotal;
@@ -14,7 +12,10 @@ class Pendanaan {
   String pekerjaan;
   String sektor;
   String akad;
+  int plafond;
+  int sisaPlafond;
   int persentasePendanaan;
+  int sisaHariPendanaan;
 
 
 
@@ -34,7 +35,8 @@ class Pendanaan {
     required this.pekerjaan,
     required this.sektor,
     required this.akad,
-    required this.persentasePendanaan
+    required this.persentasePendanaan,
+    required this.sisaHariPendanaan
   });
 }
 
@@ -45,7 +47,7 @@ List<Pendanaan> pendanaantujuan = [
     namaUsaha: 'Kedai Kopi',
     lokasi: 'Payakumbuh, Sumatera Barat',
     plafond: 5000000,
-    sisaPlafond: 3750000,
+    sisaPlafond: 4000000,
     tenor: '60 Minggu',
     bagihasil: '10%',
     bagihasilTotal: 'Rp300.000',
@@ -55,7 +57,8 @@ List<Pendanaan> pendanaantujuan = [
     pekerjaan: 'Barista',
     sektor: 'Perdagangan',
     akad: 'Perjanjian pendanaan',
-    persentasePendanaan: 25,
+    persentasePendanaan: 20,
+    sisaHariPendanaan: 2,
   ),
   Pendanaan(
       avatarURL: 'assets/images/8065449799611009-Male_8.jpg',
@@ -63,7 +66,7 @@ List<Pendanaan> pendanaantujuan = [
       namaUsaha: 'Kedai Kopi',
       lokasi: 'Payakumbuh, Sumatera Barat',
       plafond: 5000000,
-      sisaPlafond: 1250000,
+      sisaPlafond: 1000000,
       tenor: '60 Minggu',
       bagihasil: '10%',
       bagihasilTotal: 'Rp300.000',
@@ -73,7 +76,8 @@ List<Pendanaan> pendanaantujuan = [
       pekerjaan: 'Barista',
       sektor: 'Perdagangan',
       akad: 'Perjanjian pendanaan',
-      persentasePendanaan: 75,
+      persentasePendanaan: 80,
+      sisaHariPendanaan: 7
   ),
   Pendanaan(
       avatarURL: 'assets/images/3823423148494587-Female_10.jpg',
@@ -92,6 +96,7 @@ List<Pendanaan> pendanaantujuan = [
       sektor: 'Perdagangan',
       akad: 'Perjanjian pendanaan',
       persentasePendanaan: 40,
+      sisaHariPendanaan: 4
   ),
   Pendanaan(
       avatarURL: 'assets/images/7301399346372452-Female_8.jpg',
@@ -110,6 +115,7 @@ List<Pendanaan> pendanaantujuan = [
       sektor: 'Perdagangan',
       akad: 'Perjanjian pendanaan',
       persentasePendanaan: 90,
+      sisaHariPendanaan: 5
   ),
   Pendanaan(
       avatarURL: 'assets/images/08132247416911542-Female_14.jpg',
@@ -128,5 +134,6 @@ List<Pendanaan> pendanaantujuan = [
       sektor: 'Perdagangan',
       akad: 'Perjanjian pendanaan',
       persentasePendanaan: 50,
+      sisaHariPendanaan: 10
   ),
 ];

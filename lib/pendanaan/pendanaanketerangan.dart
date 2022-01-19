@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:tugasakhirsalur/data/datapendanaan.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanpembayaran.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 
 class pendanaanKeterangan extends StatefulWidget {
   final Pendanaan pendanaanPilihan;
@@ -23,20 +25,19 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
   Color salurwidgetbg = const Color(0xb3D2DDAF);
   Color salurwidgetbg2 = const Color(0x14B3C824);
 
-  int nominalPendanaan = 0;
 
   void add () {
     setState(() {
-      if (nominalPendanaan != widget.pendanaanPilihan.sisaPlafond) {
-        nominalPendanaan = nominalPendanaan + 50000;
+      if (nominalPendanaanAwal != widget.pendanaanPilihan.sisaPlafond) {
+        nominalPendanaanAwal = nominalPendanaanAwal + 100000;
       }
     });
   }
 
   void minus () {
     setState(() {
-      if (nominalPendanaan != 0) {
-        nominalPendanaan = nominalPendanaan - 50000;
+      if (nominalPendanaanAwal != 100000) {
+        nominalPendanaanAwal = nominalPendanaanAwal - 100000;
       }
     });
   }
@@ -71,7 +72,6 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
               padding: EdgeInsets.all(15),
               children: [
                 Container(
-                  height: 100,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -101,7 +101,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Text(
                             widget.pendanaanPilihan.namaDebitor,
@@ -109,18 +109,12 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                                 fontSize: 17
                             ),
                           ),
-
-
-
                           Text(
                             widget.pendanaanPilihan.namaUsaha,
                             style: GoogleFonts.poppins(
                                 fontSize: 13
                             ),
                           ),
-
-
-
                           Row(
                             children: [
                               Icon(
@@ -141,7 +135,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                   ),
                 ),
 
-                SizedBox(height: 25,),
+                SizedBox(height: 15,),
 
                 Card(
                   elevation: 10,
@@ -339,7 +333,8 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                   ),
                 ),
 
-                SizedBox(height: 30,),
+                SizedBox(height: 15,),
+
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -388,6 +383,8 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                   ],
                 ),
 
+                SizedBox(height: 15,),
+
                 Container(
                   padding: EdgeInsets.all(15),
                   decoration: BoxDecoration(
@@ -432,13 +429,13 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                     ],
                   ),
                 ),
-                SizedBox(height: 500,),
+                SizedBox(height: 250,),
               ],
             ),
             
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-              height: 250,
+              padding: EdgeInsets.fromLTRB(30, 15, 30, 30),
+              height: 300,
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
@@ -463,12 +460,21 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                                   fontSize: 14
                               ),
                             ),
+                            SizedBox(height: 15,),
                             Text(
                               'Perkiraan total hasil',
                               style: GoogleFonts.poppins(
                                   fontSize: 14
                               ),
                             ),
+                            SizedBox(height: 15,),
+                            Text(
+                              'Crowdfunding',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 14
+                              ),
+                            ),
+                            SizedBox(height: 11,)
                           ],
                         ),
                         Spacer(),
@@ -482,6 +488,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                                 fontWeight: FontWeight.bold
                               ),
                             ),
+                            SizedBox(height: 15,),
                             Text(
                               'Rp111500',
                               style: GoogleFonts.poppins(
@@ -489,11 +496,74 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                                 fontWeight: FontWeight.bold
                               ),
                             ),
+                            SizedBox(height: 15,),
+                            LinearPercentIndicator(
+                              width: 120,
+                              lineHeight: 14.0,
+                              percent: widget.pendanaanPilihan.persentasePendanaan/100,
+                              linearStrokeCap: LinearStrokeCap.roundAll,
+                              backgroundColor: Colors.grey,
+                              progressColor: salur1,
+                            ),
+                            Container(
+                              child: Row(
+                                children: [
+                                  SizedBox(width: 50,),
+                                  Text(
+                                    widget.pendanaanPilihan.sisaHariPendanaan.toString(),
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 11,
+                                    ),
+                                  ),
+                                  Text(
+                                    ' hari lagi',
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 11
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                       ],
                     ),
                   ),
+
+                  SizedBox(height: 15,),
+
+                  Container(
+                    child: Row(
+                      children: [
+                        SizedBox(width: 50,),
+                        Text(
+                          'Sisa Plafond Rp',
+                          style: GoogleFonts.poppins(
+                            fontSize: 11,
+                          ),
+                        ),
+                        Text(
+                          widget.pendanaanPilihan.sisaPlafond.toString(),
+                          style: GoogleFonts.poppins(
+                            fontSize: 11,
+                          ),
+                        ),
+                        Text(
+                          ' dari total Rp',
+                          style: GoogleFonts.poppins(
+                              fontSize: 11
+                          ),
+                        ),
+                        Text(
+                          widget.pendanaanPilihan.plafond.toString(),
+                          style: GoogleFonts.poppins(
+                            fontSize: 11,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
                   Container(
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -528,8 +598,10 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                               )
                           ),
                           child: Text(
-                            nominalPendanaan.toString(),
-                            style: GoogleFonts.poppins(),
+                            nominalPendanaanAwal.toString(),
+                            style: GoogleFonts.poppins(
+                              fontSize: 25,
+                            ),
                           ),
                         ),
                         Spacer(),
@@ -555,9 +627,12 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                     ),
                   ),
 
+                  SizedBox(height: 15,),
+
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => pendanaanPembayaran(pendanaanTerpilih: widget.pendanaanPilihan,)));
+                      nominalPendanaanAkhir = nominalPendanaanAwal;
                     },
                     style: ElevatedButton.styleFrom(
                       fixedSize: Size(335, 50),
