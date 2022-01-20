@@ -11,7 +11,7 @@ class donasiHalamanAkhir extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: salur1,
-        title: Text('Kirim Uang'),
+        title: Text('Donasi'),
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.close),

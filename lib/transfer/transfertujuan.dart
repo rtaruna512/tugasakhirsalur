@@ -26,7 +26,6 @@ class _State extends State<TransferTujuan>{
   var textLength = 0;
   final nominalControllertf = TextEditingController();
   final rekeningTujuantf = TextEditingController();
-  final namaTujuantf = TextEditingController();
   final beritaTransfer = TextEditingController();
 
   @override
@@ -125,20 +124,6 @@ class _State extends State<TransferTujuan>{
 
                         SizedBox(height: 20,),
 
-                        Container(
-                          padding: EdgeInsets.symmetric(horizontal: 15),
-                          child: TextField(
-                            controller: namaTujuantf,
-                            decoration: InputDecoration(
-                              border: OutlineInputBorder(),
-                              labelText: 'Masukkan nama penerima',
-                              isDense: true,
-                            ),
-                          ),
-                        ),
-
-                        SizedBox(height: 20,),
-
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -218,7 +203,6 @@ class _State extends State<TransferTujuan>{
                       nominalTransfer = int.parse(nominalControllertf.text);
                       rekeningTransferStr = rekeningTujuantf.text;
                       beritaTransferText = beritaTransfer.text;
-                      namaTujuanText = namaTujuantf.text;
                     },
                   ),
                 ),

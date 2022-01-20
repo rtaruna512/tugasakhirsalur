@@ -31,7 +31,7 @@ class _transferBCAState extends State<transferBCA> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: salur1,
-        title: Text('Pilih Metode Transfer'),
+        title: Text('Konfirmasi Transfer'),
         leading: IconButton(
           icon: Icon(Icons.close),
           onPressed: () {
@@ -337,7 +337,7 @@ class _transferBCAState extends State<transferBCA> {
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Text('$rekeningTransferStr'),
-                                  Text('Sdr $namaTujuanText')
+                                  Text('Sdr Budi')
                                 ],
                               )
                             ],
@@ -424,7 +424,13 @@ class _transferBCAState extends State<transferBCA> {
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity,50),
                 ),
-                child: Text('Saya Sudah Transfer'),
+                child: Text(
+                  'SAYA SUDAH TRANSFER',
+                  style: GoogleFonts.poppins(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600
+                  ),
+                ),
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context) => transferCek()));
                 },

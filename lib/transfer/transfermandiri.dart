@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart';
+import 'package:tugasakhirsalur/transfer/transfercek.dart';
 import 'package:tugasakhirsalur/transfer/transfermain.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'dart:math';
@@ -30,7 +31,7 @@ class _transferMandiriState extends State<transferMandiri> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: salur1,
-        title: Text('Pilih Metode Transfer'),
+        title: Text('Konfirmasi Transfer'),
         leading: IconButton(
           icon: Icon(Icons.close),
           onPressed: () {
@@ -336,7 +337,7 @@ class _transferMandiriState extends State<transferMandiri> {
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Text('$rekeningTransferStr'),
-                                  Text('Sdr $namaTujuanText')
+                                  Text('Sdr Budi')
                                 ],
                               )
                             ],
@@ -423,9 +424,15 @@ class _transferMandiriState extends State<transferMandiri> {
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity,50),
                 ),
-                child: Text('Saya Sudah Transfer'),
+                child: Text(
+                  'SAYA SUDAH TRANSFER',
+                  style: GoogleFonts.poppins(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600
+                  ),
+                ),
                 onPressed: (){
-                  //transfer transfer
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => transferCek()));
                 },
               ),
             ),

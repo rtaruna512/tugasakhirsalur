@@ -182,16 +182,33 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
             SizedBox(height: 30,),
 
             Container(
-              alignment: Alignment.centerLeft,
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: Text(
-                'Portofolio Saya',
-                style: GoogleFonts.poppins(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold
-                ),
-                textAlign: TextAlign.center,
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Row(
+                children: [
+                  Text(
+                    'Portofolio Saya',
+                    style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Spacer(),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        primary: salur1,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)
+                        )
+                    ),
+                    onPressed: () {
+
+                    },
+                    child: Text(
+                      'Transaksi saya',
+                      style: GoogleFonts.poppins(),
+                    ),
+                  )
+                ],
               ),
             ),
 
@@ -459,6 +476,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                   "Lihat Pasar Pendanaan",
                   style: GoogleFonts.poppins(
                     color: Colors.black,
+                    fontWeight: FontWeight.w600
                   ),
                 ),
               ),
