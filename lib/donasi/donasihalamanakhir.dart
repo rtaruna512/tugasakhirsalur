@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tugasakhirsalur/transfer/transfermain.dart';
+import 'package:tugasakhirsalur/donasi/donasimain.dart';
 
-class transferCek extends StatelessWidget {
+class donasiHalamanAkhir extends StatelessWidget {
   Color salur1 = const Color(0xff014753);
 
   @override
@@ -26,27 +26,20 @@ class transferCek extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset('assets/images/3.png'),
-            SizedBox(height: 30,),
+            Image.asset('assets/images/1.png'),
             Text(
-              'Salur sedang mengecek transaksi',
+              'Terima kasih sudah berdonasi',
               style: GoogleFonts.poppins(
-                fontSize: 21,
-                fontWeight: FontWeight.w500
-              ),
-            ),
-            Text(
-              'Uang yang sudah kami terima akan langsung dikirim ke rekening tujuan',
-              style: GoogleFonts.poppins(
-                fontSize: 12,
+                fontSize: 30,
+                fontWeight: FontWeight.w600
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 40,),
+            SizedBox(height: 15,),
             Text(
-              'Kami akan menginfokan transaksi melalui halaman beranda kirim uang, refresh secara berkala halaman beranda kirim uang',
+              '“Terima kasih atas donasi yang anda berikan, donasi yang anda berikan sangat membantu, semoga sehat selalu dan tidak berhenti untuk berdonasi”',
               style: GoogleFonts.poppins(
-                fontSize: 13,
+                fontSize: 15,
               ),
               textAlign: TextAlign.center,
             ),
@@ -59,7 +52,7 @@ class transferCek extends StatelessWidget {
               child:
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => TransferBeranda()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => DonasiBeranda()));
                 },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
@@ -71,7 +64,6 @@ class transferCek extends StatelessWidget {
                   "Kembali ke Beranda",
                   style: GoogleFonts.poppins(
                     color: Colors.black,
-                    fontWeight: FontWeight.w600
                   ),
                 ),
               ),

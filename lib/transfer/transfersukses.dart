@@ -63,7 +63,7 @@ class transferSukses extends StatelessWidget {
                 Spacer(),
               ],
             ),
-            SizedBox(height: 40,),
+            SizedBox(height: 20,),
             Container(
               width: double.infinity,
               child: Card(
@@ -91,39 +91,58 @@ class transferSukses extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Padding(
                           padding: EdgeInsets.symmetric(vertical: 15),
-                          child: Text(
-                            transferStatus.nominalTransfer,
-                            style: GoogleFonts.poppins(
-                              fontSize: 23,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            textAlign: TextAlign.center,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Rp',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 23,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                              Text(
+                                transferStatus.nominalTransfer.toString(),
+                                style: GoogleFonts.poppins(
+                                  fontSize: 23,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
                           ),
                         ),
                       ),
 
                       Padding(
-                        padding: EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 10),
+                        padding: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
                         child: Row(
                           children: [
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Nama Penerima'),
-                                Text('Bank Penerima'),
-                                Text('Nomor Rekening Penerima'),
-                                Text('Waktu Transaksi'),
+                                Text('Nama Penerima', style: GoogleFonts.poppins(fontSize: 13),),
+                                Text('Bank Penerima', style: GoogleFonts.poppins(fontSize: 13),),
+                                Text('Nomor Rekening Penerima', style: GoogleFonts.poppins(fontSize: 13),),
+                                Text('Waktu Transaksi', style: GoogleFonts.poppins(fontSize: 13),),
                               ],
                             ),
                             Spacer(),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                Text('asd'),
-                                Text('asd'),
-                                Text('asd'),
-                                Text('asd'),
+                                Text(transferStatus.namaTujuan, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w500),),
+                                Text(transferStatus.bankTujuan, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w500),),
+                                Text(transferStatus.rekeneingTujuan, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w500),),
+                                Row(
+                                  children: [
+                                    Text(transferStatus.tanggalTransfer, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w500),),
+                                    Text(', ', style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w500),),
+                                    Text(transferStatus.jamTransfer, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w500),),
+                                  ],
+                                ),
                               ],
                             )
                           ],
@@ -142,9 +161,9 @@ class transferSukses extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Berita Transfer'),
+                            Text('Berita Transfer', style: GoogleFonts.poppins(fontSize: 13, decoration: TextDecoration.underline),),
                             SizedBox(height: 10,),
-                            Text('')
+                            Text(transferStatus.beritaTransfer, style: GoogleFonts.poppins(fontSize: 13),)
                           ],
                         ),
                       ),
@@ -154,6 +173,20 @@ class transferSukses extends StatelessWidget {
                 ),
               ),
             ),
+
+            SizedBox(height: 15,),
+
+            Container(
+              child: Text(
+                'Silahkan screenshot halaman ini sebagai bukti transaksi anda',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.w500
+                ),
+              ),
+            ),
+
+            SizedBox(height: 15,),
 
             Container(
               height: 50,

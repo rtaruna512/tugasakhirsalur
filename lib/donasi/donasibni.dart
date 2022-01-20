@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart';
+import 'package:tugasakhirsalur/donasi/donasihalamanakhir.dart';
+import 'package:tugasakhirsalur/donasi/donasimain.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'dart:math';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,7 +30,7 @@ class _donasiBNIState extends State<donasiBNI> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: salur1,
-        title: Text('Pilih Metode Transfer'),
+        title: Text('Konfirmasi Donasi'),
         leading: IconButton(
           icon: Icon(Icons.close),
           onPressed: () {
@@ -84,13 +86,13 @@ class _donasiBNIState extends State<donasiBNI> {
                       borderRadius: BorderRadius.circular(5),
                       color: Colors.grey[350],
                     ),
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.symmetric(horizontal: 5),
                     child: Row(
                       children: <Widget>[
                         Text(
                           '$rekeningBNI',
                           style: GoogleFonts.poppins(
-                              fontSize: 30
+                              fontSize: 22
                           ),
                         ),
                         Spacer(),
@@ -110,7 +112,7 @@ class _donasiBNIState extends State<donasiBNI> {
                             child: Text(
                               'Salin',
                               style: GoogleFonts.poppins(
-                                  fontSize: 15,
+                                  fontSize: 10,
                                   color: salur1
                               ),
                             ),
@@ -126,15 +128,47 @@ class _donasiBNIState extends State<donasiBNI> {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: Text(
-                      'Nominal : $nominalDonasi',
+                      'Total Nominal Transfer',
+                      style: GoogleFonts.poppins(
+                          fontSize: 18
+                      ),
                     ),
                   ),
 
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    padding: EdgeInsets.symmetric(horizontal: 15),
-                    child: Text(
-                      'Kode Unik : $kodeunik',
+                  SizedBox(height: 10,),
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Nominal',
+                            ),
+                            SizedBox(height: 5,),
+                            Text(
+                              'Kode Unik',
+                            ),
+                          ],
+                        ),
+                        SizedBox(width: 25,),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '$nominalDonasi',
+                            ),
+                            SizedBox(height: 5,),
+                            Text(
+                              '$kodeunik',
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
 
@@ -146,13 +180,13 @@ class _donasiBNIState extends State<donasiBNI> {
                       borderRadius: BorderRadius.circular(5),
                       color: Colors.grey[350],
                     ),
-                    padding: EdgeInsets.all(15),
+                    padding: EdgeInsets.symmetric(horizontal: 5),
                     child: Row(
                       children: <Widget>[
                         Text(
                           'Rp$totaldonasi',
                           style: GoogleFonts.poppins(
-                              fontSize: 30
+                              fontSize: 22
                           ),
                         ),
                         Spacer(),
@@ -172,7 +206,7 @@ class _donasiBNIState extends State<donasiBNI> {
                             child: Text(
                               'Salin',
                               style: GoogleFonts.poppins(
-                                  fontSize: 15,
+                                  fontSize: 10,
                                   color: salur1
                               ),
                             ),
@@ -186,6 +220,45 @@ class _donasiBNIState extends State<donasiBNI> {
                 ],
               ),
             ),
+
+            SizedBox(height: 15,),
+
+            Container(
+              decoration: BoxDecoration(
+                  border: Border.all(
+                      color: salur1,
+                      width: 1
+                  )
+              ),
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 15),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Spacer(),
+                        Text('Transfer sebelum'),
+                        SizedBox(width: 5,),
+                        Text(
+                          '10 Desember 2021 13:25',
+                          style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        SizedBox(width: 5,),
+                        Text('atau'),
+                        Spacer()
+                      ],
+                    ),
+                    Text('transaksi akan dibatalkan oleh sistem')
+                  ],
+                ),
+              ),
+            ),
             Spacer(),
 
             Container(
@@ -194,14 +267,39 @@ class _donasiBNIState extends State<donasiBNI> {
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity,50),
                 ),
-                child: Text('Saya Sudah Transfer'),
+                child: Text(
+                  'SAYA SUDAH TRANSFER',
+                  style: GoogleFonts.poppins(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600
+                  ),
+                ),
                 onPressed: (){
-                  //transfer transfer
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => donasiHalamanAkhir()));
                 },
               ),
             ),
 
-            SizedBox(height: 40,)
+            SizedBox(height: 5,),
+
+            Container(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => DonasiBeranda()));
+                },
+                style: TextButton.styleFrom(
+                  textStyle: GoogleFonts.poppins(
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+                child: Text(
+                  'Batalkan Transaksi',
+                  style: GoogleFonts.poppins(
+                    color: salur1,
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),

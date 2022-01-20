@@ -4,7 +4,6 @@ import 'package:tugasakhirsalur/donasi/donasibni.dart';
 import 'package:tugasakhirsalur/donasi/donasibri.dart';
 import 'package:tugasakhirsalur/donasi/donasibsi.dart';
 import 'package:tugasakhirsalur/donasi/donasimandiri.dart';
-import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'package:tugasakhirsalur/donasi/donasibca.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -23,7 +22,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: salur1,
-        title: Text('Pilih Metode donasi'),
+        title: Text('Pilih Metode Transfer'),
         leading: IconButton(
           icon: Icon(Icons.close),
           onPressed: () {
@@ -37,54 +36,6 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(
-                    color: salur1,
-                    width: 1,
-                  ),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    SizedBox(height: 15,),
-
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
-                      child: Text(
-                        'Nominal yang akan di donasi:',
-                        style: GoogleFonts.poppins(
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                    SizedBox(height: 15,),
-
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
-                      child: Text(
-                        'Rp$nominalDonasi',
-                        style: GoogleFonts.poppins(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.green,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-
-                    SizedBox(height: 15,),
-                  ],
-                ),
-              ),
-
-              SizedBox(height: 15,),
-
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -106,193 +57,192 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
                 ),
               ),
 
-              SizedBox(height: 15),
+              SizedBox(height: 40),
 
-              RawMaterialButton(
-                onPressed: () {
+              InkWell(
+                onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => donasiBCA()));
                 },
-                elevation: 2,
-                child:
-                Container(
+                child: Ink(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: salurwidgetbg,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: Offset(0, 3)
-                      )
-                    ]
+                    color: Colors.grey[350],
                   ),
-                  padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                  child: Row(
-                    children: <Widget>[
-                      Image.asset(
-                        'assets/images/bca.png',
-                        height: 25,
-                        width: 100,
-                        alignment: Alignment.centerLeft,
-                      ),
-                      SizedBox(width: 15,),
-                      Text(
-                        'BCA',
-                        style: GoogleFonts.poppins(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/bca.png',
+                          height: 25,
+                          width: 100,
+                          alignment: Alignment.centerLeft,
                         ),
-                      ),
-                      Spacer(),
-                      Icon(Icons.arrow_forward_ios)
-                    ],
+                        SizedBox(width: 15,),
+                        Text(
+                          'BCA',
+                          style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        Spacer(),
+                        Icon(Icons.arrow_forward_ios)
+                      ],
+                    ),
                   ),
                 ),
               ),
 
               SizedBox(height: 15,),
 
-              RawMaterialButton(
-                onPressed: () {
+              InkWell(
+                onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => donasiMandiri()));
                 },
-                child: Container(
+                child: Ink(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: salurwidgetbg
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey[350],
                   ),
-                  padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                  child: Row(
-                    children: <Widget>[
-                      Image.asset(
-                        'assets/images/mandiri.png',
-                        height: 25,
-                        width: 100,
-                        alignment: Alignment.centerLeft,
-                      ),
-                      SizedBox(width: 15,),
-                      Text(
-                        'Mandiri',
-                        style: GoogleFonts.poppins(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/mandiri.png',
+                          height: 25,
+                          width: 100,
+                          alignment: Alignment.centerLeft,
                         ),
-                      ),
-                      Spacer(),
-                      Icon(Icons.arrow_forward_ios)
-                    ],
+                        SizedBox(width: 15,),
+                        Text(
+                          'Mandiri',
+                          style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        Spacer(),
+                        Icon(Icons.arrow_forward_ios)
+                      ],
+                    ),
                   ),
                 ),
               ),
 
               SizedBox(height: 15,),
 
-              RawMaterialButton(
-                onPressed: () {
+              InkWell(
+                onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => donasiBNI()));
                 },
-                child: Container(
+                child: Ink(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: salurwidgetbg
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey[350],
                   ),
-                  padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                  child: Row(
-                    children: <Widget>[
-                      Image.asset(
-                        'assets/images/bni.png',
-                        height: 25,
-                        width: 100,
-                        alignment: Alignment.centerLeft,
-                      ),
-                      SizedBox(width: 15,),
-                      Text(
-                        'BNI',
-                        style: GoogleFonts.poppins(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/bni.png',
+                          height: 25,
+                          width: 100,
+                          alignment: Alignment.centerLeft,
                         ),
-                      ),
-                      Spacer(),
-                      Icon(Icons.arrow_forward_ios)
-                    ],
+                        SizedBox(width: 15,),
+                        Text(
+                          'BNI',
+                          style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        Spacer(),
+                        Icon(Icons.arrow_forward_ios)
+                      ],
+                    ),
                   ),
                 ),
               ),
 
               SizedBox(height: 15,),
 
-              RawMaterialButton(
-                onPressed: () {
+              InkWell(
+                onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => donasiBRI()));
                 },
-                child: Container(
+                child: Ink(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: salurwidgetbg
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey[350],
                   ),
-                  padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                  child: Row(
-                    children: <Widget>[
-                      Image.asset(
-                        'assets/images/bri.png',
-                        height: 25,
-                        width: 100,
-                        alignment: Alignment.centerLeft,
-                      ),
-                      SizedBox(width: 15,),
-                      Text(
-                        'BRI',
-                        style: GoogleFonts.poppins(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/bri.png',
+                          height: 25,
+                          width: 100,
+                          alignment: Alignment.centerLeft,
                         ),
-                      ),
-                      Spacer(),
-                      Icon(Icons.arrow_forward_ios)
-                    ],
+                        SizedBox(width: 15,),
+                        Text(
+                          'BRI',
+                          style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        Spacer(),
+                        Icon(Icons.arrow_forward_ios)
+                      ],
+                    ),
                   ),
                 ),
               ),
 
               SizedBox(height: 15,),
 
-              RawMaterialButton(
-                onPressed: () {
+              InkWell(
+                onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => donasiBSI()));
                 },
-                child: Container(
+                child: Ink(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: salurwidgetbg
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey[350],
                   ),
-                  padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                  child: Row(
-                    children: <Widget>[
-                      Image.asset(
-                        'assets/images/bsi.png',
-                        height: 25,
-                        width: 100,
-                        alignment: Alignment.centerLeft,
-                      ),
-                      SizedBox(width: 15,),
-                      Text(
-                        'BSI',
-                        style: GoogleFonts.poppins(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/bsi.png',
+                          height: 25,
+                          width: 100,
+                          alignment: Alignment.centerLeft,
                         ),
-                      ),
-                      Spacer(),
-                      Icon(Icons.arrow_forward_ios)
-                    ],
+                        SizedBox(width: 15,),
+                        Text(
+                          'BSI',
+                          style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        Spacer(),
+                        Icon(Icons.arrow_forward_ios)
+                      ],
+                    ),
                   ),
                 ),
               ),
 
               SizedBox(height: 15,),
-
             ],
           ),
         ),

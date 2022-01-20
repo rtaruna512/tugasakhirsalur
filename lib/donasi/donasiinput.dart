@@ -37,6 +37,20 @@ class _DonasiInputState extends State<DonasiInput> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            SizedBox(height: 30,),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: Text(
+                'Donasi yang anda berikan',
+                style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600
+                ),
+              ),
+            ),
+
+            SizedBox(height: 15,),
+
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
@@ -95,24 +109,30 @@ class _DonasiInputState extends State<DonasiInput> {
                       fontSize: 14
                     ),
                   ),
-                  maxLength: 100,
+                  maxLength: 55,
 
                 ),
               ),
             ),
 
-            SizedBox(height: 30,),
+            Spacer(),
 
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity,50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)
+                  )
                 ),
                 child: Text(
                   'Lanjutkan pembayaran',
                   style: GoogleFonts.poppins(
-                      color: Colors.black
+                    color: Colors.black,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600
+
                   ),
                 ),
                 onPressed: (){
@@ -121,6 +141,7 @@ class _DonasiInputState extends State<DonasiInput> {
                 },
               ),
             ),
+            SizedBox(height: 30,),
           ],
         ),
       ),

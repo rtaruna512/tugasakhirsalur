@@ -96,7 +96,7 @@ class transferRiwayatCarousel extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  riwayattf.nominalTransfer,
+                                  riwayattf.nominalTransfer.toString(),
                                   style: GoogleFonts.poppins(
                                       fontSize: 16
                                   ),
