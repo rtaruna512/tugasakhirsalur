@@ -22,6 +22,9 @@ class _transferMandiriState extends State<transferMandiri> {
   final kodeunik = Random().nextInt(1000);
   bool isVisible = false;
 
+  String buttonText = 'Lihat';
+  bool isPressed = true;
+
 
   @override
   Widget build(BuildContext context) {
@@ -281,10 +284,14 @@ class _transferMandiriState extends State<transferMandiri> {
                       )
                   ),
                   onPressed: () {
-                    setState(() => isVisible = !isVisible);;
+                    isPressed = !isPressed;
+                    setState(() {
+                      isVisible = !isVisible;
+                      isPressed == true ? buttonText = "Lihat" : buttonText = "Tutup";
+                    });
                   },
                   child: Text(
-                    'Lihat',
+                    buttonText,
                     style: GoogleFonts.poppins(
                         color: Colors.white
                     ),

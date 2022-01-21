@@ -88,6 +88,8 @@ class _State extends State<BerandaMenuMain>{
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
+                                SizedBox(width: 15,),
+
                                 Container(
                                   width: 320,
                                   height: 200,
@@ -200,6 +202,79 @@ class _State extends State<BerandaMenuMain>{
                                   ),
                                 ),
 
+                                SizedBox(width: 15,),
+
+                                Container(
+                                  width: 320,
+                                  height: 200,
+                                  padding: EdgeInsets.all(15),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(15),
+                                      gradient: LinearGradient(
+                                          begin: Alignment.topLeft,
+                                          end: Alignment(0, 0),
+                                          colors: <Color>[
+                                            gradientGLight,
+                                            gradientGdark
+                                          ]
+                                      )
+                                  ),
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: <Widget>[
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            'Saldo Kode Unik anda',
+                                            style: GoogleFonts.poppins(
+                                                color: Colors.white
+                                            ),
+                                          ),
+                                          SizedBox(height: 10,),
+                                          Text(
+                                            'Rp250.000',
+                                            style: GoogleFonts.poppins(
+                                                color: Colors.white,
+                                                fontSize: 27
+                                            ),
+                                          ),
+                                          SizedBox(height: 30,),
+                                          Text(
+                                            'Anda sudah berhemat',
+                                            style: GoogleFonts.poppins(
+                                                color: Colors.white,
+                                                fontSize: 11
+                                            ),
+                                          ),
+                                          Text(
+                                            'Rp100.000',
+                                            style: GoogleFonts.poppins(
+                                                color: Colors.white,
+                                                fontSize: 11
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      Spacer(),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.end,
+                                        children: <Widget>[
+                                          Image.asset(
+                                            'assets/images/mastercard.png',
+                                            height: 45,
+                                            width: 45,
+                                            fit: BoxFit.fitWidth,
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+
+                                SizedBox(width: 15,),
                               ],
                             ),
                           ),

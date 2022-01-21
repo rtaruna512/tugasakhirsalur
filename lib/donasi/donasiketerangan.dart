@@ -175,7 +175,7 @@ class _State extends State<DonasiKeterangan>{
                      ),
                    ),
 
-                   SizedBox(height: 15,),
+                   SizedBox(height: 30,),
 
                    Container(
                      padding: EdgeInsets.symmetric(horizontal: 10),
@@ -196,7 +196,8 @@ class _State extends State<DonasiKeterangan>{
                        },
                      ),
                    ),
-                   SizedBox(height: 15,),
+
+                   SizedBox(height: 30,),
 
                    Padding(
                      padding: EdgeInsets.symmetric(horizontal: 10),
@@ -283,7 +284,7 @@ class _State extends State<DonasiKeterangan>{
                      ),
                    ),
 
-                   SizedBox(height: 15,),
+                   SizedBox(height: 30,),
 
                    Container(
                      padding: EdgeInsets.symmetric(horizontal: 10),

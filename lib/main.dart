@@ -36,6 +36,7 @@ class _State extends State<loginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
@@ -201,8 +202,9 @@ class _State extends State<loginPage> {
                           ],
                           mainAxisAlignment: MainAxisAlignment.center,
 
-                        )),
-
+                        )
+                    ),
+                    Spacer(),
                   ],
                 ),
               ],

@@ -22,6 +22,8 @@ class _transferBCAState extends State<transferBCA> {
   final kodeunik = Random().nextInt(1000);
   bool isVisible = false;
 
+  String buttonText = 'Lihat';
+  bool isPressed = true;
 
   @override
   Widget build(BuildContext context) {
@@ -281,10 +283,14 @@ class _transferBCAState extends State<transferBCA> {
                     )
                   ),
                   onPressed: () {
-                    setState(() => isVisible = !isVisible);;
+                    isPressed = !isPressed;
+                    setState(() {
+                      isVisible = !isVisible;
+                      isPressed == true ? buttonText = "Lihat" : buttonText = "Tutup";
+                    });
                   },
                   child: Text(
-                    'Lihat',
+                    buttonText,
                     style: GoogleFonts.poppins(
                       color: Colors.white
                     ),

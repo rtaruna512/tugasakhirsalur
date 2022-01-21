@@ -42,6 +42,9 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
     });
   }
 
+  bool isVisibleResiko = false;
+  bool isVisibleRiwayat = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -342,6 +345,10 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
+                        setState(() {
+                          isVisibleResiko = !isVisibleResiko;
+                          isVisibleRiwayat = false;
+                        });
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(165, 30),
@@ -363,7 +370,10 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                     ElevatedButton(
                       onPressed: () {
-
+                        setState(() {
+                          isVisibleRiwayat = !isVisibleRiwayat;
+                          isVisibleResiko = false;
+                        });
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(165, 30),
@@ -385,51 +395,78 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                 SizedBox(height: 15,),
 
-                Container(
-                  padding: EdgeInsets.all(15),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: salur1
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'Risiko yang dihadapi mitra usaha yang mungkin terjadi:',
-                        style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontSize: 15
+                Visibility(
+                  visible: isVisibleResiko,
+                  child: Container(
+                    padding: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: salur1
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'Risiko yang dihadapi mitra usaha yang mungkin terjadi:',
+                          style: GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 15
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 10,),
-                      Text(
-                        '1. Persaingan antar penjual mempengaruhi permintaan penjualan',
-                        style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontSize: 15
+                        SizedBox(height: 10,),
+                        Text(
+                          '1. Persaingan antar penjual mempengaruhi permintaan penjualan',
+                          style: GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 15
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 5,),
-                      Text(
-                        '2. karakteristik dan pengetahuan market mempengaruhi penjualan',
-                        style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontSize: 15
+                        SizedBox(height: 5,),
+                        Text(
+                          '2. karakteristik dan pengetahuan market mempengaruhi penjualan',
+                          style: GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 15
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 5,),
-                      Text(
-                        '3. keadaan ekonomi wilayah mitra tersebut',
-                        style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontSize: 15
+                        SizedBox(height: 5,),
+                        Text(
+                          '3. keadaan ekonomi wilayah mitra tersebut',
+                          style: GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 15
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-                SizedBox(height: 250,),
+                Visibility(
+                  visible: isVisibleRiwayat,
+                  child: Container(
+                    padding: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: salur1
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'Mitra belum memiliki riwayat pendanaan sebelumnya',
+                          style: GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 15
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                SizedBox(height: 300,),
               ],
             ),
             

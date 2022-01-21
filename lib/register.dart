@@ -231,6 +231,7 @@ class _State extends State<signupPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                       )
                   ),
+                  Spacer(),
                 ],
               ),
             ],

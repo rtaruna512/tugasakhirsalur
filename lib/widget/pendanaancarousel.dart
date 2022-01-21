@@ -167,11 +167,21 @@ class pendanaanCarousel extends StatelessWidget {
                                         crossAxisAlignment: CrossAxisAlignment.end,
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                          Text(
-                                            pendanaan.sisaPlafond.toString(),
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 12
-                                            ),
+                                          Row(
+                                            children: [
+                                              Text(
+                                                'Rp',
+                                                style: GoogleFonts.poppins(
+                                                    fontSize: 12
+                                                ),
+                                              ),
+                                              Text(
+                                                pendanaan.sisaPlafond.toString(),
+                                                style: GoogleFonts.poppins(
+                                                    fontSize: 12
+                                                ),
+                                              ),
+                                            ],
                                           ),
 
                                           SizedBox(height: 5,),
