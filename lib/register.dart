@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/bantuan/bantuanmain.dart';
-import 'package:tugasakhirsalur/main.dart';
+import 'package:tugasakhirsalur/login.dart';
 import 'package:tugasakhirsalur/syaratketentuan.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/widget/backgroundpainter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,10 +18,6 @@ class _State extends State<signupPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   bool _isHidden = true;
-  Color salur1 = const Color(0xff014753);
-  Color gradientGLight = const Color(0xffD7E14C);
-  Color gradientGdark = const Color(0xff041417);
-  Color salurwidgetbg2 = const Color(0x66a7a7a7);
 
   @override
   Widget build(BuildContext context) {
@@ -80,12 +77,12 @@ class _State extends State<signupPage> {
                     child: Container(
                       padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                       decoration: BoxDecoration(
-                          color: salurwidgetbg2,
+                          color: salur11,
                           borderRadius: BorderRadius.circular(5)
                       ),
                       child: TextField(
                         style: GoogleFonts.poppins(
-                            fontSize: 20
+                            fontSize: 15
                         ),
                         controller: nameController,
                         decoration: InputDecoration(
@@ -93,7 +90,7 @@ class _State extends State<signupPage> {
                           hintText: 'Masukkan Nama Lengkap',
                           hintStyle: GoogleFonts.poppins(
                               color: Colors.black,
-                              fontSize: 20
+                              fontSize: 15
                           ),
                         ),
                       ),
@@ -107,12 +104,12 @@ class _State extends State<signupPage> {
                     child: Container(
                       padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                       decoration: BoxDecoration(
-                          color: salurwidgetbg2,
+                          color: salur11,
                           borderRadius: BorderRadius.circular(5)
                       ),
                       child: TextField(
                         style: GoogleFonts.poppins(
-                            fontSize: 20
+                            fontSize: 15
                         ),
                         controller: emailController,
                         decoration: InputDecoration(
@@ -120,7 +117,7 @@ class _State extends State<signupPage> {
                           hintText: 'Masukkan Email',
                           hintStyle: GoogleFonts.poppins(
                               color: Colors.black,
-                              fontSize: 20
+                              fontSize: 15
                           ),
                         ),
                       ),
@@ -134,10 +131,13 @@ class _State extends State<signupPage> {
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          color: salurwidgetbg2
+                          color: salur11
                       ),
                       padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                       child: TextField(
+                        style: GoogleFonts.poppins(
+                            fontSize: 15
+                        ),
                         obscureText: _isHidden,
                         controller: passwordController,
                         decoration: InputDecoration(
@@ -145,13 +145,13 @@ class _State extends State<signupPage> {
                           hintText: 'Password',
                           hintStyle: GoogleFonts.poppins(
                               color: Colors.black,
-                              fontSize: 20
+                              fontSize: 15
                           ),
                           suffix: InkWell(
                             onTap: _togglePasswordView,
                             child: Icon(
                               Icons.visibility,
-                              size: 20,
+                              size: 18,
                             ),
                           ),
                         ),

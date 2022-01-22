@@ -4,11 +4,11 @@ import 'package:tugasakhirsalur/data/datatransferriwayat.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/transfer/transfercek.dart';
 import 'package:tugasakhirsalur/transfer/transfersukses.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 
 class transferRiwayatCarousel extends StatelessWidget {
-  Color salur1 = const Color(0xff014753);
-  Color salurwidgetbg2 = const Color(0x14B3C824);
+
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class transferRiwayatCarousel extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                            color: salurwidgetbg2,
+                            color: salur8,
                             borderRadius: BorderRadius.circular(20),
                         ),
 

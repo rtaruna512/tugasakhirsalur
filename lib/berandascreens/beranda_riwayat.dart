@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 class BerandaRiwayat extends StatefulWidget {
 
@@ -9,10 +10,6 @@ class BerandaRiwayat extends StatefulWidget {
 }
 
 class _BerandaRiwayatState extends State<BerandaRiwayat> {
-  Color salur1 = const Color(0xff014753);
-  Color salur2 = const Color(0xcc014753);
-  Color gradientGLight = const Color(0xffD7E14C);
-  Color gradientGdark = const Color(0xff041417);
 
   @override
   Widget build(BuildContext context) {

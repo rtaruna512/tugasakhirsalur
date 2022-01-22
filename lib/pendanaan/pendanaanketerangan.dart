@@ -5,6 +5,7 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:tugasakhirsalur/data/datapendanaan.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanpembayaran.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 
 class pendanaanKeterangan extends StatefulWidget {
@@ -16,14 +17,7 @@ class pendanaanKeterangan extends StatefulWidget {
 }
 
 class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
-  Color salur1 = const Color(0xff014753);
-  Color salur2 = const Color(0xcc014753);
-  Color salur3 = const Color(0x80d2ddaf);
-  Color salur4 = const Color(0xff79834e);
-  Color gradientGLight = const Color(0xffD7E14C);
-  Color gradientGdark = const Color(0xff041417);
-  Color salurwidgetbg = const Color(0xb3D2DDAF);
-  Color salurwidgetbg2 = const Color(0x14B3C824);
+
 
 
   void add () {
@@ -145,7 +139,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      color: salurwidgetbg2,
+                      color: salur8,
                     ),
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),

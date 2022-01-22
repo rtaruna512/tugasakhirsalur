@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/data/datadonasi.dart';
 import 'package:tugasakhirsalur/donasi/donasimetodetf.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,8 +14,6 @@ class DonasiInput extends StatefulWidget {
 }
 
 class _DonasiInputState extends State<DonasiInput> {
-  Color salur1 = const Color(0xff014753);
-  Color salurwidgetbg = const Color(0xb3D2DDAF);
   final nominalControllerd = TextEditingController();
 
   @override
@@ -60,7 +59,7 @@ class _DonasiInputState extends State<DonasiInput> {
                 controller: nominalControllerd,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  fillColor: salurwidgetbg,
+                  fillColor: salur7,
                   filled: true,
                   prefixText: "Rp",
                   labelText: 'Nominal Donasi'

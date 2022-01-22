@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/berandascreens/beranda_main.dart';
 import 'package:tugasakhirsalur/berandascreens/beranda_riwayat.dart';
 import 'package:flutter/services.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 
 
@@ -12,10 +13,6 @@ class BerandaMenu extends StatefulWidget {
 }
 
 class _State extends State<BerandaMenu>{
-  Color salur1 = const Color(0xff014753);
-  Color salur2 = const Color(0xcc014753);
-  Color gradientGLight = const Color(0xffD7E14C);
-  Color gradientGdark = const Color(0xff041417);
   int currentIndex = 0;
   final screens = [
     BerandaMenuMain(),

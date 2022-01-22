@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanpasar.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 
 
@@ -11,12 +12,7 @@ class pendanaanBeranda extends StatefulWidget {
 }
 
 class _pendanaanBerandaState extends State<pendanaanBeranda> {
-  Color salur1 = const Color(0xff014753);
-  Color salur2 = const Color(0xcc014753);
-  Color salur3 = const Color(0x80d2ddaf);
-  Color salur4 = const Color(0xff79834e);
-  Color gradientGLight = const Color(0xffD7E14C);
-  Color gradientGdark = const Color(0xff041417);
+
 
   @override
   Widget build(BuildContext context) {

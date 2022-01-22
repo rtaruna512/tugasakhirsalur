@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart';
 import 'package:tugasakhirsalur/transfer/transfercek.dart';
 import 'package:tugasakhirsalur/transfer/transfermain.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'dart:math';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +19,6 @@ class transferMandiri extends StatefulWidget {
 }
 
 class _transferMandiriState extends State<transferMandiri> {
-  Color salur1 = const Color(0xff014753);
   final kodeunik = Random().nextInt(1000);
   bool isVisible = false;
 

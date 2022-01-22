@@ -5,6 +5,7 @@ import 'package:tugasakhirsalur/data/datadonasi.dart';
 import 'package:tugasakhirsalur/donasi/donasiinput.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 
 class DonasiKeterangan extends StatefulWidget {
@@ -16,9 +17,6 @@ class DonasiKeterangan extends StatefulWidget {
 }
 
 class _State extends State<DonasiKeterangan>{
-  Color salur1 = const Color(0xff014753);
-  Color salurwidgetbg = const Color(0xb3D2DDAF);
-  Color salurwidgetbg3 = const Color(0xffD2DDAF);
 
   @override
   Widget build(BuildContext context) {
@@ -131,7 +129,7 @@ class _State extends State<DonasiKeterangan>{
                            lineHeight: 14.0,
                            percent: widget.donasiPilihan.penggalanganTerkumpul/widget.donasiPilihan.targetPenggalangan,
                            linearStrokeCap: LinearStrokeCap.butt,
-                           backgroundColor: salurwidgetbg3,
+                           backgroundColor: salur9,
                            progressColor: salur1,
                          ),
                          Row(
@@ -303,7 +301,7 @@ class _State extends State<DonasiKeterangan>{
                            padding: EdgeInsets.all(10),
                            alignment: Alignment.topLeft,
                            decoration: BoxDecoration(
-                             color: salurwidgetbg,
+                             color: salur7,
                              borderRadius: BorderRadius.circular(5)
                            ),
                            width: 365,

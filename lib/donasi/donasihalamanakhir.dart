@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/donasi/donasimain.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 class donasiHalamanAkhir extends StatelessWidget {
-  Color salur1 = const Color(0xff014753);
 
   @override
   Widget build(BuildContext context) {

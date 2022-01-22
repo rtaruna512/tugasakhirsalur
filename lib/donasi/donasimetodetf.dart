@@ -6,6 +6,7 @@ import 'package:tugasakhirsalur/donasi/donasibsi.dart';
 import 'package:tugasakhirsalur/donasi/donasimandiri.dart';
 import 'package:tugasakhirsalur/donasi/donasibca.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 class DonasiMetodeTF extends StatefulWidget {
   @override
@@ -13,8 +14,6 @@ class DonasiMetodeTF extends StatefulWidget {
 }
 
 class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
-  Color salur1 = const Color(0xff014753);
-  Color salurwidgetbg = const Color(0x80D2DDAF);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +38,7 @@ class _DonasiMetodeTFState extends State<DonasiMetodeTF> {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.lightGreen,
+                  color: salur13,
                 ),
                 padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
                 child: Row(

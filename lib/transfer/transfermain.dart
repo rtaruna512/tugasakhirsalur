@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/transfer/transfertujuan.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/widget/transferriwayatcarousel.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TransferBeranda extends StatelessWidget {
-  Color salur1 = const Color(0xff014753);
-  Color gradientGLight = const Color(0xffD7E14C);
-  Color gradientGdark = const Color(0xff041417);
 
   @override
   Widget build(BuildContext context) {

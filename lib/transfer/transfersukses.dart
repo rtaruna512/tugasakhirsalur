@@ -4,10 +4,10 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/data/datatransferriwayat.dart';
 import 'package:tugasakhirsalur/transfer/transfermain.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 class transferSukses extends StatelessWidget {
   final RiwayatTransfer transferStatus;
-  Color salur1 = const Color(0xff014753);
 
   transferSukses({required this.transferStatus});
 
@@ -70,7 +70,7 @@ class transferSukses extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                   side: BorderSide(
-                    color: Colors.lightGreen,
+                    color: salur13,
                     width: 2
                   ),
                 ),
@@ -86,7 +86,7 @@ class transferSukses extends StatelessWidget {
                               topLeft: Radius.circular(15),
                               topRight: Radius.circular(15)
                           ),
-                          color: Colors.lightGreen,
+                          color: salur13,
                         ),
                         alignment: Alignment.center,
                         child: Padding(
@@ -150,7 +150,7 @@ class transferSukses extends StatelessWidget {
                       ),
 
                       Divider(
-                        color: Colors.lightGreen,
+                        color: salur13,
                         height: 1,
                         thickness: 2,
                       ),
@@ -199,14 +199,18 @@ class transferSukses extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(13)
+                      borderRadius: BorderRadius.circular(13),
+                    side: BorderSide(width: 3, color: salur13)
                   ),
+                  primary: Colors.white
                 ),
                 child:
                 Text(
-                  "Kembali ke Beranda",
+                  "Ke halaman utama",
                   style: GoogleFonts.poppins(
-                    color: Colors.black,
+                    color: salur13,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600
                   ),
                 ),
               ),

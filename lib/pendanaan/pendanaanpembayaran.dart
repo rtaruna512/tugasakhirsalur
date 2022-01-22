@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/data/datapendanaan.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanmain.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,14 +16,7 @@ class pendanaanPembayaran extends StatefulWidget {
 }
 
 class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
-  Color salur1 = const Color(0xff014753);
-  Color salur2 = const Color(0xcc014753);
-  Color salur3 = const Color(0x80d2ddaf);
-  Color salur4 = const Color(0xff79834e);
-  Color gradientGLight = const Color(0xffD7E14C);
-  Color gradientGdark = const Color(0xff041417);
-  Color salurwidgetbg = const Color(0xb3D2DDAF);
-  Color salurwidgetbg2 = const Color(0xd4B3C824);
+
 
   @override
   Widget build(BuildContext context) {

@@ -4,10 +4,9 @@ import 'package:tugasakhirsalur/data/datapendanaan.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanketerangan.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 class pendanaanCarousel extends StatelessWidget {
-  Color salur1 = const Color(0xff014753);
-  Color salurwidgetbg2 = const Color(0x14B3C824);
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +54,7 @@ class pendanaanCarousel extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               CircleAvatar(
-                                radius: 55,
+                                radius: 45,
                                 backgroundImage: ExactAssetImage(pendanaan.avatarURL),
                               ),
                               SizedBox(height: 5,),
@@ -68,7 +67,7 @@ class pendanaanCarousel extends StatelessWidget {
                                     ),
                                   ),
                                   LinearPercentIndicator(
-                                    width: 116,
+                                    width: 100,
                                     lineHeight: 10,
                                     percent: pendanaan.persentasePendanaan/100,
                                     linearStrokeCap: LinearStrokeCap.roundAll,
@@ -77,7 +76,7 @@ class pendanaanCarousel extends StatelessWidget {
                                   ),
                                   Row(
                                     children: [
-                                      SizedBox(width: 50,),
+                                      SizedBox(width: 40,),
                                       Text(
                                         pendanaan.sisaHariPendanaan.toString(),
                                         style: GoogleFonts.poppins(
@@ -128,7 +127,7 @@ class pendanaanCarousel extends StatelessWidget {
                                   padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
-                                    color: salurwidgetbg2,
+                                    color: salur12,
                                   ),
                                   child: Row(
                                     children: [

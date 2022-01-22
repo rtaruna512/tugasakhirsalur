@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/transfer/transfermetodetf.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -21,7 +22,6 @@ class _State extends State<TransferTujuan>{
     "BRI",
     "BSI"
   ];
-  Color salur1 = const Color(0xff014753);
   var maxLength = 20;
   var textLength = 0;
   final nominalControllertf = TextEditingController();

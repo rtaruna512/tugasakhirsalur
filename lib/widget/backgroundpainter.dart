@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:ui' as ui;
 
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
+
 class BackgroundPainter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,7 +11,7 @@ class BackgroundPainter extends StatelessWidget {
       children: [
         Spacer(),
         CustomPaint(
-          size: Size(double.infinity, 180),
+          size: Size(double.infinity, 200),
           painter: BgPainter(),
         ),
       ],
@@ -18,9 +20,6 @@ class BackgroundPainter extends StatelessWidget {
 }
 
 class BgPainter extends CustomPainter{
-  Color salur1 = const Color(0xff014753);
-  Color gradientGLight = const Color(0xffD7E14C);
-  Color gradientGdark = const Color(0xff041417);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -35,11 +34,13 @@ class BgPainter extends CustomPainter{
 
     var path = Path();
 
-    path.moveTo(0, size.height * 0.7);
-    path.quadraticBezierTo(size.width * 0.25, size.height * 0.7,
-        size.width * 0.5, size.height * 0.8);
-    path.quadraticBezierTo(size.width * 0.75, size.height * 0.9,
-        size.width * 1.0, size.height * 0.8);
+    path.moveTo(0, size.height * 0.95);
+    path.quadraticBezierTo(size.width * 0.15, size.height * 0.7,
+        size.width * 0.3, size.height * 0.9);
+    path.quadraticBezierTo(size.width * 0.4, size.height * 1,
+        size.width * 0.5, size.height * 0.9);
+    path.quadraticBezierTo(size.width * 0.75, size.height * 0.6,
+        size.width * 1, size.height * 0.75);
     path.lineTo(size.width, size.height);
     path.lineTo(0, size.height);
 

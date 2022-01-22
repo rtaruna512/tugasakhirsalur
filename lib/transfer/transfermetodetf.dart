@@ -6,6 +6,7 @@ import 'package:tugasakhirsalur/transfer/transferbni.dart';
 import 'package:tugasakhirsalur/transfer/transferbri.dart';
 import 'package:tugasakhirsalur/transfer/transfermandiri.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 class transferMetodeTF extends StatefulWidget {
   @override
@@ -13,7 +14,6 @@ class transferMetodeTF extends StatefulWidget {
 }
 
 class _transferMetodeTFState extends State<transferMetodeTF> {
-  Color salur1 = const Color(0xff014753);
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class _transferMetodeTFState extends State<transferMetodeTF> {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.lightGreen,
+                  color: salur13,
                 ),
                 padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
                 child: Row(

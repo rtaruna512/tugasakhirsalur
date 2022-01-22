@@ -1,17 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 class ProfileMenu extends StatelessWidget {
-  Color salur1 = const Color(0xff014753);
-  Color salur2 = const Color(0xcc014753);
-  Color salur3 = const Color(0x80d2ddaf);
-  Color salur4 = const Color(0xff79834e);
-  Color gradientGLight = const Color(0xffD7E14C);
-  Color gradientGdark = const Color(0xff041417);
-  Color salurwidgetbg = const Color(0xb3D2DDAF);
-  Color salurwidgetbg2 = const Color(0xd4B3C824);
-  Color salurwidgetbg3 = const Color(0x37014753);
-  Color salurwidgetbg4 = const Color(0x3C014753);
+
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +62,7 @@ class ProfileMenu extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                color: salurwidgetbg3
+                color: salur3
               ),
               padding: EdgeInsets.all(15),
               child: Column(
@@ -103,7 +95,7 @@ class ProfileMenu extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: salurwidgetbg4,
+                            color: salur4,
                           ),
                           child: Text(
                             'Muhammad Fadhil',
@@ -134,7 +126,7 @@ class ProfileMenu extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: salurwidgetbg4,
+                            color: salur4,
                           ),
                           child: Text(
                             'muhammadfadhil511@gmail.com',
@@ -165,7 +157,7 @@ class ProfileMenu extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: salurwidgetbg4,
+                            color: salur4,
                           ),
                           child: Text(
                             '*************',
@@ -204,7 +196,7 @@ class ProfileMenu extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: salurwidgetbg3
+                  color: salur3
               ),
               padding: EdgeInsets.all(15),
               child: Column(
@@ -237,7 +229,7 @@ class ProfileMenu extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: salurwidgetbg4,
+                            color: salur4,
                           ),
                           child: Text(
                             'Muhammad Fadhil',
@@ -268,7 +260,7 @@ class ProfileMenu extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: salurwidgetbg4,
+                            color: salur4,
                           ),
                           child: Text(
                             '+62 82215357968',
@@ -312,7 +304,7 @@ class ProfileMenu extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: salurwidgetbg4,
+                            color: salur4,
                           ),
                           child: Row(
                             children: [
@@ -365,7 +357,7 @@ class ProfileMenu extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: salurwidgetbg4,
+                            color: salur4,
                           ),
                           child: Row(
                             children: [
@@ -396,7 +388,7 @@ class ProfileMenu extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: salurwidgetbg3
+                  color: salur3
               ),
               padding: EdgeInsets.all(15),
               child: Column(
@@ -429,7 +421,7 @@ class ProfileMenu extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: salurwidgetbg4,
+                            color: salur4,
                           ),
                           child: Text(
                             'Bank Negara Indonesia - PT (Persero)',
@@ -460,7 +452,7 @@ class ProfileMenu extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: salurwidgetbg4,
+                            color: salur4,
                           ),
                           child: Text(
                             'Sdr Muhammad Fadhil',
@@ -491,7 +483,7 @@ class ProfileMenu extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: salurwidgetbg4,
+                            color: salur4,
                           ),
                           child: Text(
                             '609162687',

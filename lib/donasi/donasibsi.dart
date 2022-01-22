@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart';
 import 'package:tugasakhirsalur/donasi/donasihalamanakhir.dart';
 import 'package:tugasakhirsalur/donasi/donasimain.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'dart:math';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +19,6 @@ class donasiBSI extends StatefulWidget {
 }
 
 class _donasiBSIState extends State<donasiBSI> {
-  Color salur1 = const Color(0xff014753);
   final kodeunik = Random().nextInt(1000);
 
 
