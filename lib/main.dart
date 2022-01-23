@@ -56,7 +56,6 @@ class MyHomePage extends StatelessWidget {
                                   'BUAT AKUN',
                                   style: GoogleFonts.poppins(
                                     color: Colors.white,
-                                    fontSize: 18,
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
@@ -86,7 +85,6 @@ class MyHomePage extends StatelessWidget {
                                   'MASUK',
                                   style: GoogleFonts.poppins(
                                     color: Colors.white,
-                                    fontSize: 18,
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),

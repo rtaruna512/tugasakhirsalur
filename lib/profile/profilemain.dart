@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugasakhirsalur/password/passwordreset.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 class ProfileMenu extends StatelessWidget {
@@ -72,8 +73,8 @@ class ProfileMenu extends StatelessWidget {
                   Text(
                     'Informasi Akun',
                     style: GoogleFonts.poppins(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600
                     ),
                   ),
 
@@ -87,7 +88,7 @@ class ProfileMenu extends StatelessWidget {
                         Text(
                           'Nama',
                           style: GoogleFonts.poppins(
-                            fontSize: 18
+                            fontSize: 15
                           ),
                         ),
                         Container(
@@ -100,7 +101,7 @@ class ProfileMenu extends StatelessWidget {
                           child: Text(
                             'Muhammad Fadhil',
                             style: GoogleFonts.poppins(
-                                fontSize: 18
+                                fontSize: 15
                             ),
                           ),
                         ),
@@ -118,7 +119,7 @@ class ProfileMenu extends StatelessWidget {
                         Text(
                           'Email',
                           style: GoogleFonts.poppins(
-                              fontSize: 18
+                              fontSize: 15
                           ),
                         ),
                         Container(
@@ -131,7 +132,7 @@ class ProfileMenu extends StatelessWidget {
                           child: Text(
                             'muhammadfadhil511@gmail.com',
                             style: GoogleFonts.poppins(
-                                fontSize: 18
+                                fontSize: 15
                             ),
                           ),
                         ),
@@ -149,7 +150,7 @@ class ProfileMenu extends StatelessWidget {
                         Text(
                           'Password',
                           style: GoogleFonts.poppins(
-                              fontSize: 18
+                              fontSize: 15
                           ),
                         ),
                         Container(
@@ -162,13 +163,13 @@ class ProfileMenu extends StatelessWidget {
                           child: Text(
                             '*************',
                             style: GoogleFonts.poppins(
-                                fontSize: 18
+                                fontSize: 15
                             ),
                           ),
                         ),
                         TextButton(
                           onPressed: () {
-
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => passwordReset()));
                           },
                           style: TextButton.styleFrom(
                             padding: EdgeInsets.zero,
@@ -206,8 +207,8 @@ class ProfileMenu extends StatelessWidget {
                   Text(
                     'Informasi Pribadi',
                     style: GoogleFonts.poppins(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600
                     ),
                   ),
 
@@ -221,7 +222,7 @@ class ProfileMenu extends StatelessWidget {
                         Text(
                           'Nama',
                           style: GoogleFonts.poppins(
-                              fontSize: 18
+                              fontSize: 15
                           ),
                         ),
                         Container(
@@ -234,7 +235,7 @@ class ProfileMenu extends StatelessWidget {
                           child: Text(
                             'Muhammad Fadhil',
                             style: GoogleFonts.poppins(
-                                fontSize: 18
+                                fontSize: 15
                             ),
                           ),
                         ),
@@ -252,7 +253,7 @@ class ProfileMenu extends StatelessWidget {
                         Text(
                           'Nomor Handphone',
                           style: GoogleFonts.poppins(
-                              fontSize: 18
+                              fontSize: 15
                           ),
                         ),
                         Container(
@@ -265,7 +266,7 @@ class ProfileMenu extends StatelessWidget {
                           child: Text(
                             '+62 82215357968',
                             style: GoogleFonts.poppins(
-                                fontSize: 18
+                                fontSize: 15
                             ),
                           ),
                         ),
@@ -285,7 +286,7 @@ class ProfileMenu extends StatelessWidget {
                             Text(
                               'KTP',
                               style: GoogleFonts.poppins(
-                                  fontSize: 18
+                                  fontSize: 15
                               ),
                             ),
                             SizedBox(width: 5,),
@@ -299,27 +300,32 @@ class ProfileMenu extends StatelessWidget {
                             )
                           ],
                         ),
-                        Container(
-                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: salur4,
-                          ),
-                          child: Row(
-                            children: [
-                              Text(
-                                'Sudah upload',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 18
+                        RawMaterialButton(
+                          onPressed: () {
+
+                          },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: salur4,
+                            ),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'Sudah upload',
+                                  style: GoogleFonts.poppins(
+                                      fontSize: 15
+                                  ),
                                 ),
-                              ),
-                              Spacer(),
-                              Icon(
-                                Icons.visibility,
-                                size: 20,
-                              ),
-                            ],
+                                Spacer(),
+                                Icon(
+                                  Icons.visibility,
+                                  size: 20,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -338,7 +344,7 @@ class ProfileMenu extends StatelessWidget {
                             Text(
                               'Selfie',
                               style: GoogleFonts.poppins(
-                                  fontSize: 18
+                                  fontSize: 15
                               ),
                             ),
                             SizedBox(width: 5,),
@@ -352,27 +358,32 @@ class ProfileMenu extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Container(
-                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: salur4,
-                          ),
-                          child: Row(
-                            children: [
-                              Text(
-                                'Sudah upload',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 18
+                        RawMaterialButton(
+                          onPressed: () {
+
+                          },
+                          child: Container(
+                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: salur4,
+                            ),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'Sudah upload',
+                                  style: GoogleFonts.poppins(
+                                      fontSize: 15
+                                  ),
                                 ),
-                              ),
-                              Spacer(),
-                              Icon(
-                                Icons.visibility,
-                                size: 20,
-                              ),
-                            ],
+                                Spacer(),
+                                Icon(
+                                  Icons.visibility,
+                                  size: 20,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -398,8 +409,8 @@ class ProfileMenu extends StatelessWidget {
                   Text(
                     'Informasi Akun Bank Saya',
                     style: GoogleFonts.poppins(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600
                     ),
                   ),
 
@@ -413,7 +424,7 @@ class ProfileMenu extends StatelessWidget {
                         Text(
                           'Bank',
                           style: GoogleFonts.poppins(
-                              fontSize: 18
+                              fontSize: 15
                           ),
                         ),
                         Container(
@@ -426,7 +437,7 @@ class ProfileMenu extends StatelessWidget {
                           child: Text(
                             'Bank Negara Indonesia - PT (Persero)',
                             style: GoogleFonts.poppins(
-                                fontSize: 18
+                                fontSize: 15
                             ),
                           ),
                         ),
@@ -444,7 +455,7 @@ class ProfileMenu extends StatelessWidget {
                         Text(
                           'Pemilik Akun',
                           style: GoogleFonts.poppins(
-                              fontSize: 18
+                              fontSize: 15
                           ),
                         ),
                         Container(
@@ -457,7 +468,7 @@ class ProfileMenu extends StatelessWidget {
                           child: Text(
                             'Sdr Muhammad Fadhil',
                             style: GoogleFonts.poppins(
-                                fontSize: 18
+                                fontSize: 15
                             ),
                           ),
                         ),
@@ -475,7 +486,7 @@ class ProfileMenu extends StatelessWidget {
                         Text(
                           'Nomor Rekening',
                           style: GoogleFonts.poppins(
-                              fontSize: 18
+                              fontSize: 15
                           ),
                         ),
                         Container(
@@ -488,7 +499,7 @@ class ProfileMenu extends StatelessWidget {
                           child: Text(
                             '609162687',
                             style: GoogleFonts.poppins(
-                                fontSize: 18
+                                fontSize: 15
                             ),
                           ),
                         ),
@@ -496,10 +507,35 @@ class ProfileMenu extends StatelessWidget {
                     ),
                   ),
 
-
                 ],
               ),
             ),
+
+            SizedBox(height: 15,),
+
+            Container(
+              height: 45,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)
+                      ),
+                    primary: salur1
+                  ),
+                  child: Text(
+                    'KELUAR',
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  onPressed: (){
+
+                  },
+                )
+            ),
+
+            SizedBox(height: 15,),
 
           ],
         ),

@@ -29,7 +29,7 @@ class _State extends State<signupPage> {
         actions: [
           IconButton(
             icon: Icon(Icons.help_outline),
-            iconSize: 50,
+            iconSize: 40,
             color: Colors.black,
             onPressed: (){
               Navigator.push(
@@ -53,44 +53,50 @@ class _State extends State<signupPage> {
                 children: <Widget>[
                   Container(
                       alignment: Alignment.topLeft,
-                      padding: EdgeInsets.fromLTRB(30,0,30,0),
+                      padding: EdgeInsets.symmetric(horizontal: 30),
                       child: Text(
                         'Ayo bergabung dengan Salur!',
                         style: GoogleFonts.poppins(
                             color: Colors.black,
                             fontWeight: FontWeight.w500,
-                            fontSize: 30),
+                            fontSize: 27),
                       )),
+
+                  SizedBox(height: 15,),
+
                   Container(
                       alignment: Alignment.topLeft,
-                      padding: EdgeInsets.fromLTRB(30,0,30,0),
+                      padding: EdgeInsets.symmetric(horizontal: 30),
                       child: Text(
                         'Lengkapi Informasimu untuk\n'
-                            'menjadi anggota di Salur.\n',
+                            'menjadi anggota di Salur.',
                         style: GoogleFonts.poppins(
                             color: Colors.black,
                             fontWeight: FontWeight.w500,
                             fontSize: 15),
                       )),
+
+                  SizedBox(height: 15,),
+
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    padding: EdgeInsets.symmetric(horizontal: 30),
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                       decoration: BoxDecoration(
                           color: salur11,
                           borderRadius: BorderRadius.circular(5)
                       ),
                       child: TextField(
                         style: GoogleFonts.poppins(
-                            fontSize: 15
+                            fontSize: 13
                         ),
                         controller: nameController,
                         decoration: InputDecoration(
+                          contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                           border: InputBorder.none,
                           hintText: 'Masukkan Nama Lengkap',
                           hintStyle: GoogleFonts.poppins(
                               color: Colors.black,
-                              fontSize: 15
+                              fontSize: 13
                           ),
                         ),
                       ),
@@ -100,24 +106,24 @@ class _State extends State<signupPage> {
                   SizedBox(height: 15,),
 
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    padding: EdgeInsets.symmetric(horizontal: 30),
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                       decoration: BoxDecoration(
                           color: salur11,
                           borderRadius: BorderRadius.circular(5)
                       ),
                       child: TextField(
                         style: GoogleFonts.poppins(
-                            fontSize: 15
+                            fontSize: 13
                         ),
                         controller: emailController,
                         decoration: InputDecoration(
+                          contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                           border: InputBorder.none,
                           hintText: 'Masukkan Email',
                           hintStyle: GoogleFonts.poppins(
                               color: Colors.black,
-                              fontSize: 15
+                              fontSize: 13
                           ),
                         ),
                       ),
@@ -127,31 +133,31 @@ class _State extends State<signupPage> {
                   SizedBox(height: 15,),
 
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    padding: EdgeInsets.symmetric(horizontal: 30),
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           color: salur11
                       ),
-                      padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                       child: TextField(
                         style: GoogleFonts.poppins(
-                            fontSize: 15
+                            fontSize: 13
                         ),
                         obscureText: _isHidden,
                         controller: passwordController,
                         decoration: InputDecoration(
+                          contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                           border: InputBorder.none,
                           hintText: 'Password',
                           hintStyle: GoogleFonts.poppins(
                               color: Colors.black,
-                              fontSize: 15
+                              fontSize: 13
                           ),
                           suffix: InkWell(
                             onTap: _togglePasswordView,
                             child: Icon(
                               Icons.visibility,
-                              size: 18,
+                              size: 15,
                             ),
                           ),
                         ),
@@ -159,17 +165,15 @@ class _State extends State<signupPage> {
                     ),
                   ),
 
-                  Container(
-                    padding: EdgeInsets.fromLTRB(30, 30, 30, 0),
-                    alignment: Alignment.center,
-                    child: Text('Dengan mendaftar anda menyetujui',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 12)),
-                  ),
+                  SizedBox(height: 50,),
 
-                  Container(
-                      child: TextButton(
+                  Column(
+                    children: [
+                      Text('Dengan mendaftar anda menyetujui',
+                          style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 12)),
+                      InkWell(
                         child: Text(
                             'Syarat & Ketentuan',
                             style: GoogleFonts.poppins(
@@ -177,26 +181,39 @@ class _State extends State<signupPage> {
                               color: salur1,
                               fontSize: 12,)
                         ),
-                        onPressed: () {
+                        onTap: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => SyaratKetentuan())
                           );
                         },
-                      )),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 15,),
 
                   Container(
                       height: 50,
                       width: double.infinity,
-                      padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
+                      padding: EdgeInsets.symmetric(horizontal: 30),
                       child: ElevatedButton(
-                        child: Text('Daftar'),
+                        child: Text(
+                          'DAFTAR',
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
                         onPressed: () {
                           print(nameController.text);
                           print(passwordController.text);
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: salur1,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15)
+                            ),
+                            primary: salur1
                         ),
                       )),
 
@@ -208,11 +225,11 @@ class _State extends State<signupPage> {
                       padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
                       child: Row(
                         children: <Widget>[
-                          Text('Sudah punya akun Salur?',
+                          Text('Sudah punya akun Salur? ',
                               style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 12)),
-                          TextButton(
+                          InkWell(
                             child: Text(
                                 'Masuk di sini',
                                 style: GoogleFonts.poppins(
@@ -220,7 +237,7 @@ class _State extends State<signupPage> {
                                     color: salur1,
                                     fontSize: 12)
                             ),
-                            onPressed: () {
+                            onTap: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(builder: (context) => loginPage())

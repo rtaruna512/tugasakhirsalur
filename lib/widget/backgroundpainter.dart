@@ -35,7 +35,7 @@ class BgPainter extends CustomPainter{
     var path = Path();
 
     path.moveTo(0, size.height * 0.95);
-    path.quadraticBezierTo(size.width * 0.15, size.height * 0.7,
+    path.quadraticBezierTo(size.width * 0.15, size.height * 0.8,
         size.width * 0.3, size.height * 0.9);
     path.quadraticBezierTo(size.width * 0.4, size.height * 1,
         size.width * 0.5, size.height * 0.9);
