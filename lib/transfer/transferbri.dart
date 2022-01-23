@@ -361,7 +361,7 @@ class _transferBRIState extends State<transferBRI> {
                             children: [
                               Text('Nominal'),
                               Spacer(),
-                              Text('$nominalTransfer')
+                              Text('Rp$nominalTransfer')
                             ],
                           ),
                         ),

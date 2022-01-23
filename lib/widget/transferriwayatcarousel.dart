@@ -19,7 +19,7 @@ class transferRiwayatCarousel extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 15,),
             Container(
-              height: 300,
+              height: 200,
               child: ListView.separated(
                 separatorBuilder: (context, index) => Divider(
                   height: 20,

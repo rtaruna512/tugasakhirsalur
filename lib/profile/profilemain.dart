@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugasakhirsalur/bantuan/bantuanmain.dart';
 import 'package:tugasakhirsalur/password/passwordreset.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
@@ -19,13 +20,24 @@ class ProfileMenu extends StatelessWidget {
         title: Text('Akun'),
         centerTitle: true,
         backgroundColor: salur1,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.help_outline),
+            onPressed: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => BantuanMain()
+                  )
+              );
+            },
+          )
+        ],
       ),
       body: Padding(
         padding: EdgeInsets.all(15),
         child: ListView(
           children: <Widget>[
-            SizedBox(height: 15,),
-
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Row(
@@ -393,7 +405,7 @@ class ProfileMenu extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 30,),
+            SizedBox(height: 15,),
 
             Container(
               width: double.infinity,
@@ -511,14 +523,14 @@ class ProfileMenu extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 15,),
+            SizedBox(height: 30,),
 
             Container(
-              height: 45,
+              height: 50,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)
+                          borderRadius: BorderRadius.circular(10)
                       ),
                     primary: salur1
                   ),

@@ -361,7 +361,7 @@ class _transferBCAState extends State<transferBCA> {
                             children: [
                               Text('Nominal'),
                               Spacer(),
-                              Text('$nominalTransfer')
+                              Text('Rp$nominalTransfer')
                             ],
                           ),
                         ),

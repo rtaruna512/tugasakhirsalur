@@ -153,45 +153,14 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                 padding: EdgeInsets.all(15),
                 child:
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      'Pembayaran',
+                      'Pembayaran plafond',
                       style: GoogleFonts.poppins(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600
                       ),
-                    ),
-                    SizedBox(height: 10,),
-                    Row(
-                      children: [
-                        Text(
-                          'Total plafon',
-                          style: GoogleFonts.poppins(
-                            fontSize: 18,
-                          ),
-                        ),
-                        Spacer(),
-                        Text(
-                          'Rp',
-                          style: GoogleFonts.poppins(
-                            fontSize: 18,
-                          ),
-                        ),
-                        Text(
-                          nominalPendanaanAkhir.toString(),
-                          style: GoogleFonts.poppins(
-                            fontSize: 18,
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    SizedBox(height: 10,),
-
-                    Divider(
-                      color: Colors.black,
-                      thickness: 1.5,
                     ),
 
                     SizedBox(height: 10,),
@@ -201,19 +170,12 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.lightGreen
+                        color: salur13
                       ),
                       child:
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            'TOTAL',
-                            style: GoogleFonts.poppins(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold
-                            ),
-                          ),
-                          Spacer(),
                           Text(
                             'Rp',
                             style: GoogleFonts.poppins(

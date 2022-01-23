@@ -15,6 +15,7 @@ class DonasiInput extends StatefulWidget {
 
 class _DonasiInputState extends State<DonasiInput> {
   final nominalControllerd = TextEditingController();
+  final beritaControllerd = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -108,6 +109,7 @@ class _DonasiInputState extends State<DonasiInput> {
                       fontSize: 14
                     ),
                   ),
+                  controller: beritaControllerd,
                   maxLength: 55,
 
                 ),
@@ -137,6 +139,7 @@ class _DonasiInputState extends State<DonasiInput> {
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context) => DonasiMetodeTF()));
                   nominalDonasi = int.parse(nominalControllerd.text);
+                  beritaDonasiText = beritaControllerd.text;
                 },
               ),
             ),

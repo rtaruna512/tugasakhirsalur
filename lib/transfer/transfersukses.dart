@@ -29,7 +29,10 @@ class transferSukses extends StatelessWidget {
         padding: EdgeInsets.all(15),
         child: ListView(
           children: [
-            Image.asset('assets/images/2.png'),
+            Image.asset(
+              'assets/images/2.png',
+              height: 255,
+            ),
             Container(
               child:
               Text(

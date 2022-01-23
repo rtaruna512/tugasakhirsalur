@@ -362,7 +362,7 @@ class _transferBNIState extends State<transferBNI> {
                             children: [
                               Text('Nominal'),
                               Spacer(),
-                              Text('$nominalTransfer')
+                              Text('Rp$nominalTransfer')
                             ],
                           ),
                         ),

@@ -362,7 +362,7 @@ class _transferMandiriState extends State<transferMandiri> {
                             children: [
                               Text('Nominal'),
                               Spacer(),
-                              Text('$nominalTransfer')
+                              Text('Rp$nominalTransfer')
                             ],
                           ),
                         ),

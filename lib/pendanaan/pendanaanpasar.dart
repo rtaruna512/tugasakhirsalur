@@ -31,8 +31,10 @@ class _pendanaanPasarState extends State<pendanaanPasar> {
         elevation: 0,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15),
-        child: ListView(
+        padding: EdgeInsets.all(15),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
               child: TextField(
@@ -43,7 +45,7 @@ class _pendanaanPasarState extends State<pendanaanPasar> {
                   color:Colors.grey[800],
                 ),
                 decoration: InputDecoration(
-                    hintText: 'Cari tujuan donasi',
+                    hintText: 'Cari Pendanaan',
                     hintStyle: GoogleFonts.poppins(
                       color:Colors.grey[800],
                       fontStyle: FontStyle.italic,

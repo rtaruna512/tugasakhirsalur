@@ -175,7 +175,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
               ),
             ),
 
-            SizedBox(height: 30,),
+            SizedBox(height: 15,),
 
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
@@ -452,7 +452,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
               ),
             ),
 
-            SizedBox(height: 65,),
+            SizedBox(height: 15,),
 
             Container(
               height: 50,
@@ -477,7 +477,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                 ),
               ),
             ),
-            SizedBox(height: 30,)
+            SizedBox(height: 15,)
 
           ],
         ),

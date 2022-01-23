@@ -14,7 +14,7 @@ class TransferBeranda extends StatelessWidget {
           backgroundColor: salur1,
           centerTitle: true,
           title: Text(
-            'Pendanaan',
+            'Kirim Uang',
             style: GoogleFonts.poppins(
               color: Colors.white,
             ),
@@ -29,12 +29,20 @@ class TransferBeranda extends StatelessWidget {
           ),
         ),
       body:Padding(
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.all(0),
         child: ListView(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: Container(
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 10, 20, 30),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)
+                ),
+                color: salur1,
+              ),
+              child:
+              Container(
                 width: 320,
                 height: 200,
                 padding: EdgeInsets.all(15),
@@ -46,34 +54,43 @@ class TransferBeranda extends StatelessWidget {
                         colors: <Color>[
                           gradientGLight,
                           gradientGdark
-                        ],
-                    ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black26,
-                      blurRadius: 15,
+                        ]
                     )
-                  ]
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'Anda sudah berhemat',
+                          'Saldo Kode Unik anda',
                           style: GoogleFonts.poppins(
                               color: Colors.white
                           ),
                         ),
-                        SizedBox(height: 15,),
+                        SizedBox(height: 10,),
                         Text(
                           'Rp250.000',
                           style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 27
+                          ),
+                        ),
+                        SizedBox(height: 30,),
+                        Text(
+                          'Anda sudah berhemat',
+                          style: GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 11
+                          ),
+                        ),
+                        Text(
+                          'Rp100.000',
+                          style: GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 11
                           ),
                         )
                       ],

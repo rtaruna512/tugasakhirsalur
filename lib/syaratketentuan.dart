@@ -20,10 +20,11 @@ class SyaratKetentuan extends StatelessWidget {
         title: RichText(text: TextSpan(
           text: 'Syarat & Ketentuan Umum Salur',
           style: GoogleFonts.poppins(
-            fontSize: 20
+            fontSize: 20,
         ),
         ),
         ),
+        centerTitle: true,
         toolbarHeight: 75,
       ),
       body: Padding(

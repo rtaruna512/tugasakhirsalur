@@ -17,7 +17,7 @@ class pendanaanCarousel extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 15,),
             Container(
-              height: 600,
+              height: 500,
               child: ListView.separated(
                 separatorBuilder: (context, index) => Divider(
                   height: 20,

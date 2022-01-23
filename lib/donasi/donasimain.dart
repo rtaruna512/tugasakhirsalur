@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:tugasakhirsalur/donasi/donasiriwayat.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/widget/donasicarousel.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -125,7 +126,7 @@ class _State extends State<DonasiBeranda> {
                       )
                     ),
                     onPressed: () {
-
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => donasiRiwayatmenu()));
                     },
                     child: Text(
                       'Donasi saya',

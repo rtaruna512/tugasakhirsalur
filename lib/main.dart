@@ -5,8 +5,14 @@ import 'package:tugasakhirsalur/login.dart';
 import 'package:tugasakhirsalur/register.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/widget/backgroundpainter.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(MaterialApp(
     theme: ThemeData(
         brightness: Brightness.light,
@@ -21,8 +27,7 @@ void main() {
   ));
 }
 
-class MyHomePage extends StatelessWidget {
-  Color salur1 = const Color(0xff014753);
+class MyHomePage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {

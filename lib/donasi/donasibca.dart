@@ -6,25 +6,19 @@ import 'package:tugasakhirsalur/donasi/donasihalamanakhir.dart';
 import 'package:tugasakhirsalur/donasi/donasimain.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
-import 'dart:math';
 import 'package:google_fonts/google_fonts.dart';
 
 class donasiBCA extends StatefulWidget {
-  const donasiBCA({Key? key}) : super(key: key);
-
-
 
   @override
   _donasiBCAState createState() => _donasiBCAState();
 }
 
 class _donasiBCAState extends State<donasiBCA> {
-  final kodeunik = Random().nextInt(1000);
-
 
   @override
   Widget build(BuildContext context) {
-    var totaldonasi = nominalDonasi + kodeunik;
+    var totaldonasi = nominalDonasi;
     String totaldonasiString = totaldonasi.toString();
     return Scaffold(
       appBar: AppBar(
@@ -135,42 +129,6 @@ class _donasiBCAState extends State<donasiBCA> {
                     ),
                   ),
 
-                  SizedBox(height: 10,),
-
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
-                    child: Row(
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Nominal',
-                            ),
-                            SizedBox(height: 5,),
-                            Text(
-                              'Kode Unik',
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 25,),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              '$nominalDonasi',
-                            ),
-                            SizedBox(height: 5,),
-                            Text(
-                              '$kodeunik',
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
 
                   SizedBox(height: 15,),
 

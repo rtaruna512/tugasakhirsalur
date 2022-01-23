@@ -362,7 +362,7 @@ class _transferBSIState extends State<transferBSI> {
                             children: [
                               Text('Nominal'),
                               Spacer(),
-                              Text('$nominalTransfer')
+                              Text('Rp$nominalTransfer')
                             ],
                           ),
                         ),
