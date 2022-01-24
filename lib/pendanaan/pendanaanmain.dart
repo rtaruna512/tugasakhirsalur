@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanpasar.dart';
+import 'package:tugasakhirsalur/pendanaan/pendanaanriwayat.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
 
@@ -197,7 +198,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                         )
                     ),
                     onPressed: () {
-
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => pendanaanRiwayatmenu()));
                     },
                     child: Text(
                       'Transaksi saya',
