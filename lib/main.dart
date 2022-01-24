@@ -22,6 +22,7 @@ void main() {
         primaryColor: salur13,
         colorScheme: ThemeData().colorScheme.copyWith(primary: salur13),
         errorColor: Colors.red,
+        scaffoldBackgroundColor: Colors.white,
     ),
     home: MyHomePage(),
   ));
