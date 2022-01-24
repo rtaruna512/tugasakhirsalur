@@ -44,6 +44,13 @@ class MyHomePage extends StatelessWidget{
                   child: Column(
                     children: <Widget>[
                       Spacer(),
+                      
+                      Image.asset(
+                        'assets/images/appicon.png',
+                        height: 300,
+                      ),
+
+                      Spacer(),
 
                       Container(
                           padding: EdgeInsets.symmetric(horizontal: 15),
