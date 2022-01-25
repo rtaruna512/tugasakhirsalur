@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:tugasakhirsalur/widget/pendanaancarousel.dart';
+import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
+import 'package:tugasakhirsalur/widget/pendanaanlistview.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class pendanaanPasar extends StatefulWidget {
@@ -42,37 +43,40 @@ class _pendanaanPasarState extends State<pendanaanPasar> {
 
                 },
                 style: GoogleFonts.poppins(
-                  color:Colors.grey[800],
+                  color:salur17,
+                  fontSize: 13,
                 ),
                 decoration: InputDecoration(
-                    hintText: 'Cari Pendanaan',
+                    hintText: 'Cari Tujuan Donasi',
                     hintStyle: GoogleFonts.poppins(
-                      color:Colors.grey[800],
+                      color:salur17,
                       fontStyle: FontStyle.italic,
+                      fontSize: 13,
+
                     ),
                     filled: true,
-                    fillColor: Colors.grey[300],
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: BorderSide(
+                        color: salur18
+                      )
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: (Colors.grey[300])!,width: 1),
-                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: BorderSide(width: 0, color: salur18)
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: (Colors.grey[300])!,width: 1),
-                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: BorderSide(width: 0, color: salur18)
                     ),
-                    suffixIcon: Icon(Icons.search, color:Colors.grey[800])
+                    suffixIcon: Icon(Icons.search, color:salur17,size: 18,)
                 ),
               ),
             ),
 
             SizedBox(height: 5,),
 
-            pendanaanCarousel(),
-
-            SizedBox(height: 15,)
+            Flexible(child: Container(child: pendanaanCarousel())),
           ],
         ),
       ),

@@ -20,5 +20,7 @@ Color salur13 = const Color(0xffB3C824);
 Color salur14 = const Color(0xffDADADA);
 Color salur15 = const Color(0x0f014753);
 Color salur16 = const Color(0x32B3C824);
+Color salur17 = const Color(0x32014753);
+Color salur18 = const Color(0x14014753);
 Color gradientGLight = const Color(0xffB3C824);
 Color gradientGdark = const Color(0xff041417);

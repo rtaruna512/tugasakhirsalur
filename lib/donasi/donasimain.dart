@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:tugasakhirsalur/beranda.dart';
 import 'package:tugasakhirsalur/donasi/donasiriwayat.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
-import 'package:tugasakhirsalur/widget/donasicarousel.dart';
+import 'package:tugasakhirsalur/widget/donasilistview.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DonasiBeranda extends StatefulWidget {
@@ -23,7 +24,7 @@ class _State extends State<DonasiBeranda> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => BerandaMenu()));
           },
         ),
         title: Text('Donasi', textAlign: TextAlign.center,),
@@ -31,9 +32,10 @@ class _State extends State<DonasiBeranda> {
       ),
       body: Padding(
         padding: EdgeInsets.all(0),
-        child: ListView(
+        child: Column(
           children: <Widget>[
             Container(
+              width: double.infinity,
               padding: EdgeInsets.fromLTRB(20, 10, 20, 30),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -56,12 +58,6 @@ class _State extends State<DonasiBeranda> {
                           gradientGdark
                         ]
                     ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black26,
-                        blurRadius: 15,
-                      )
-                    ]
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -113,8 +109,8 @@ class _State extends State<DonasiBeranda> {
                   Text(
                     'Ayo Bantu Sekarang',
                     style: GoogleFonts.poppins(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   Spacer(),
@@ -139,42 +135,54 @@ class _State extends State<DonasiBeranda> {
 
             SizedBox(height: 15,),
 
-            Container(
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 15),
-              child: TextField(
-                onChanged: (value){
+              child: Container(
+                child: TextField(
+                  onChanged: (value){
 
-                },
-                style: GoogleFonts.poppins(
-                  color:Colors.lightGreen[800],
-                ),
-                decoration: InputDecoration(
-                    hintText: 'Cari tujuan donasi',
-                    hintStyle: GoogleFonts.poppins(
-                      color:Colors.lightGreen[800],
-                      fontStyle: FontStyle.italic,
-                    ),
-                    filled: true,
-                    fillColor: Colors.lightGreen[300],
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(16)),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: (Colors.lightGreen[300])!,width: 1),
-                      borderRadius: BorderRadius.all(Radius.circular(16)),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: (Colors.lightGreen[300])!,width: 1),
-                      borderRadius: BorderRadius.all(Radius.circular(16)),
-                    ),
-                    suffixIcon: Icon(Icons.search, color:Colors.lightGreen[800])
+                  },
+                  style: GoogleFonts.poppins(
+                    color:salur17,
+                    fontSize: 13,
+                  ),
+                  decoration: InputDecoration(
+                      hintText: 'Cari Pendanaan',
+                      hintStyle: GoogleFonts.poppins(
+                        color:salur17,
+                        fontStyle: FontStyle.italic,
+                        fontSize: 13,
+
+                      ),
+                      filled: true,
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(
+                              color: salur18
+                          )
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(width: 0, color: salur18)
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(width: 0, color: salur18)
+                      ),
+                      suffixIcon: Icon(Icons.search, color:salur17,size: 18,)
+                  ),
                 ),
               ),
             ),
 
-            donasiCarousel(),
-
             SizedBox(height: 15,),
+
+            Flexible(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                  child: donasiCarousel()
+              ),
+            ),
           ],
         ),
       ),

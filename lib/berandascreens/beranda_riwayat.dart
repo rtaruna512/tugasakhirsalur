@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
+import 'package:tugasakhirsalur/widget/donasiriwayatlistview.dart';
+import 'package:tugasakhirsalur/widget/pendanaanriwayatlistview.dart';
+import 'package:tugasakhirsalur/widget/transferriwayatlistview.dart';
 
 class BerandaRiwayat extends StatefulWidget {
 
@@ -10,6 +13,13 @@ class BerandaRiwayat extends StatefulWidget {
 }
 
 class _BerandaRiwayatState extends State<BerandaRiwayat> {
+  bool isVisiblePendanaan = false;
+  bool isVisibleDonasi = false;
+  bool isVisibleTransfer = false;
+
+  bool buttonPendanaanPressed = false;
+  bool buttonDonasiPressed = false;
+  bool buttonTransferPressed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,41 +33,107 @@ class _BerandaRiwayatState extends State<BerandaRiwayat> {
       body: Padding(
         padding: EdgeInsets.all(15),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
-              child: TextField(
-                onChanged: (value){
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              decoration: BoxDecoration(
+                color: salur13,
+                borderRadius: BorderRadius.circular(15)
+              ),
+              child: Row(
+                children: [
+                  RawMaterialButton(
+                    onPressed: () {
+                      setState(() {
+                        isVisiblePendanaan = !isVisiblePendanaan;
+                        isVisibleDonasi = false;
+                        isVisibleTransfer = false;
+                        buttonPendanaanPressed = !buttonPendanaanPressed;
+                        buttonDonasiPressed = false;
+                        buttonTransferPressed = false;
 
-                },
-                style: GoogleFonts.poppins(
-                  color:Colors.lightGreen[800],
-                ),
-                decoration: InputDecoration(
-                    hintText: 'Cari catatan',
-                    hintStyle: GoogleFonts.poppins(
-                      color:Colors.lightGreen[800],
-                      fontStyle: FontStyle.italic,
+                      });
+                    },
+                    child: Text(
+                      'Pendanaan',
+                      style: GoogleFonts.poppins(
+                        color: buttonPendanaanPressed ? Colors.white : Colors.black,
+                        fontWeight: FontWeight.w600
+                      ),
                     ),
-                    filled: true,
-                    fillColor: Colors.lightGreen[300],
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                  ),
+                  Spacer(),
+                  RawMaterialButton(
+                    onPressed: () {
+                      setState(() {
+                        isVisibleDonasi = !isVisibleDonasi;
+                        isVisiblePendanaan = false;
+                        isVisibleTransfer = false;
+                        buttonDonasiPressed = !buttonDonasiPressed;
+                        buttonPendanaanPressed = false;
+                        buttonTransferPressed = false;
+                      });
+                    },
+                    child: Text(
+                      'Donasi',
+                      style: GoogleFonts.poppins(
+                        color: buttonDonasiPressed ? Colors.white : Colors.black,
+                        fontWeight: FontWeight.w600
+                      ),
                     ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: (Colors.lightGreen[300])!,width: 1),
-                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                  ),
+                  Spacer(),
+                  RawMaterialButton(
+                    onPressed: () {
+                      setState(() {
+                        isVisibleTransfer = !isVisibleTransfer;
+                        isVisibleDonasi = false;
+                        isVisiblePendanaan = false;
+                        buttonTransferPressed = !buttonTransferPressed;
+                        buttonPendanaanPressed = false;
+                        buttonDonasiPressed = false;
+                      });
+                    },
+                    child: Text(
+                      'Kirim Uang',
+                      style: GoogleFonts.poppins(
+                        color: buttonTransferPressed ? Colors.white : Colors.black,
+                        fontWeight: FontWeight.w600
+                      ),
                     ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: (Colors.lightGreen[300])!,width: 1),
-                      borderRadius: BorderRadius.all(Radius.circular(16)),
-                    ),
-                    suffixIcon: Icon(Icons.search, color:Colors.lightGreen[800])
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 15,),
+
+            Visibility(
+              visible: isVisiblePendanaan,
+              child: Flexible(
+                child: Container(
+                    child: pendanaanRiwayatListView()
                 ),
               ),
             ),
+
+            Visibility(
+              visible: isVisibleDonasi,
+              child: Flexible(
+                child: Container(
+                    child: donasiRiwayatListView()
+                ),
+              ),
+            ),
+
+            Visibility(
+              visible: isVisibleTransfer,
+              child: Flexible(
+                child: Container(
+                    child: transferRiwayatCarousel()
+                ),
+              ),
+            ),
+
           ],
         ),
       ),

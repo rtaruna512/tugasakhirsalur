@@ -78,41 +78,30 @@ class pendanaanSukses extends StatelessWidget {
                               ],
                             ),
                             Spacer(),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Text(pendanaanStatus.namaDebitor, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w600),),
-                                SizedBox(height: 10,),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      'Rp',
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                      textAlign: TextAlign.center,
+                            Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Text(pendanaanStatus.namaDebitor, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w600),),
+                                  SizedBox(height: 10,),
+                                  Text(
+                                    'Rp${pendanaanStatus.nominalPendanaanAkhir.toString()}',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w600,
                                     ),
-                                    Text(
-                                      pendanaanStatus.nominalPendanaanAkhir.toString(),
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 10,),
-                                Row(
-                                  children: [
-                                    Text(pendanaanStatus.tanggalPendanaan, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w600),),
-                                    Text(', ', style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w600),),
-                                    Text(pendanaanStatus.jamPendanaan, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w600),),
-                                  ],
-                                ),
-                              ],
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  SizedBox(height: 10,),
+                                  Row(
+                                    children: [
+                                      Text(pendanaanStatus.tanggalPendanaan, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w600),),
+                                      Text(', ', style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w600),),
+                                      Text(pendanaanStatus.jamPendanaan, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w600),),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             )
                           ],
                         ),

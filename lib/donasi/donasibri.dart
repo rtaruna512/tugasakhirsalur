@@ -198,24 +198,29 @@ class _donasiBRIState extends State<donasiBRI> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Spacer(),
-                        Text('Transfer sebelum'),
-                        SizedBox(width: 5,),
-                        Text(
-                          '10 Desember 2021 13:25',
+                    RichText(
+                      textAlign: TextAlign.center,
+                      text: TextSpan(
                           style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold
+                            fontSize: 13,
+                            color: Colors.black,
                           ),
-                        ),
-                        SizedBox(width: 5,),
-                        Text('atau'),
-                        Spacer()
-                      ],
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: 'Transfer sebelum ',
+                            ),
+                            TextSpan(
+                                text: '10 Desember 2021 13:25',
+                                style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                )
+                            ),
+                            TextSpan(
+                              text: ' atau transaksi akan dibatalkan oleh sistem',
+                            )
+                          ]
+                      ),
                     ),
-                    Text('transaksi akan dibatalkan oleh sistem')
                   ],
                 ),
               ),

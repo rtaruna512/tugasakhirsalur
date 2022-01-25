@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugasakhirsalur/beranda.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanpasar.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanriwayat.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
@@ -29,7 +30,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => BerandaMenu()));
           },
           color: Colors.white,
         ),
@@ -453,7 +454,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
               ),
             ),
 
-            SizedBox(height: 15,),
+            SizedBox(height: 20,),
 
             Container(
               height: 50,

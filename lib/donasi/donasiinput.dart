@@ -53,7 +53,7 @@ class _DonasiInputState extends State<DonasiInput> {
 
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
-              child: TextField(
+              child: TextFormField(
                 style: GoogleFonts.poppins(
                   fontSize: 25,
                 ),
@@ -66,6 +66,9 @@ class _DonasiInputState extends State<DonasiInput> {
                   labelText: 'Nominal Donasi'
                 ),
                 keyboardType: TextInputType.number,
+                validator: (nominalControllerd){
+
+                },
               ),
             ),
             Container(

@@ -195,7 +195,8 @@ class _State extends State<TransferTujuan>{
                     child: Text(
                       'LANJUT',
                       style: GoogleFonts.poppins(
-                        color: Colors.black
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600
                       ),
                     ),
                     onPressed: (){

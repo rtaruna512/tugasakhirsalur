@@ -135,7 +135,10 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                 SizedBox(height: 15,),
 
                 Card(
-                  elevation: 10,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)
+                  ),
+                  elevation: 5,
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
@@ -470,8 +473,8 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                      blurRadius: 10.0,
-                      offset: Offset(0, 0))
+                      blurRadius: 2.0,
+                  )
                 ],
                 color: Colors.white
               ),

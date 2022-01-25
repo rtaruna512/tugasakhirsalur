@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/data/datapendanaan.dart';
+import 'package:tugasakhirsalur/data/datapendanaanriwayat.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanmain.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class pendanaanPembayaran extends StatefulWidget {
-  final Pendanaan pendanaanTerpilih;
+class pendanaanriwayatPembayaran extends StatefulWidget {
+  final RiwayatPendanaan pendanaanriwayatTerpilih;
 
-  pendanaanPembayaran({required this.pendanaanTerpilih});
+  pendanaanriwayatPembayaran({required this.pendanaanriwayatTerpilih});
   @override
-  _pendanaanPembayaranState createState() => _pendanaanPembayaranState();
+  _pendanaanriwayatPembayaranState createState() => _pendanaanriwayatPembayaranState();
 }
 
-class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
+class _pendanaanriwayatPembayaranState extends State<pendanaanriwayatPembayaran> {
 
 
   @override
@@ -62,7 +62,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                         ),
                         child: CircleAvatar(
                           radius: 40,
-                          backgroundImage: ExactAssetImage(widget.pendanaanTerpilih.avatarURL),
+                          backgroundImage: ExactAssetImage(widget.pendanaanriwayatTerpilih.avatarURL),
 
                         ),
                       ),
@@ -76,13 +76,13 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Text(
-                        widget.pendanaanTerpilih.namaDebitor,
+                        widget.pendanaanriwayatTerpilih.namaDebitor,
                         style: GoogleFonts.poppins(
                             fontSize: 17
                         ),
                       ),
                       Text(
-                        widget.pendanaanTerpilih.namaUsaha,
+                        widget.pendanaanriwayatTerpilih.namaUsaha,
                         style: GoogleFonts.poppins(
                             fontSize: 13
                         ),
@@ -94,7 +94,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                             size: 14,
                           ),
                           Text(
-                            widget.pendanaanTerpilih.lokasi,
+                            widget.pendanaanriwayatTerpilih.lokasi,
                             style: GoogleFonts.poppins(
                                 fontSize: 14
                             ),
@@ -114,8 +114,8 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
               child: Container(
                 height: 40,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all()
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all()
                 ),
                 child:
                 Row(
@@ -130,9 +130,9 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                     Text(
                       '01:00:00',
                       style: GoogleFonts.poppins(
-                        color: Colors.red,
-                        fontSize: 13,
-                        fontWeight: FontWeight.bold
+                          color: Colors.red,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold
                       ),
                     ),
                     Spacer(),
@@ -147,8 +147,8 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all()
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all()
                 ),
                 padding: EdgeInsets.all(15),
                 child:
@@ -158,8 +158,8 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                     Text(
                       'Pembayaran plafond',
                       style: GoogleFonts.poppins(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600
                       ),
                     ),
 
@@ -169,8 +169,8 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                       height: 50,
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: salur13
+                          borderRadius: BorderRadius.circular(10),
+                          color: salur13
                       ),
                       child:
                       Row(
@@ -184,10 +184,10 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                             ),
                           ),
                           Text(
-                            nominalPendanaanAkhir.toString(),
+                            widget.pendanaanriwayatTerpilih.nominalPendanaanAkhir.toString(),
                             style: GoogleFonts.poppins(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold
                             ),
                           ),
                         ],
@@ -250,7 +250,7 @@ class _pendanaanPembayaranState extends State<pendanaanPembayaran> {
                             child: Container(
                               padding: EdgeInsets.fromLTRB(15, 6, 15, 6),
                               decoration: BoxDecoration(
-                                color: Colors.grey
+                                  color: Colors.grey
                               ),
                               child: Text(
                                 'Salin',

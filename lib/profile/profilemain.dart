@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/bantuan/bantuanmain.dart';
+import 'package:tugasakhirsalur/main.dart';
 import 'package:tugasakhirsalur/password/passwordreset.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
@@ -47,23 +48,27 @@ class ProfileMenu extends StatelessWidget {
                     backgroundImage: ExactAssetImage('assets/images/5894220152385821-Male_6.jpg'),
                   ),
                   SizedBox(width: 15,),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Muhammad Fadhil',
-                        style: GoogleFonts.poppins(
-                          fontSize: 23
+                  Flexible(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Muhammad Fadhil',
+                          style: GoogleFonts.poppins(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600
+                          ),
                         ),
-                      ),
-                      Text(
-                        'muhammadfadhil511@gmail.com',
-                        style: GoogleFonts.poppins(
-                          fontSize: 12
-                        ),
-                      )
-                    ],
+                        SizedBox(height: 15,),
+                        Text(
+                          'muhammadfadhil511@gmail.com',
+                          style: GoogleFonts.poppins(
+                            fontSize: 12
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
@@ -542,7 +547,8 @@ class ProfileMenu extends StatelessWidget {
                     ),
                   ),
                   onPressed: (){
-
+                   // SystemNavigator.pop();
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => MyHomePage()), ModalRoute.withName("/Home"));
                   },
                 )
             ),

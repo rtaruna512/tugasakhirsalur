@@ -5,7 +5,7 @@ import 'package:tugasakhirsalur/pendanaan/pendanaanmain.dart';
 import 'package:tugasakhirsalur/profile/profilemain.dart';
 import 'package:tugasakhirsalur/transfer/transfermain.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
-import 'package:tugasakhirsalur/widget/donasicarousel.dart';
+import 'package:tugasakhirsalur/widget/donasilistview.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -22,12 +22,12 @@ class _State extends State<BerandaMenuMain>{
     return Scaffold(
       body: Padding(
           padding: EdgeInsets.all(0),
-          child: ListView(
+          child: Column(
               children: <Widget>[
                 Stack(
                   children: <Widget>[
                     Container(
-                      height: MediaQuery.of(context).size.height * .59,
+                      height: MediaQuery.of(context).size.height * .50,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(20),
@@ -35,7 +35,7 @@ class _State extends State<BerandaMenuMain>{
                         ),
                         color: salur1,
                       ),
-                      padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
+                      padding: EdgeInsets.fromLTRB(15, 30, 15, 0),
                       child: Column(
                         children: <Widget>[
                           Padding(
@@ -85,7 +85,6 @@ class _State extends State<BerandaMenuMain>{
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                SizedBox(width: 15,),
 
                                 Container(
                                   width: 320,
@@ -270,14 +269,11 @@ class _State extends State<BerandaMenuMain>{
                                     ],
                                   ),
                                 ),
-
-                                SizedBox(width: 15,),
                               ],
                             ),
                           ),
                           Spacer(),
-
-                          SizedBox(height: 54,),
+                          SizedBox(height: 55,),
                         ],
                       ),
                     ),
@@ -286,7 +282,7 @@ class _State extends State<BerandaMenuMain>{
                     Container(
                       alignment: Alignment.topCenter,
                       padding: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * .52,
+                        top: MediaQuery.of(context).size.height * .43,
                         left: 15,
                         right: 15,
                       ),
@@ -401,20 +397,30 @@ class _State extends State<BerandaMenuMain>{
                   ],
                 ),
 
-                SizedBox(height: 30,),
+                SizedBox(height: 15,),
 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: Text(
-                    'Ayo Salurkan',
-                    style: GoogleFonts.poppins(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Ayo Salurkan',
+                      style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
 
-                donasiCarousel(),
+                SizedBox(height: 15,),
+
+                Flexible(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 15),
+                      child: donasiCarousel()
+                  ),
+                ),
               ]
           )
       ),

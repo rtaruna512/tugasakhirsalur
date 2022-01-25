@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:tugasakhirsalur/beranda.dart';
 import 'package:tugasakhirsalur/transfer/transfertujuan.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
-import 'package:tugasakhirsalur/widget/transferriwayatcarousel.dart';
+import 'package:tugasakhirsalur/widget/transferriwayatlistview.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TransferBeranda extends StatelessWidget {
@@ -24,15 +25,16 @@ class TransferBeranda extends StatelessWidget {
             icon: Icon(Icons.arrow_back_ios),
             color: Colors.white,
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => BerandaMenu()));
             },
           ),
         ),
       body:Padding(
         padding: EdgeInsets.all(0),
-        child: ListView(
+        child: Column(
           children: <Widget>[
             Container(
+              width: double.infinity,
               padding: EdgeInsets.fromLTRB(20, 10, 20, 30),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -126,9 +128,14 @@ class TransferBeranda extends StatelessWidget {
               ),
             ),
 
-            transferRiwayatCarousel(),
+            Flexible(
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 15),
+                    child: transferRiwayatCarousel()
+                )
+            ),
 
-            SizedBox(height: 20,),
+            SizedBox(height: 15,),
 
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
@@ -139,7 +146,8 @@ class TransferBeranda extends StatelessWidget {
                 child: Text(
                   'Kirim Uang Sekarang',
                   style: GoogleFonts.poppins(
-                    color: Colors.black
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600
                   ),
                 ),
                 onPressed: (){
@@ -149,7 +157,9 @@ class TransferBeranda extends StatelessWidget {
                   );
                 },
               )
-            )
+            ),
+
+            SizedBox(height: 15,),
           ],
         )
       )
