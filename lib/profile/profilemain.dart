@@ -1,12 +1,32 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/bantuan/bantuanmain.dart';
-import 'package:tugasakhirsalur/main.dart';
 import 'package:tugasakhirsalur/password/passwordreset.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
-class ProfileMenu extends StatelessWidget {
+class ProfileMenu extends StatefulWidget {
+  const ProfileMenu({Key? key}) : super(key: key);
 
+  @override
+  _ProfileMenuState createState() => _ProfileMenuState();
+}
+
+class _ProfileMenuState extends State<ProfileMenu> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  late User user;
+
+
+  @override
+  void initState() {
+    super.initState();
+    initUser();
+  }
+
+  initUser() async {
+    user = await _auth.currentUser!;
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,17 +74,17 @@ class ProfileMenu extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Muhammad Fadhil',
+                          'Nama Pengguna',
                           style: GoogleFonts.poppins(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600
                           ),
                         ),
                         SizedBox(height: 15,),
                         Text(
-                          'muhammadfadhil511@gmail.com',
+                          '${user.email}',
                           style: GoogleFonts.poppins(
-                            fontSize: 12
+                              fontSize: 12
                           ),
                         )
                       ],
@@ -79,8 +99,8 @@ class ProfileMenu extends StatelessWidget {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: salur3
+                  borderRadius: BorderRadius.circular(15),
+                  color: salur3
               ),
               padding: EdgeInsets.all(15),
               child: Column(
@@ -90,8 +110,8 @@ class ProfileMenu extends StatelessWidget {
                   Text(
                     'Informasi Akun',
                     style: GoogleFonts.poppins(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600
                     ),
                   ),
 
@@ -105,7 +125,7 @@ class ProfileMenu extends StatelessWidget {
                         Text(
                           'Nama',
                           style: GoogleFonts.poppins(
-                            fontSize: 15
+                              fontSize: 15
                           ),
                         ),
                         Container(
@@ -116,7 +136,7 @@ class ProfileMenu extends StatelessWidget {
                             color: salur4,
                           ),
                           child: Text(
-                            'Muhammad Fadhil',
+                            'Nama Pengguna',
                             style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
@@ -147,7 +167,7 @@ class ProfileMenu extends StatelessWidget {
                             color: salur4,
                           ),
                           child: Text(
-                            'muhammadfadhil511@gmail.com',
+                            '${user.email}',
                             style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
@@ -189,15 +209,15 @@ class ProfileMenu extends StatelessWidget {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => passwordReset()));
                           },
                           style: TextButton.styleFrom(
-                            padding: EdgeInsets.zero,
-                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            alignment: Alignment.centerLeft
+                              padding: EdgeInsets.zero,
+                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                              alignment: Alignment.centerLeft
                           ),
                           child: Text(
                             'Ganti password?',
                             style: GoogleFonts.poppins(
-                              fontSize: 13,
-                              color: salur1
+                                fontSize: 13,
+                                color: salur1
                             ),
                           ),
                         )
@@ -250,7 +270,7 @@ class ProfileMenu extends StatelessWidget {
                             color: salur4,
                           ),
                           child: Text(
-                            'Muhammad Fadhil',
+                            'Nama Pengguna',
                             style: GoogleFonts.poppins(
                                 fontSize: 15
                             ),
@@ -531,13 +551,13 @@ class ProfileMenu extends StatelessWidget {
             SizedBox(height: 30,),
 
             Container(
-              height: 50,
+                height: 50,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)
                       ),
-                    primary: salur1
+                      primary: salur1
                   ),
                   child: Text(
                     'KELUAR',
@@ -547,8 +567,7 @@ class ProfileMenu extends StatelessWidget {
                     ),
                   ),
                   onPressed: (){
-                   // SystemNavigator.pop();
-                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => MyHomePage()), ModalRoute.withName("/Home"));
+                    Navigator.pushReplacementNamed(context, '/halaman_login');
                   },
                 )
             ),

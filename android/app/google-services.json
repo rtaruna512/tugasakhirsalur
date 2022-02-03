@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1055130749713",
+    "project_id": "tugasakhirsalurfirebase",
+    "storage_bucket": "tugasakhirsalurfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055130749713:android:85731ceb0005e5c6b11ab0",
+        "android_client_info": {
+          "package_name": "com.salur.salurapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055130749713-hb53vsdkdllofvd7dfm4cqqokfc9cefj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3IpPb9fZUhnKKFE2zNCTsBMnc6b1YLvQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055130749713-hb53vsdkdllofvd7dfm4cqqokfc9cefj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

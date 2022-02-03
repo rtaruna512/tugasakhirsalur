@@ -25,7 +25,7 @@ class donasiHalamanAkhir extends StatelessWidget {
       ),
       body: Padding(
         padding: EdgeInsets.all(15),
-        child: ListView(
+        child: Column(
           children: [
             Image.asset(
               'assets/images/1.png',
@@ -79,36 +79,6 @@ class donasiHalamanAkhir extends StatelessWidget {
                           )
                         ],
                       ))
-                ],
-              ),
-            ),
-
-            SizedBox(height: 15,),
-
-            Container(
-              width: double.infinity,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Pesan kepada penerima',
-                    style: GoogleFonts.poppins(
-                        fontSize: 16
-                    ),
-                  ),
-                  Container(
-                    width: double.infinity,
-                      height: 75,
-                      decoration: BoxDecoration(
-                          border: Border.all(
-                              color: salur1,
-                              width: 2
-                          )
-                      ),
-                      padding: EdgeInsets.all(10),
-                      child: Text(beritaDonasiText)
-                  ),
                 ],
               ),
             ),

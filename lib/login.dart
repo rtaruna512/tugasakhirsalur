@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/bantuan/bantuanmain.dart';
@@ -7,6 +8,9 @@ import 'package:tugasakhirsalur/register.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/widget/backgroundpainter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugasakhirsalur/widget/error_alertbox.dart';
+import 'package:tugasakhirsalur/widget/loading_alert.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class loginPage extends StatefulWidget {
   @override
@@ -17,6 +21,55 @@ class _State extends State<loginPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   bool _isHidden = true;
+
+  FirebaseAuth _auth = FirebaseAuth.instance;
+  
+  void _loginUser()async{
+    showDialog(
+      context: context, 
+      builder: (con){
+        return const LoadingAlertDialog(message: "Loading...");
+      },
+    );
+    User ? currentUser;
+    await _auth.signInWithEmailAndPassword(
+        email: emailController.text.trim(),
+        password: passwordController.text.trim()).then((auth){
+          currentUser = auth.user;
+    }).catchError((error){
+      showDialog(
+          context: context,
+          builder: (con){
+            return ErrorAlertDialog(message: 'Email atau password salah');
+      });
+    });
+    if(currentUser != null){
+      getUserData(currentUser!.uid);
+    }else{
+      print("error");
+    }
+  }
+
+  getUserData(String uid)async{
+    await FirebaseFirestore.instance.collection("users").doc(uid).get().then((results){
+      String status = results.data()!["status"];
+      if(status == "active"){
+        Navigator.pop(context);
+        Route newRoute =
+        MaterialPageRoute(builder: (context) => BerandaMenu());
+        Navigator.pushReplacement(context, newRoute);
+      }else{
+        _auth.signOut();
+        Navigator.pop(context);
+        Route newRoute =
+        MaterialPageRoute(builder: (context) => loginPage());
+        Navigator.pushReplacement(context, newRoute);
+        showDialog(context: context, builder: (con){
+          return const ErrorAlertDialog(message: "Akun belum teregistrasi.");
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -168,12 +221,14 @@ class _State extends State<loginPage> {
                             primary: salur1
                           ),
                           onPressed: () {
-                            print(emailController.text);
-                            print(passwordController.text);
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => BerandaMenu())
-                            );
+                            emailController.text.isNotEmpty && passwordController.text.isNotEmpty
+                                ? _loginUser():
+                                showDialog(
+                                  context: context,
+                                  builder: (con) {
+                                    return const ErrorAlertDialog(message: "Mohon masukkan email dan password yang benar.");
+                                  },
+                                );
                           },
                         )),
 

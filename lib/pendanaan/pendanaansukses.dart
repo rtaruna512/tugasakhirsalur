@@ -63,7 +63,7 @@ class pendanaanSukses extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
+                        padding: EdgeInsets.all(1),
                         child: Row(
                           children: [
                             Column(

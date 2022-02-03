@@ -55,7 +55,7 @@ class _DonasiInputState extends State<DonasiInput> {
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextFormField(
                 style: GoogleFonts.poppins(
-                  fontSize: 25,
+                  fontSize: 20,
                 ),
                 controller: nominalControllerd,
                 decoration: InputDecoration(
@@ -82,44 +82,7 @@ class _DonasiInputState extends State<DonasiInput> {
               ),
             ),
 
-            SizedBox(height: 30,),
-
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              child: Text(
-                'Berikan pesan kepada penerima',
-                style: GoogleFonts.poppins(
-                  fontSize: 16
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: salur1,
-                    width: 2
-                  )
-                ),
-                padding: EdgeInsets.all(10),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    isDense: true,
-                    hintText: 'Tulis dukungan dan doa kepada penerima',
-                    hintStyle: GoogleFonts.poppins(
-                      fontSize: 14
-                    ),
-                  ),
-                  controller: beritaControllerd,
-                  maxLength: 55,
-
-                ),
-              ),
-            ),
-
-            Spacer(),
+            SizedBox(height: 50,),
 
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
@@ -146,7 +109,7 @@ class _DonasiInputState extends State<DonasiInput> {
                 },
               ),
             ),
-            SizedBox(height: 30,),
+            Spacer(),
           ],
         ),
       ),

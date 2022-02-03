@@ -14,4 +14,12 @@ String rekeningMandiri = '00000002';
 String rekeningBNI = '00000003';
 String rekeningBRI = '00000004';
 String rekeningBSI = '00000005';
+String namadaftar = '';
+String emaildaftar = '';
+String passworddaftar = '';
+
+String userId = "";
+String userEmail = "";
+String getName = "";
+
 
