@@ -17,21 +17,32 @@ class pendanaanKeterangan extends StatefulWidget {
 }
 
 class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
-
-
+  late var pendanaanAngsuranMingguan = ((widget.pendanaanPilihan.plafond + (widget.pendanaanPilihan.plafond * (widget.pendanaanPilihan.persenbagihasil / 100))) / widget.pendanaanPilihan.tenor);
+  late var pembayaranmitra = ((widget.pendanaanPilihan.persenbagihasil / 100) * nominalPendanaanAwal);
+  late var bataspenambahanplafond = widget.pendanaanPilihan.sisaPlafond / 100000;
+  late var perkiraantotalhasil = (nominalPendanaanAwal + (nominalPendanaanAwal * (widget.pendanaanPilihan.persenbagihasil / 100)));
+  var n = 1;
 
   void add () {
     setState(() {
-      if (nominalPendanaanAwal != widget.pendanaanPilihan.sisaPlafond) {
+      if (nominalPendanaanAwal != widget.pendanaanPilihan.sisaPlafond && n <= bataspenambahanplafond) {
         nominalPendanaanAwal = nominalPendanaanAwal + 100000;
+        pembayaranmitra = (((widget.pendanaanPilihan.persenbagihasil / 100) * nominalPendanaanAwal));
+        perkiraantotalhasil = (nominalPendanaanAwal + (nominalPendanaanAwal * (widget.pendanaanPilihan.persenbagihasil / 100)));
+
+        n++;
       }
     });
   }
 
   void minus () {
     setState(() {
-      if (nominalPendanaanAwal != 100000) {
+      if (nominalPendanaanAwal != 100000 && n != 1) {
         nominalPendanaanAwal = nominalPendanaanAwal - 100000;
+        pembayaranmitra = (((widget.pendanaanPilihan.persenbagihasil / 100) * nominalPendanaanAwal));
+        perkiraantotalhasil = (nominalPendanaanAwal + (nominalPendanaanAwal * (widget.pendanaanPilihan.persenbagihasil / 100)));
+        n--;
+
       }
     });
   }
@@ -245,28 +256,59 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                             children: [
                               SizedBox(height: 5,),
 
-                              Text(
-                                widget.pendanaanPilihan.plafond.toString(),
-                                style: GoogleFonts.poppins(
-                                    fontSize: 14
+                              RichText(
+                                text: TextSpan(
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 14,
+                                        color: Colors.black
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text: 'Rp',
+                                      ),
+                                      TextSpan(
+                                        text: widget.pendanaanPilihan.plafond.toString(),
+                                      )
+                                    ]
                                 ),
                               ),
 
                               SizedBox(height: 10,),
 
-                              Text(
-                                widget.pendanaanPilihan.tenor,
-                                style: GoogleFonts.poppins(
-                                    fontSize: 14
+                              RichText(
+                                text: TextSpan(
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 14,
+                                        color: Colors.black
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text: widget.pendanaanPilihan.tenor.toString(),
+                                      ),
+                                      TextSpan(
+                                        text: ' Minggu',
+                                      )
+                                    ]
                                 ),
                               ),
 
+
                               SizedBox(height: 10,),
 
-                              Text(
-                                widget.pendanaanPilihan.bagihasilTotal,
-                                style: GoogleFonts.poppins(
-                                    fontSize: 14
+                              RichText(
+                                text: TextSpan(
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 14,
+                                        color: Colors.black
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text: widget.pendanaanPilihan.persenbagihasil.toString(),
+                                      ),
+                                      TextSpan(
+                                        text: '%',
+                                      )
+                                    ]
                                 ),
                               ),
 
@@ -281,10 +323,20 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
 
                               SizedBox(height: 10,),
 
-                              Text(
-                                widget.pendanaanPilihan.angsuranMingguan,
-                                style: GoogleFonts.poppins(
-                                    fontSize: 14
+                              RichText(
+                                text: TextSpan(
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 14,
+                                        color: Colors.black
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text: 'Rp',
+                                      ),
+                                      TextSpan(
+                                        text: pendanaanAngsuranMingguan.toInt().toString(),
+                                      )
+                                    ]
                                 ),
                               ),
 
@@ -515,19 +567,42 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text(
-                              'Rp2230/Minggu',
-                              style: GoogleFonts.poppins(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold
+                            RichText(
+                              text: TextSpan(
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black
+                                  ),
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                      text: 'Rp',
+                                    ),
+                                    TextSpan(
+                                      text: pembayaranmitra.toInt().toString(),
+                                    ),
+                                    TextSpan(
+                                      text: '/Minggu',
+                                    )
+                                  ]
                               ),
                             ),
                             SizedBox(height: 15,),
-                            Text(
-                              'Rp111500',
-                              style: GoogleFonts.poppins(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold
+                            RichText(
+                              text: TextSpan(
+                                  style: GoogleFonts.poppins(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black
+                                  ),
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                      text: 'Rp',
+                                    ),
+                                    TextSpan(
+                                      text: perkiraantotalhasil.toInt().toString(),
+                                    ),
+                                  ]
                               ),
                             ),
                             SizedBox(height: 15,),

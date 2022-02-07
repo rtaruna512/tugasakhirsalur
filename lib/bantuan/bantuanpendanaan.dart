@@ -64,7 +64,7 @@ class BantuanPendanaan extends StatelessWidget {
                         ),
                         child: Text(
                           'Apakah itu pendanaan Crowdfunding?',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),
@@ -79,7 +79,7 @@ class BantuanPendanaan extends StatelessWidget {
                           children: [
                             Text(
                               'Pendanaan Crowdfunding merupakan salah satu tipe pendanaan yang memungkinkan beberapa pendana untuk mendanai 1 peminjam dana/mitra secara bersama-sama. Sehingga plafon lebih ringan dan pendana memiliki kesempatan untuk bisa melakukan diversifikasi investasi.',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),
@@ -110,7 +110,7 @@ class BantuanPendanaan extends StatelessWidget {
                         ),
                         child: Text(
                           'Apa keuntungan dari pendanaan Crowdfunding dibandingkan dengan pendanaan biasa?',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),
@@ -125,7 +125,7 @@ class BantuanPendanaan extends StatelessWidget {
                           children: [
                             Text(
                               'Dengan mengikuti pendanaan Crowdfunding, pendana dapat mendanai dengan plafon yang lebih terjangkau dan sangat cocok untuk pendana pemula. Dengan plafon yang lebih terjangkau, pendana juga dapat lebih mudah melakukan diversifikasi portofolio dengan mendanai beberapa mitra sekaligus.',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),
@@ -156,7 +156,7 @@ class BantuanPendanaan extends StatelessWidget {
                         ),
                         child: Text(
                           'Apakah peer-to-peer (P2P) lending itu?',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),
@@ -171,7 +171,7 @@ class BantuanPendanaan extends StatelessWidget {
                           children: [
                             Text(
                               'Salur adalah sebuah wadah yang mempertemukan calon penerima pinjaman dengan pemberi dana (pendana) secara langsung dan menjadi perantara yang mengurus perjanjian hutang piutang kedua belah pihak serta mengawasi pembayarannya. Layanan ini disebut Peer-to-Peer (P2P) Lending.Kami menjalankannya lewat aplikasi teknologi, sehingga mampu menurunkan biaya operasional dan lebih efisien.',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),
@@ -202,7 +202,7 @@ class BantuanPendanaan extends StatelessWidget {
                         ),
                         child: Text(
                           'Apakah Yang Dimaksud Dengan Akad Pendanaan?',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),
@@ -217,7 +217,7 @@ class BantuanPendanaan extends StatelessWidget {
                           children: [
                             Text(
                               'Akad pendanaan sudah berlaku jika sudah verfikasi akun dengan ini anda sudah menyetujui syarat dan ketentuan umum yang berlaku',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),
@@ -248,7 +248,7 @@ class BantuanPendanaan extends StatelessWidget {
                         ),
                         child: Text(
                           'Siapa Saja Yang Dapat Menjadi Pendana di Salur?',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),
@@ -263,7 +263,7 @@ class BantuanPendanaan extends StatelessWidget {
                           children: [
                             Text(
                               'Siapapun yang memiliki rekening bank penerbit Indonesia dapat bergabung dengan Salur sebagai pendana',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),
@@ -294,7 +294,7 @@ class BantuanPendanaan extends StatelessWidget {
                         ),
                         child: Text(
                           'Saya sangat berhati-hati terhadap risiko pendanaan. Bagaimana saya mengurangi risiko pendanaan saya?',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),
@@ -309,7 +309,7 @@ class BantuanPendanaan extends StatelessWidget {
                           children: [
                             Text(
                               'Kami menyarankan agar pendana dapat mempelajari dengan seksama risiko terkait dengan fintech dan P2P Lending secara umum.',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),

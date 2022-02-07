@@ -183,7 +183,7 @@ class transferSukses extends StatelessWidget {
               child: Text(
                 'Silahkan screenshot halaman ini sebagai bukti transaksi anda',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w500
                 ),
               ),
@@ -218,6 +218,7 @@ class transferSukses extends StatelessWidget {
                 ),
               ),
             ),
+
             SizedBox(height: 15,)
           ],
         ),

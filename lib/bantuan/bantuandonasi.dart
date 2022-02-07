@@ -64,7 +64,7 @@ class BantuanDonasi extends StatelessWidget {
                         ),
                         child: Text(
                           'Bagaimana jika saya belum transfer hingga melewati batas waktu?',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),
@@ -79,7 +79,7 @@ class BantuanDonasi extends StatelessWidget {
                           children: [
                             Text(
                               'Anda bisa mengulang proses donasi di galang dana yang ingin dibantu.',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),
@@ -110,7 +110,7 @@ class BantuanDonasi extends StatelessWidget {
                         ),
                         child: Text(
                           'Donasi saya terbatalkan, bagaimana cara berdonasi ke penggalang yang sama?',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),
@@ -125,7 +125,7 @@ class BantuanDonasi extends StatelessWidget {
                           children: [
                             Text(
                               'Silahkan lakukan proses donasi kembali dan masukkan nominal dan pilih metode pembayaran anda.',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),
@@ -156,7 +156,7 @@ class BantuanDonasi extends StatelessWidget {
                         ),
                         child: Text(
                           'Bagaimana saya tahu donasi sudah berhasil?',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),
@@ -171,7 +171,7 @@ class BantuanDonasi extends StatelessWidget {
                           children: [
                             Text(
                               'Setelah transaksi berhasil anda akan mendapatkan notifikasi atau anda bisa melakukan pengecekan di riwayat transaksi dihalaman beranda atau di “riwayat donasi saya” di halaman donasi.',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),
@@ -202,7 +202,7 @@ class BantuanDonasi extends StatelessWidget {
                         ),
                         child: Text(
                           'Apakah saya wajib konfirmasi setelah transfer donasi?',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),
@@ -217,7 +217,7 @@ class BantuanDonasi extends StatelessWidget {
                           children: [
                             Text(
                               'Anda tidak perlu melakukan konfirmasi apabila telah melakukan transfer sesuai dengan nomor yang tertera.',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),
@@ -248,7 +248,7 @@ class BantuanDonasi extends StatelessWidget {
                         ),
                         child: Text(
                           'Apa arti dari status donasi saya?',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),

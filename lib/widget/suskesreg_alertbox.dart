@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:tugasakhirsalur/login.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SuksesRegAlert extends StatelessWidget {
   const SuksesRegAlert({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class SuksesRegAlert extends StatelessWidget {
         children: [
           Text(
             'Akun berhasil terdaftar!',
-            style: TextStyle(
+            style: GoogleFonts.poppins(
                 color: Colors.white,
                 fontWeight: FontWeight.w500
             ),
@@ -33,8 +34,8 @@ class SuksesRegAlert extends StatelessWidget {
               Route newRoute = MaterialPageRoute(builder: (context) => loginPage());
               Navigator.pushReplacement(context, newRoute);
             },
-            child: const Center(
-                child: Text('Ok', style: TextStyle(fontWeight: FontWeight.w600),)),
+            child: Center(
+                child: Text('Ok', style: GoogleFonts.poppins(fontWeight: FontWeight.w600),)),
           )
         ],
       ),

@@ -162,40 +162,61 @@ class pendanaanCarousel extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            'Rp',
+                                      RichText(
+                                        text: TextSpan(
                                             style: GoogleFonts.poppins(
-                                                fontSize: 12
+                                                fontSize: 12,
+                                                color: Colors.black
                                             ),
-                                          ),
-                                          Text(
-                                            pendanaan.sisaPlafond.toString(),
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 12
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-
-                                      SizedBox(height: 5,),
-
-                                      Text(
-                                        pendanaan.tenor,
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 12
+                                            children: <TextSpan>[
+                                              TextSpan(
+                                                text: 'Rp',
+                                              ),
+                                              TextSpan(
+                                                text: pendanaan.sisaPlafond.toString(),
+                                              )
+                                            ]
                                         ),
                                       ),
 
                                       SizedBox(height: 5,),
 
-                                      Text(
-                                        pendanaan.bagihasil,
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 12
+                                      RichText(
+                                        text: TextSpan(
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 12,
+                                                color: Colors.black
+                                            ),
+                                            children: <TextSpan>[
+                                              TextSpan(
+                                                text: pendanaan.tenor.toString(),
+                                              ),
+                                              TextSpan(
+                                                text: ' Minggu',
+                                              )
+                                            ]
                                         ),
                                       ),
+
+                                      SizedBox(height: 5,),
+
+                                      RichText(
+                                        text: TextSpan(
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 12,
+                                                color: Colors.black
+                                            ),
+                                            children: <TextSpan>[
+                                              TextSpan(
+                                                  text: pendanaan.persenbagihasil.toString(),
+                                              ),
+                                              TextSpan(
+                                                text: '%',
+                                              )
+                                            ]
+                                        ),
+                                      ),
+
                                     ],
                                   )
                                 ],

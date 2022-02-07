@@ -103,7 +103,7 @@ class _State extends State<passwordLupa> {
                         child: ElevatedButton(
                           child: Text(
                             'Reset Password',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
                             ),

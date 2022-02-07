@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/donasi/donasimain.dart';
+import 'package:tugasakhirsalur/penarikan/penarikanmain.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanmain.dart';
 import 'package:tugasakhirsalur/profile/profilemain.dart';
 import 'package:tugasakhirsalur/transfer/transfermain.dart';
@@ -85,6 +86,77 @@ class _State extends State<BerandaMenuMain>{
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
+
+                                Container(
+                                  width: 320,
+                                  height: 200,
+                                  padding: EdgeInsets.all(15),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(15),
+                                      gradient: LinearGradient(
+                                          begin: Alignment.topLeft,
+                                          end: Alignment(0, 0),
+                                          colors: <Color>[
+                                            gradientGLight,
+                                            gradientGdark
+                                          ]
+                                      )
+                                  ),
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: <Widget>[
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Text(
+                                            'Saldo Semua Transaksi Anda',
+                                            style: GoogleFonts.poppins(
+                                                color: Colors.white
+                                            ),
+                                          ),
+                                          SizedBox(height: 15,),
+                                          Text(
+                                            'Rp250.000',
+                                            style: GoogleFonts.poppins(
+                                                color: Colors.white,
+                                                fontSize: 27
+                                            ),
+                                          ),
+                                          SizedBox(height: 15,),
+                                          ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                            ),
+                                            onPressed: () {
+                                              Navigator.push(context, MaterialPageRoute(builder: (context) => PenarikanBeranda()));
+                                            }, 
+                                            child: Text(
+                                              'Tarik Sekarang',
+                                              style: GoogleFonts.poppins(
+                                                  fontWeight: FontWeight.w600
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Spacer(),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.end,
+                                        children: <Widget>[
+                                          Image.asset(
+                                            'assets/images/mastercard.png',
+                                            height: 45,
+                                            width: 45,
+                                            fit: BoxFit.fitWidth,
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+
+                                SizedBox(width: 15,),
 
                                 Container(
                                   width: 320,

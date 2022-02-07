@@ -64,7 +64,7 @@ class BantuanTransfer extends StatelessWidget {
                         ),
                         child: Text(
                           'Nominal transfer salah/tidak memasukkan kode unik',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w600
                           ),
                         ),
@@ -79,7 +79,7 @@ class BantuanTransfer extends StatelessWidget {
                           children: [
                             Text(
                               'Sistem aplikasi salur tidak memproses transaksi jika nominal yang dimasukkan berbeda dengan nominal transaksi yang kami berikan.\n',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),
@@ -129,7 +129,7 @@ class BantuanTransfer extends StatelessWidget {
                         ),
                         child: Text(
                           'Waktu transaksi lama/belum sampai ke tujuan',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600
                           ),
                         ),
@@ -144,7 +144,7 @@ class BantuanTransfer extends StatelessWidget {
                           children: [
                             Text(
                               'Pastikan nominal yang kamu transfer ke rekening salur benar dan sama dengan nominal yang ada pada transaksi kamu.\n',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 13,
                               ),
                             ),

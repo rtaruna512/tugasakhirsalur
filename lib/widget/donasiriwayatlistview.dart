@@ -9,6 +9,7 @@ import 'package:tugasakhirsalur/donasi/donasibsi.dart';
 import 'package:tugasakhirsalur/donasi/donasimandiri.dart';
 import 'package:tugasakhirsalur/donasi/donasihalamanakhir.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class donasiRiwayatListView extends StatelessWidget {
@@ -82,32 +83,32 @@ class donasiRiwayatListView extends StatelessWidget {
                         children: [
                           Text(
                             riwayatdon.namaDonasi,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600
                             ),
                           ),
                           Text(
                             riwayatdon.namaPenggalang,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 13
                             ),
                           ),
                           RichText(
                             text: TextSpan(
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                     fontSize: 13,
                                     color: Colors.black
                                 ),
                                 children: <TextSpan>[
                                   TextSpan(
                                       text: 'Total donasi ',
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                       )
                                   ),
                                   TextSpan(
                                       text: 'Rp${riwayatdon.nominalDonasi.toString()}',
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                       )
                                   ),
                                 ]
@@ -127,7 +128,7 @@ class donasiRiwayatListView extends StatelessWidget {
                         width: 100,
                         child: Text(
                           riwayatdon.statusDonasi,
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600,
                               fontSize: 14,
                               color: salur10
@@ -137,7 +138,7 @@ class donasiRiwayatListView extends StatelessWidget {
                       ),
                       Text(
                         riwayatdon.tanggalDonasi,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 13,
                         ),
                       )

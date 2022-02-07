@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tugasakhirsalur/widget/pendanaanriwayatlistview.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class pendanaanRiwayatmenu extends StatelessWidget {
@@ -18,7 +19,7 @@ class pendanaanRiwayatmenu extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        title: Text('Transaksi Pendanaan Saya',style: TextStyle(color: Colors.black),),
+        title: Text('Transaksi Pendanaan Saya',style: GoogleFonts.poppins(color: Colors.black),),
         centerTitle: true,
 
       ),

@@ -3,17 +3,16 @@ class Pendanaan {
   String namaDebitor;
   String namaUsaha;
   String lokasi;
-  String tenor;
-  String bagihasil;
   String bagihasilTotal;
   String pendanaanKe;
-  String angsuranMingguan;
   String penghasilanPerbulan;
   String pekerjaan;
   String sektor;
   String akad;
+  int tenor;
   int plafond;
   int sisaPlafond;
+  int persenbagihasil;
   int persentasePendanaan;
   int sisaHariPendanaan;
 
@@ -27,10 +26,9 @@ class Pendanaan {
     required this.plafond,
     required this.sisaPlafond,
     required this.tenor,
-    required this.bagihasil,
+    required this.persenbagihasil,
     required this.bagihasilTotal,
     required this.pendanaanKe,
-    required this.angsuranMingguan,
     required this.penghasilanPerbulan,
     required this.pekerjaan,
     required this.sektor,
@@ -48,11 +46,10 @@ List<Pendanaan> pendanaantujuan = [
     lokasi: 'Payakumbuh, Sumatera Barat',
     plafond: 5000000,
     sisaPlafond: 4000000,
-    tenor: '60 Minggu',
-    bagihasil: '10%',
+    tenor: 50,
+    persenbagihasil: 10,
     bagihasilTotal: 'Rp300.000',
     pendanaanKe: '3',
-    angsuranMingguan: 'Rp87.000',
     penghasilanPerbulan: 'Rp4.000.000',
     pekerjaan: 'Barista',
     sektor: 'Perdagangan',
@@ -67,11 +64,10 @@ List<Pendanaan> pendanaantujuan = [
       lokasi: 'Payakumbuh, Sumatera Barat',
       plafond: 5000000,
       sisaPlafond: 1000000,
-      tenor: '60 Minggu',
-      bagihasil: '10%',
+      tenor: 50,
+      persenbagihasil: 10,
       bagihasilTotal: 'Rp300.000',
       pendanaanKe: '3',
-      angsuranMingguan: 'Rp87.000',
       penghasilanPerbulan: 'Rp4.000.000',
       pekerjaan: 'Barista',
       sektor: 'Perdagangan',
@@ -86,11 +82,10 @@ List<Pendanaan> pendanaantujuan = [
       lokasi: 'Payakumbuh, Sumatera Barat',
       plafond: 5000000,
       sisaPlafond: 3000000,
-      tenor: '60 Minggu',
-      bagihasil: '10%',
+      tenor: 50,
+      persenbagihasil: 10,
       bagihasilTotal: 'Rp300.000',
       pendanaanKe: '3',
-      angsuranMingguan: 'Rp87.000',
       penghasilanPerbulan: 'Rp4.000.000',
       pekerjaan: 'Barista',
       sektor: 'Perdagangan',
@@ -105,11 +100,10 @@ List<Pendanaan> pendanaantujuan = [
       lokasi: 'Payakumbuh, Sumatera Barat',
       plafond: 5000000,
       sisaPlafond: 500000,
-      tenor: '60 Minggu',
-      bagihasil: '10%',
+      tenor: 50,
+      persenbagihasil: 10,
       bagihasilTotal: 'Rp300.000',
       pendanaanKe: '3',
-      angsuranMingguan: 'Rp87.000',
       penghasilanPerbulan: 'Rp4.000.000',
       pekerjaan: 'Barista',
       sektor: 'Perdagangan',
@@ -124,11 +118,10 @@ List<Pendanaan> pendanaantujuan = [
       lokasi: 'Payakumbuh, Sumatera Barat',
       plafond: 5000000,
       sisaPlafond: 2500000,
-      tenor: '60 Minggu',
-      bagihasil: '10%',
+      tenor: 50,
+      persenbagihasil: 10,
       bagihasilTotal: 'Rp300.000',
       pendanaanKe: '3',
-      angsuranMingguan: 'Rp87.000',
       penghasilanPerbulan: 'Rp4.000.000',
       pekerjaan: 'Barista',
       sektor: 'Perdagangan',

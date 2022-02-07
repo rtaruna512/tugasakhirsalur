@@ -102,7 +102,7 @@ class transferRiwayatCarousel extends StatelessWidget {
 
                       Text(
                         riwayattf.statusTransfer,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: salur10

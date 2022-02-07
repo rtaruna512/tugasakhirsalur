@@ -5,6 +5,10 @@ int nominalTransfer = 0;
 int nominalDonasi = 0;
 int nominalPendanaanAwal = 100000;
 int nominalPendanaanAkhir = 0;
+
+int nominalPenarikanAset = 0;
+int nominalPenarikanSaldounik = 0;
+
 String beritaDonasiText = '';
 String rekeningTransferStr = '00000000';
 String beritaTransferText = '';

@@ -1,20 +1,18 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:tugasakhirsalur/data/datadonasi.dart';
-import 'package:tugasakhirsalur/donasi/donasimetodetf.dart';
+import 'package:flutter/material.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
-import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 
-class DonasiInput extends StatefulWidget {
-  late final Donasi donasiPilihan;
+class PenarikanAsetPendanaan extends StatefulWidget {
+  const PenarikanAsetPendanaan({Key? key}) : super(key: key);
 
   @override
-  _DonasiInputState createState() => _DonasiInputState();
+  _PenarikanAsetPendanaanState createState() => _PenarikanAsetPendanaanState();
 }
 
-class _DonasiInputState extends State<DonasiInput> {
-  final nominalControllerd = TextEditingController();
+class _PenarikanAsetPendanaanState extends State<PenarikanAsetPendanaan> {
+  final nominalController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +40,8 @@ class _DonasiInputState extends State<DonasiInput> {
               child: Text(
                 'Donasi yang anda berikan',
                 style: GoogleFonts.poppins(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600
                 ),
               ),
             ),
@@ -56,16 +54,16 @@ class _DonasiInputState extends State<DonasiInput> {
                 style: GoogleFonts.poppins(
                   fontSize: 20,
                 ),
-                controller: nominalControllerd,
+                controller: nominalController,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  fillColor: salur7,
-                  filled: true,
-                  prefixText: "Rp",
-                  labelText: 'Nominal Donasi'
+                    border: OutlineInputBorder(),
+                    fillColor: salur7,
+                    filled: true,
+                    prefixText: "Rp",
+                    labelText: 'Nominal Donasi'
                 ),
                 keyboardType: TextInputType.number,
-                validator: (nominalControllerd){
+                validator: (nominalController){
 
                 },
               ),
@@ -73,7 +71,7 @@ class _DonasiInputState extends State<DonasiInput> {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Text(
-                  'Minimal menyalurkan Rp1000.',
+                'Minimal menyalurkan Rp1000.',
                 style: GoogleFonts.poppins(
                   fontStyle: FontStyle.italic,
                   color: Colors.red,
@@ -87,23 +85,22 @@ class _DonasiInputState extends State<DonasiInput> {
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(double.infinity,50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15)
-                  )
+                    minimumSize: const Size(double.infinity,50),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)
+                    )
                 ),
                 child: Text(
-                  'Lanjutkan pembayaran',
+                  'TARIK SALDO SEKARANG',
                   style: GoogleFonts.poppins(
-                    color: Colors.black,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w600
+                      color: Colors.black,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600
 
                   ),
                 ),
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => DonasiMetodeTF()));
-                  nominalDonasi = int.parse(nominalControllerd.text);
+                  nominalPenarikanAset = int.parse(nominalController.text);
                 },
               ),
             ),

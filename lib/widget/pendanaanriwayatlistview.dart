@@ -5,6 +5,7 @@ import 'package:tugasakhirsalur/data/datapendanaanriwayat.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanriwayatpembayaran.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaansukses.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class pendanaanRiwayatListView extends StatelessWidget {
   const pendanaanRiwayatListView({Key? key}) : super(key: key);
@@ -62,32 +63,32 @@ class pendanaanRiwayatListView extends StatelessWidget {
                         children: [
                           Text(
                             'Pendanaan',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600
                             ),
                           ),
                           Text(
                             riwayatdana.namaDebitor,
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 13
                             ),
                           ),
                           RichText(
                             text: TextSpan(
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                     fontSize: 13,
                                     color: Colors.black
                                 ),
                                 children: <TextSpan>[
                                   TextSpan(
                                       text: 'Total Plafond ',
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                       )
                                   ),
                                   TextSpan(
                                       text: 'Rp${riwayatdana.nominalPendanaanAkhir.toString()}',
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                       )
                                   ),
                                 ]
@@ -106,7 +107,7 @@ class pendanaanRiwayatListView extends StatelessWidget {
                         width: 100,
                         child: Text(
                           riwayatdana.statusPendanaan,
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               fontWeight: FontWeight.w600,
                               fontSize: 14,
                               color: salur10
@@ -116,7 +117,7 @@ class pendanaanRiwayatListView extends StatelessWidget {
                       ),
                       Text(
                         riwayatdana.tanggalPendanaan,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 13,
                         ),
                       )

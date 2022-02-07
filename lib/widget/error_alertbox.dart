@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ErrorAlertDialog extends StatelessWidget {
   final String message;
@@ -17,7 +18,7 @@ class ErrorAlertDialog extends StatelessWidget {
         children: [
           Text(
             message,
-            style: TextStyle(
+            style: GoogleFonts.poppins(
               color: Colors.white,
               fontWeight: FontWeight.w500
             ),
@@ -32,8 +33,8 @@ class ErrorAlertDialog extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            child: const Center(
-                child: Text('Ok', style: TextStyle(fontWeight: FontWeight.w600),)),
+            child: Center(
+                child: Text('Ok', style: GoogleFonts.poppins(fontWeight: FontWeight.w600),)),
           )
         ],
       ),
