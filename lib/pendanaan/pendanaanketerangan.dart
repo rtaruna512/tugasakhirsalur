@@ -18,8 +18,11 @@ class pendanaanKeterangan extends StatefulWidget {
 
 class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
   late var pendanaanAngsuranMingguan = ((widget.pendanaanPilihan.plafond + (widget.pendanaanPilihan.plafond * (widget.pendanaanPilihan.persenbagihasil / 100))) / widget.pendanaanPilihan.tenor);
-  late var pembayaranmitra = ((widget.pendanaanPilihan.persenbagihasil / 100) * nominalPendanaanAwal);
+
+  late var pembayaranmitra = ((nominalPendanaanAwal / widget.pendanaanPilihan.tenor) + ((widget.pendanaanPilihan.persenbagihasil / 100) * nominalPendanaanAwal / widget.pendanaanPilihan.tenor));
+
   late var bataspenambahanplafond = widget.pendanaanPilihan.sisaPlafond / 100000;
+
   late var perkiraantotalhasil = (nominalPendanaanAwal + (nominalPendanaanAwal * (widget.pendanaanPilihan.persenbagihasil / 100)));
   var n = 1;
 
@@ -27,7 +30,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
     setState(() {
       if (nominalPendanaanAwal != widget.pendanaanPilihan.sisaPlafond && n <= bataspenambahanplafond) {
         nominalPendanaanAwal = nominalPendanaanAwal + 100000;
-        pembayaranmitra = (((widget.pendanaanPilihan.persenbagihasil / 100) * nominalPendanaanAwal));
+        pembayaranmitra = ((nominalPendanaanAwal / widget.pendanaanPilihan.tenor) + ((widget.pendanaanPilihan.persenbagihasil / 100) * nominalPendanaanAwal / widget.pendanaanPilihan.tenor));
         perkiraantotalhasil = (nominalPendanaanAwal + (nominalPendanaanAwal * (widget.pendanaanPilihan.persenbagihasil / 100)));
 
         n++;
@@ -39,7 +42,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
     setState(() {
       if (nominalPendanaanAwal != 100000 && n != 1) {
         nominalPendanaanAwal = nominalPendanaanAwal - 100000;
-        pembayaranmitra = (((widget.pendanaanPilihan.persenbagihasil / 100) * nominalPendanaanAwal));
+        pembayaranmitra = ((nominalPendanaanAwal / widget.pendanaanPilihan.tenor) + ((widget.pendanaanPilihan.persenbagihasil / 100) * nominalPendanaanAwal / widget.pendanaanPilihan.tenor));
         perkiraantotalhasil = (nominalPendanaanAwal + (nominalPendanaanAwal * (widget.pendanaanPilihan.persenbagihasil / 100)));
         n--;
 
@@ -609,7 +612,7 @@ class _pendanaanKeteranganState extends State<pendanaanKeterangan> {
                             LinearPercentIndicator(
                               width: 120,
                               lineHeight: 14.0,
-                              percent: widget.pendanaanPilihan.persentasePendanaan/100,
+                              percent: ((widget.pendanaanPilihan.plafond - widget.pendanaanPilihan.sisaPlafond) / widget.pendanaanPilihan.plafond),
                               linearStrokeCap: LinearStrokeCap.roundAll,
                               backgroundColor: Colors.grey,
                               progressColor: salur1,

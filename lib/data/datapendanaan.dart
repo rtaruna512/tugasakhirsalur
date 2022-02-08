@@ -3,7 +3,6 @@ class Pendanaan {
   String namaDebitor;
   String namaUsaha;
   String lokasi;
-  String bagihasilTotal;
   String pendanaanKe;
   String penghasilanPerbulan;
   String pekerjaan;
@@ -27,7 +26,6 @@ class Pendanaan {
     required this.sisaPlafond,
     required this.tenor,
     required this.persenbagihasil,
-    required this.bagihasilTotal,
     required this.pendanaanKe,
     required this.penghasilanPerbulan,
     required this.pekerjaan,
@@ -48,9 +46,8 @@ List<Pendanaan> pendanaantujuan = [
     sisaPlafond: 4000000,
     tenor: 50,
     persenbagihasil: 10,
-    bagihasilTotal: 'Rp300.000',
     pendanaanKe: '3',
-    penghasilanPerbulan: 'Rp4.000.000',
+    penghasilanPerbulan: 'Rp4000000',
     pekerjaan: 'Barista',
     sektor: 'Perdagangan',
     akad: 'Perjanjian pendanaan',
@@ -66,9 +63,8 @@ List<Pendanaan> pendanaantujuan = [
       sisaPlafond: 1000000,
       tenor: 50,
       persenbagihasil: 10,
-      bagihasilTotal: 'Rp300.000',
       pendanaanKe: '3',
-      penghasilanPerbulan: 'Rp4.000.000',
+      penghasilanPerbulan: 'Rp4000000',
       pekerjaan: 'Barista',
       sektor: 'Perdagangan',
       akad: 'Perjanjian pendanaan',
@@ -84,9 +80,8 @@ List<Pendanaan> pendanaantujuan = [
       sisaPlafond: 3000000,
       tenor: 50,
       persenbagihasil: 10,
-      bagihasilTotal: 'Rp300.000',
       pendanaanKe: '3',
-      penghasilanPerbulan: 'Rp4.000.000',
+      penghasilanPerbulan: 'Rp4000000',
       pekerjaan: 'Barista',
       sektor: 'Perdagangan',
       akad: 'Perjanjian pendanaan',
@@ -102,9 +97,8 @@ List<Pendanaan> pendanaantujuan = [
       sisaPlafond: 500000,
       tenor: 50,
       persenbagihasil: 10,
-      bagihasilTotal: 'Rp300.000',
       pendanaanKe: '3',
-      penghasilanPerbulan: 'Rp4.000.000',
+      penghasilanPerbulan: 'Rp4000000',
       pekerjaan: 'Barista',
       sektor: 'Perdagangan',
       akad: 'Perjanjian pendanaan',
@@ -120,9 +114,8 @@ List<Pendanaan> pendanaantujuan = [
       sisaPlafond: 2500000,
       tenor: 50,
       persenbagihasil: 10,
-      bagihasilTotal: 'Rp300.000',
       pendanaanKe: '3',
-      penghasilanPerbulan: 'Rp4.000.000',
+      penghasilanPerbulan: 'Rp4000000',
       pekerjaan: 'Barista',
       sektor: 'Perdagangan',
       akad: 'Perjanjian pendanaan',

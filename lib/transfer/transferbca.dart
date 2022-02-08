@@ -27,8 +27,10 @@ class _transferBCAState extends State<transferBCA> {
 
   @override
   Widget build(BuildContext context) {
+
     var totalpembayaran = nominalTransfer + kodeunik;
     String totalpembayaranString = totalpembayaran.toString();
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,

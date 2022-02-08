@@ -1,6 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:tugasakhirsalur/beranda.dart';
+import 'package:tugasakhirsalur/donasi/donasimain.dart';
+import 'package:tugasakhirsalur/penarikan/penarikanasetpendanaan.dart';
+import 'package:tugasakhirsalur/penarikan/penarikankodeunik.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -222,7 +225,7 @@ class PenarikanBeranda extends StatelessWidget {
                 ),
               ),
               onPressed: (){
-
+                Navigator.push(context, MaterialPageRoute(builder: (context) => PenarikanAsetPendanaan()));
               },
             ),
 
@@ -247,7 +250,7 @@ class PenarikanBeranda extends StatelessWidget {
                 ),
               ),
               onPressed: (){
-
+                Navigator.push(context, MaterialPageRoute(builder: (context) => PenarikanKodeUnik()));
               },
             ),
 
@@ -267,7 +270,7 @@ class PenarikanBeranda extends StatelessWidget {
 
             ElevatedButton(
               onPressed: () {
-
+                Navigator.push(context, MaterialPageRoute(builder: (context) => DonasiBeranda()));
               },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(

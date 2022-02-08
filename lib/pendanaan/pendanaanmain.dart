@@ -5,6 +5,8 @@ import 'package:tugasakhirsalur/beranda.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanpasar.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanriwayat.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
+import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
+
 
 
 
@@ -14,8 +16,6 @@ class pendanaanBeranda extends StatefulWidget {
 }
 
 class _pendanaanBerandaState extends State<pendanaanBeranda> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,7 +87,7 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                         ),
                         SizedBox(height: 8,),
                         Text(
-                          'Rp250.000',
+                          totalAsetPendanaan.toString(),
                           style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 30
@@ -130,27 +130,51 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
-                                  'Rp 0',
-                                  style: GoogleFonts.poppins(
-                                      color: Colors.white,
-                                      fontSize: 12
+                                RichText(
+                                  text: TextSpan(
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 12
+                                      ),
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                          text: 'Rp',
+                                        ),
+                                        TextSpan(
+                                          text: totalSisaPokok.toString(),
+                                        ),
+                                      ]
                                   ),
                                 ),
                                 SizedBox(height: 5,),
-                                Text(
-                                  'Rp 0',
-                                  style: GoogleFonts.poppins(
-                                      color: Colors.white,
-                                      fontSize: 12
+                                RichText(
+                                  text: TextSpan(
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 12
+                                      ),
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                          text: 'Rp',
+                                        ),
+                                        TextSpan(
+                                          text: totalPlafondTerbayar.toString(),
+                                        ),
+                                      ]
                                   ),
                                 ),
                                 SizedBox(height: 5,),
-                                Text(
-                                  '0 Mitra',
-                                  style: GoogleFonts.poppins(
-                                      color: Colors.white,
-                                      fontSize: 12
+                                RichText(
+                                  text: TextSpan(
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 12
+                                      ),
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                          text: mitraAktif.toString(),
+                                        ),
+                                        TextSpan(
+                                          text: ' Mitra',
+                                        ),
+                                      ]
                                   ),
                                 ),
                               ],
@@ -284,37 +308,77 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                             children: [
                               SizedBox(height: 5,),
 
-                              Text(
-                                'Rp 0',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 15
+                              RichText(
+                                text: TextSpan(
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 15,
+                                      color: Colors.black
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text: 'Rp',
+                                      ),
+                                      TextSpan(
+                                        text: totalPlafondTerbayar.toString(),
+                                      ),
+                                    ]
                                 ),
                               ),
 
                               SizedBox(height: 10,),
 
-                              Text(
-                                'Rp 0',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 15
+                              RichText(
+                                text: TextSpan(
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 15,
+                                      color: Colors.black
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text: 'Rp',
+                                      ),
+                                      TextSpan(
+                                        text: totalSisaPokok.toString(),
+                                      ),
+                                    ]
                                 ),
                               ),
 
                               SizedBox(height: 10,),
 
-                              Text(
-                                'Rp 0',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 15
+                              RichText(
+                                text: TextSpan(
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 15,
+                                        color: Colors.black
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text: 'Rp',
+                                      ),
+                                      TextSpan(
+                                        text: totalPendanaanAktif.toString(),
+                                      ),
+                                    ]
                                 ),
                               ),
 
                               SizedBox(height: 10,),
 
-                              Text(
-                                'Rp 0',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 15
+                              RichText(
+                                text: TextSpan(
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 15,
+                                        color: Colors.black
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text: 'Rp',
+                                      ),
+                                      TextSpan(
+                                        text: totalBagiHasilTerbayar.toString(),
+                                      ),
+                                    ]
                                 ),
                               ),
 
@@ -388,10 +452,20 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                             children: [
                               SizedBox(height: 5,),
 
-                              Text(
-                                'Rp 0',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 15
+                              RichText(
+                                text: TextSpan(
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 15,
+                                        color: Colors.black
+                                    ),
+                                    children: <TextSpan>[
+                                      TextSpan(
+                                        text: mitraAktif.toString(),
+                                      ),
+                                      TextSpan(
+                                        text: ' Mitra',
+                                      ),
+                                    ]
                                 ),
                               ),
 

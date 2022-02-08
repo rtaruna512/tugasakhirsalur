@@ -59,7 +59,7 @@ class pendanaanCarousel extends StatelessWidget {
                           LinearPercentIndicator(
                             width: 100,
                             lineHeight: 10,
-                            percent: pendanaan.persentasePendanaan/100,
+                            percent: ((pendanaan.plafond - pendanaan.sisaPlafond) / pendanaan.plafond),
                             linearStrokeCap: LinearStrokeCap.roundAll,
                             backgroundColor: Colors.grey,
                             progressColor: salur1,

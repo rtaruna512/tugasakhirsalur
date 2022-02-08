@@ -97,7 +97,6 @@ class pendanaanSukses extends StatelessWidget {
                                     children: [
                                       Text(pendanaanStatus.tanggalPendanaan, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w600),),
                                       Text(', ', style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w600),),
-                                      Text(pendanaanStatus.jamPendanaan, style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.w600),),
                                     ],
                                   ),
                                 ],

@@ -46,7 +46,11 @@ class _State extends State<loginPage> {
     if(currentUser != null){
       getUserData(currentUser!.uid);
     }else{
-      print("error");
+      showDialog(
+          context: context,
+          builder: (con){
+            return ErrorAlertDialog(message: 'Email atau password salah');
+          });
     }
   }
 

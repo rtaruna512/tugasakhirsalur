@@ -5,14 +5,14 @@ import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/variables/appvariables_lib.dart';
 
-class PenarikanAsetPendanaan extends StatefulWidget {
-  const PenarikanAsetPendanaan({Key? key}) : super(key: key);
+class PenarikanKodeUnik extends StatefulWidget {
+  const PenarikanKodeUnik({Key? key}) : super(key: key);
 
   @override
-  _PenarikanAsetPendanaanState createState() => _PenarikanAsetPendanaanState();
+  _PenarikanKodeUnikState createState() => _PenarikanKodeUnikState();
 }
 
-class _PenarikanAsetPendanaanState extends State<PenarikanAsetPendanaan> {
+class _PenarikanKodeUnikState extends State<PenarikanKodeUnik> {
   final nominalController = TextEditingController();
 
   @override
@@ -21,7 +21,7 @@ class _PenarikanAsetPendanaanState extends State<PenarikanAsetPendanaan> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: salur1,
-        title: Text('Tarik Saldo Pendanaan'),
+        title: Text('Tarik Saldo Kode Unik'),
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: (){
@@ -60,7 +60,7 @@ class _PenarikanAsetPendanaanState extends State<PenarikanAsetPendanaan> {
                     labelText: 'Nominal Penarikan'
                 ),
                 keyboardType: TextInputType.number,
-                validator: (nominalControllerd){
+                validator: (nominalController){
 
                 },
               ),
@@ -109,16 +109,16 @@ class _PenarikanAsetPendanaanState extends State<PenarikanAsetPendanaan> {
                           ),
                           children: <TextSpan>[
                             TextSpan(
-                              text: '*Penarikan saldo ',
+                              text: '*Minimal penarikan saldo ',
                             ),
                             TextSpan(
-                              text: 'aset pendanaan',
+                              text: 'kode unik',
                               style: GoogleFonts.poppins(
                                   fontWeight: FontWeight.bold
                               ),
                             ),
                             TextSpan(
-                              text: ' bisa dilakukan jika masa tenor telah selesai',
+                              text: ' adalah Rp20000',
                             ),
                           ]
                       ),
@@ -161,9 +161,9 @@ class _PenarikanAsetPendanaanState extends State<PenarikanAsetPendanaan> {
 
                   ),
                 ),
-                onPressed: (){
+                onPressed: ()  {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => PenarikanCek()));
-                  nominalPenarikanAset = int.parse(nominalController.text);
+                  nominalPenarikanSaldounik = int.parse(nominalController.text);
                 },
               ),
             ),

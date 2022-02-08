@@ -26,4 +26,15 @@ String userId = "";
 String userEmail = "";
 String getName = "";
 
+//halaman pendanaan
+int totalPlafondDonor = 0;
+int totalPlafondTerbayar = 0;
+int totalBagiHasilTerbayar = 0;
+int totalSisaPokok = 0;
+int mitraAktif = 0;
+int totalPendanaanAktif = 0;
+
+
+int totalAsetPendanaan = totalPlafondDonor + totalBagiHasilTerbayar;
+
 

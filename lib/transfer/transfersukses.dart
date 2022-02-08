@@ -73,7 +73,7 @@ class transferSukses extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                   side: BorderSide(
-                    color: salur13,
+                    color: salur1,
                     width: 2
                   ),
                 ),
@@ -89,7 +89,7 @@ class transferSukses extends StatelessWidget {
                               topLeft: Radius.circular(15),
                               topRight: Radius.circular(15)
                           ),
-                          color: salur13,
+                          color: salur1,
                         ),
                         alignment: Alignment.center,
                         child: Padding(
@@ -102,6 +102,7 @@ class transferSukses extends StatelessWidget {
                                 style: GoogleFonts.poppins(
                                   fontSize: 23,
                                   fontWeight: FontWeight.bold,
+                                  color: Colors.white
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -110,6 +111,7 @@ class transferSukses extends StatelessWidget {
                                 style: GoogleFonts.poppins(
                                   fontSize: 23,
                                   fontWeight: FontWeight.bold,
+                                  color: Colors.white
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -153,7 +155,7 @@ class transferSukses extends StatelessWidget {
                       ),
 
                       Divider(
-                        color: salur13,
+                        color: salur1,
                         height: 1,
                         thickness: 2,
                       ),
