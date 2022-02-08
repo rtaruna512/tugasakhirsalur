@@ -24,7 +24,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
   }
 
   initUser() async {
-    user = await _auth.currentUser!;
+    user = _auth.currentUser!;
     setState(() {});
   }
 
@@ -339,7 +339,33 @@ class _ProfileMenuState extends State<ProfileMenu> {
                         ),
                         RawMaterialButton(
                           onPressed: () {
-
+                            showDialog(
+                              context: context,
+                              builder: (con){
+                                return AlertDialog(
+                                  contentPadding: EdgeInsets.all(30),
+                                  backgroundColor: salur1,
+                                  content: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Image.asset('assets/images/2a7f1b6d49425e97ff3d73fd7c20074b.jpg'),
+                                      SizedBox(height: 15,),
+                                      ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            fixedSize: Size(100, 40),
+                                            alignment: Alignment.center
+                                        ),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        child: Center(
+                                            child: Text('Kembali', style: GoogleFonts.poppins(fontWeight: FontWeight.w600),)),
+                                      )
+                                    ],
+                                  ),
+                                );
+                              },
+                            );
                           },
                           child: Container(
                             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),
@@ -397,7 +423,33 @@ class _ProfileMenuState extends State<ProfileMenu> {
                         ),
                         RawMaterialButton(
                           onPressed: () {
-
+                            showDialog(
+                              context: context,
+                              builder: (con){
+                                return AlertDialog(
+                                  contentPadding: EdgeInsets.all(30),
+                                  backgroundColor: salur1,
+                                  content: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Image.asset('assets/images/mceclip0.png'),
+                                      SizedBox(height: 15,),
+                                      ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            fixedSize: Size(100, 40),
+                                            alignment: Alignment.center
+                                        ),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        child: Center(
+                                            child: Text('Kembali', style: GoogleFonts.poppins(fontWeight: FontWeight.w600),)),
+                                      )
+                                    ],
+                                  ),
+                                );
+                              },
+                            );
                           },
                           child: Container(
                             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 15),

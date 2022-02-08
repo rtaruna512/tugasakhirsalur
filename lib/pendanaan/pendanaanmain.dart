@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/beranda.dart';
+import 'package:tugasakhirsalur/penarikan/penarikanmain.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanpasar.dart';
 import 'package:tugasakhirsalur/pendanaan/pendanaanriwayat.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
@@ -86,11 +88,20 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                           ),
                         ),
                         SizedBox(height: 8,),
-                        Text(
-                          totalAsetPendanaan.toString(),
-                          style: GoogleFonts.poppins(
-                              color: Colors.white,
-                              fontSize: 30
+                        RichText(
+                          text: TextSpan(
+                              style: GoogleFonts.poppins(
+                                  color: Colors.white,
+                                  fontSize: 30
+                              ),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: 'Rp',
+                                ),
+                                TextSpan(
+                                  text: totalAsetPendanaan.toString(),
+                                ),
+                              ]
                           ),
                         ),
                         SizedBox(height: 20,),
@@ -433,14 +444,6 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
 
                               SizedBox(height: 10,),
 
-                              Text(
-                                'Pembayaran Lancar',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 15
-                                ),
-                              ),
-
-                              SizedBox(height: 10,),
                             ],
                           ),
 
@@ -471,14 +474,6 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
 
                               SizedBox(height: 10,),
 
-                              Text(
-                                'Rp 0',
-                                style: GoogleFonts.poppins(
-                                    fontSize: 15
-                                ),
-                              ),
-
-                              SizedBox(height: 10,),
                             ],
                           ),
                         ],
@@ -527,8 +522,34 @@ class _pendanaanBerandaState extends State<pendanaanBeranda> {
                 ),
               ),
             ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              child: RichText(
+                text: TextSpan(
+                    style: GoogleFonts.poppins(
+                        fontSize: 12,
+                        color: Colors.black
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: '*Proses pencairan dapat diajukan pada halaman utama aplikasi atau ',
+                      ),
+                      TextSpan(
+                        text: 'Klik Disini',
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.bold
+                        ),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => PenarikanBeranda()));
+                          }
+                      ),
+                    ]
+                ),
+              ),
+            ),
 
-            SizedBox(height: 20,),
+            SizedBox(height: 30,),
 
             Container(
               height: 50,

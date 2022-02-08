@@ -9,7 +9,6 @@ import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 import 'package:tugasakhirsalur/widget/backgroundpainter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/widget/error_alertbox.dart';
-import 'package:tugasakhirsalur/widget/loading_alert.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class loginPage extends StatefulWidget {
@@ -25,23 +24,13 @@ class _State extends State<loginPage> {
   FirebaseAuth _auth = FirebaseAuth.instance;
   
   void _loginUser()async{
-    showDialog(
-      context: context, 
-      builder: (con){
-        return const LoadingAlertDialog(message: "Loading...");
-      },
-    );
     User ? currentUser;
     await _auth.signInWithEmailAndPassword(
         email: emailController.text.trim(),
         password: passwordController.text.trim()).then((auth){
           currentUser = auth.user;
     }).catchError((error){
-      showDialog(
-          context: context,
-          builder: (con){
-            return ErrorAlertDialog(message: 'Email atau password salah');
-      });
+
     });
     if(currentUser != null){
       getUserData(currentUser!.uid);
