@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tugasakhirsalur/bantuan/bantuanmain.dart';
+import 'package:tugasakhirsalur/login.dart';
 import 'package:tugasakhirsalur/password/passwordreset.dart';
 import 'package:tugasakhirsalur/variables/appcolors_lib.dart';
 
@@ -619,7 +620,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
                     ),
                   ),
                   onPressed: (){
-                    Navigator.pushReplacementNamed(context, '/halaman_login');
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => loginPage()), (route) => false);
                   },
                 )
             ),
